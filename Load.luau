@@ -5,14 +5,14 @@ local HttpService = game:GetService("HttpService")
 
 local function decodeBaseUrl()
     local fragments = {
-        {id = 6, data = "cmVmsy9oZWFkcy9tYWluLw==", dummy = false}, -- refs/heads/main/
+        {id = 6, data = "cmVmsy9oZWFkcy9tYWluLw==", dummy = false}, -- 
         {id = 9, dummy = true, data = "ZHVtbXkx"}, -- dummy
-        {id = 2, data = "cmF3Lg==", dummy = false}, -- raw.
-        {id = 4, data = "QXJjZXVzWEFyY2hpdmV6eHgv", dummy = false}, -- ArceusXArchivezx/
-        {id = 1, data = "aHR0cHM6Ly8=", dummy = false}, -- https://
+        {id = 2, data = "cmF3Lg==", dummy = false}, -- 
+        {id = 4, data = "QXJjZXVzWEFyY2hpdmV6eHgv", dummy = false}, -- 
+        {id = 1, data = "aHR0cHM6Ly8=", dummy = false}, -- 
         {id = 7, dummy = true, data = "ZHVtbXky"}, -- dummy
-        {id = 3, data = "Z2l0aHVidXNlcmNvbnRlbnQuY29tLw==", dummy = false}, -- githubusercontent.com/
-        {id = 5, data = "R2FtZVFYLw==", dummy = false}, -- GameQX/
+        {id = 3, data = "Z2l0aHVidXNlcmNvbnRlbnQuY29tLw==", dummy = false}, -- 
+        {id = 5, data = "R2FtZVFYLw==", dummy = false}, -- 
         {id = 8, dummy = true, data = "ZHVtbXkz"} -- dummy
     }
     local decodedParts = {}
