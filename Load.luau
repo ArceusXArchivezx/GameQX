@@ -84,6 +84,8 @@ local GameScripts = {
     ["$15,000 Glass Bridge (Squid Game Obby)"] = "Money1.luau",
     ["Cross Glass Bridge to RICH!"] = "GV.lua",
     ["$45,600 Jump Rope"] = "Roblox.lua",
+    ["Brookhaven (Coming Soon)"] = "",
+    ["Bloxfruits (Coming Soon)"] = "",
 }
 
 local ScreenGui = Instance.new("ScreenGui")
