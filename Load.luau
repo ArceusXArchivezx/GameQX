@@ -85,6 +85,7 @@ local GameScripts = {
     ["Cross Glass Bridge to RICH!"] = "GV.lua",
     ["$45,600 Jump Rope"] = "Roblox.lua",
     ["Brookhaven"] = "Korea.com",
+    ["99 Nights in the Forest Glass Bridge"] = "Senpei.com",
     ["Bloxfruits (Coming Soon)"] = "",
 }
 
