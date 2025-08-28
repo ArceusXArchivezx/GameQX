@@ -12,7 +12,7 @@ local function decodeBaseUrl()
         {id = 1, data = "aHR0cHM6Ly8=", dummy = false}, -- https://
         {id = 7, dummy = true, data = "ZHVtbXky"}, -- dummy
         {id = 3, data = "Z2l0aHVidXNlcmNvbnRlbnQuY29tLw==", dummy = false}, -- githubusercontent.com/
-        {id = 5, data = "R2FtZVFYLw==", dummy = false}, -- GameQX/1
+        {id = 5, data = "R2FtZVFYLw==", dummy = false}, -- GameQX/
         {id = 8, dummy = true, data = "ZHVtbXkz"} -- dummy
     }
     local decodedParts = {}
