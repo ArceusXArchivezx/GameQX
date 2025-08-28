@@ -78,14 +78,14 @@ local GameScripts = {
     ["Easy Squid Bridge! Glass Bridge!"] = "Money.luau",
     ["+$1,000 Every Correct Glass"] = "Qwq.luau",
     ["Pick Right Path to RICH!"] = "Metode.lua",
-    ["Legends Of Speed"] = "Terpercaya.com",
-    ["Ninja Legends"] = "Indo.com",
+    ["Legends Of Speed"] = "Terpercaya.lua",
+    ["Ninja Legends"] = "Indo.lua",
     ["K-Pop Demon Hunter Trolling Tower"] = "Clean.luau",
     ["$15,000 Glass Bridge (Squid Game Obby)"] = "Money1.luau",
     ["Cross Glass Bridge to RICH!"] = "GV.lua",
     ["$45,600 Jump Rope"] = "Roblox.lua",
-    ["Brookhaven"] = "Korea.com",
-    ["99 Nights in the Forest Glass Bridge"] = "Senpei.com",
+    ["Brookhaven"] = "Korea.lua",
+    ["99 Nights in the Forest Glass Bridge"] = "Senpei.lua",
     ["Bloxfruits (Coming Soon)"] = "",
 }
 
