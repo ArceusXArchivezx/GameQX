@@ -29,6 +29,7 @@ local GameScripts = {
     ["Brookhaven"] = "Korea.lua",
     ["99 Nights in the Forest Glass Bridge"] = "Senpei.lua",
     ["Bloxfruits (Coming Soon)"] = "",
+    ["RUNAWAY JUMP ROPE"] = "Global.lua",
 }
 
 local ScreenGui = Instance.new("ScreenGui")
