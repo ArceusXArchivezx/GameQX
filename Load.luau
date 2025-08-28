@@ -1,74 +1,16 @@
 local StarterGui = game:GetService("StarterGui")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
-local HttpService = game:GetService("HttpService")
 
-local function decodeBaseUrl()
-    local fragments = {
-        {id = 6, data = "cmVmsy9oZWFkcy9tYWluLw==", dummy = false}, -- refs/heads/main/
-        {id = 9, dummy = true, data = "ZHVtbXkx"}, -- dummy
-        {id = 2, data = "cmF3Lg==", dummy = false}, -- raw.
-        {id = 4, data = "QXJjZXVzWEFyY2hpdmV6eHgv", dummy = false}, -- ArceusXArchivezx/
-        {id = 1, data = "aHR0cHM6Ly8=", dummy = false}, -- https://
-        {id = 7, dummy = true, data = "ZHVtbXky"}, -- dummy
-        {id = 3, data = "Z2l0aHVidXNlcmNvbnRlbnQuY29tLw==", dummy = false}, -- githubusercontent.com/
-        {id = 5, data = "R2FtZVFYLw==", dummy = false}, -- GameQX/
-        {id = 8, dummy = true, data = "ZHVtbXkz"} -- dummy
-    }
-    local decodedParts = {}
-
-    for _, frag in ipairs(fragments) do
-        if not frag.dummy then
-            local decoded = ""
-            local success, result = pcall(function()
-                -- Encode as JSON string and decode to handle Base64
-                local json = HttpService:JSONEncode({data = frag.data})
-                local decodedJson = HttpService:JSONDecode(json)
-                -- Manual Base64 decode as fallback
-                local base64 = decodedJson.data
-                local base64Chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
-                local binary = ""
-                local padding = 0
-                for i = 1, #base64 do
-                    if base64:sub(i, i) == "=" then padding = padding + 1 end
-                end
-                for i = 1, #base64 - padding do
-                    local char = base64:sub(i, i)
-                    local value = string.find(base64Chars, char, 1, true) - 1
-                    if value then
-                        binary = binary .. string.format("%06b", value)
-                    else
-                        error("Invalid Base64 character: " .. char)
-                    end
-                end
-                local decodedBytes = {}
-                for i = 1, #binary, 8 do
-                    local byte = string.sub(binary, i, i + 7)
-                    if #byte == 8 then
-                        decodedBytes[#decodedBytes + 1] = tonumber(byte, 2)
-                    end
-                end
-                for _, byte in ipairs(decodedBytes) do
-                    decoded = decoded .. string.char(byte)
-                end
-                return decoded
-            end)
-            if not success then
-                warn("Base64 decoding failed for part", frag.id, ":", result)
-                return nil
-            end
-            decodedParts[frag.id] = decoded
-        end
-    end
-
-    -- Concatenate parts in correct order
-    local decoded = ""
-    for i = 1, #decodedParts do
-        if not decodedParts[i] then
-            warn("Missing part at index", i)
-            return nil
-        end
-        decoded = decoded .. decodedParts[i]
+-- Reversed BASE_URL
+local BASE_URL_REVERSED = "/niam/sdaeh/sfer/XQemaG/xzevihcrAXsuecrA/moc.tnetnocresubuhtig.war//:sptth"
+local function getBaseUrl()
+    local success, decoded = pcall(function()
+        return string.reverse(BASE_URL_REVERSED)
+    end)
+    if not success then
+        warn("❌ URL decoding failed:", decoded)
+        return nil
     end
     return decoded
 end
@@ -96,7 +38,7 @@ ScreenGui.Name = "ArceusXNeoGUI"
 local Frame = Instance.new("Frame")
 Frame.Size = UDim2.new(0, 200, 0, 300)
 Frame.Position = UDim2.new(0.5, -100, 0.5, -150)
-Frame.BackgroundColor3 = Color3.fromRGB(180, 160, 190) -- Muted lavender
+Frame.BackgroundColor3 = Color3.fromRGB(200, 170, 170) -- Muted rose beige
 Frame.Parent = ScreenGui
 Frame.Active = true
 Frame.Draggable = true
@@ -107,15 +49,15 @@ FrameCorner.Parent = Frame
 
 local FrameGradient = Instance.new("UIGradient")
 FrameGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(180, 160, 190)), -- Muted lavender
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(230, 220, 200)) -- Pale cream
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(200, 170, 170)), -- Muted rose beige
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 235, 210)) -- Soft ivory
 })
 FrameGradient.Rotation = 90 -- Vertical gradient
 FrameGradient.Parent = Frame
 
 local FrameShadow = Instance.new("UIStroke")
 FrameShadow.Thickness = 2
-FrameShadow.Color = Color3.fromRGB(160, 180, 160) -- Soft sage outline
+FrameShadow.Color = Color3.fromRGB(150, 160, 140) -- Muted olive outline
 FrameShadow.Transparency = 0.5
 FrameShadow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 FrameShadow.Parent = Frame
@@ -148,9 +90,9 @@ end)
 local CloseButton = Instance.new("TextButton")
 CloseButton.Size = UDim2.new(0, 28, 0, 28)
 CloseButton.Position = UDim2.new(1, -32, 0, 4)
-CloseButton.BackgroundColor3 = Color3.fromRGB(160, 180, 160) -- Soft sage
+CloseButton.BackgroundColor3 = Color3.fromRGB(150, 160, 140) -- Muted olive
 CloseButton.Text = "X"
-CloseButton.TextColor3 = Color3.fromRGB(190, 180, 170) -- Delicate taupe text
+CloseButton.TextColor3 = Color3.fromRGB(180, 175, 165) -- Warm gray text
 CloseButton.Font = Enum.Font.GothamBold
 CloseButton.TextSize = 14
 CloseButton.Parent = Frame
@@ -161,17 +103,17 @@ CloseButtonCorner.Parent = CloseButton
 
 local CloseButtonGradient = Instance.new("UIGradient")
 CloseButtonGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(160, 180, 160)), -- Soft sage
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(230, 220, 200)) -- Pale cream
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(150, 160, 140)), -- Muted olive
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 235, 210)) -- Soft ivory
 })
 CloseButtonGradient.Rotation = 90 -- Vertical gradient
 CloseButtonGradient.Parent = CloseButton
 
 CloseButton.MouseEnter:Connect(function()
-    TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 30, 0, 30), BackgroundColor3 = Color3.fromRGB(230, 220, 200) }):Play()
+    TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 30, 0, 30), BackgroundColor3 = Color3.fromRGB(240, 235, 210) }):Play()
 end)
 CloseButton.MouseLeave:Connect(function()
-    TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 28, 0, 28), BackgroundColor3 = Color3.fromRGB(160, 180, 160) }):Play()
+    TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 28, 0, 28), BackgroundColor3 = Color3.fromRGB(150, 160, 140) }):Play()
 end)
 
 CloseButton.MouseButton1Click:Connect(function()
@@ -181,9 +123,9 @@ end)
 local Dropdown = Instance.new("TextButton")
 Dropdown.Size = UDim2.new(1, -10, 0, 36)
 Dropdown.Position = UDim2.new(0, 5, 0, 40)
-Dropdown.BackgroundColor3 = Color3.fromRGB(160, 180, 160) -- Soft sage
+Dropdown.BackgroundColor3 = Color3.fromRGB(150, 160, 140) -- Muted olive
 Dropdown.Text = "▶ Select Game"
-Dropdown.TextColor3 = Color3.fromRGB(190, 180, 170) -- Delicate taupe text
+Dropdown.TextColor3 = Color3.fromRGB(180, 175, 165) -- Warm gray text
 Dropdown.Font = Enum.Font.Gotham
 Dropdown.TextSize = 14
 Dropdown.Parent = Frame
@@ -194,28 +136,28 @@ DropdownCorner.Parent = Dropdown
 
 local DropdownGradient = Instance.new("UIGradient")
 DropdownGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(160, 180, 160)), -- Soft sage
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(230, 220, 200)) -- Pale cream
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(150, 160, 140)), -- Muted olive
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 235, 210)) -- Soft ivory
 })
 DropdownGradient.Rotation = 90 -- Vertical gradient
 DropdownGradient.Parent = Dropdown
 
 Dropdown.MouseEnter:Connect(function()
-    TweenService:Create(Dropdown, TweenInfo.new(0.2), { Size = UDim2.new(1, -8, 0, 38), BackgroundColor3 = Color3.fromRGB(230, 220, 200) }):Play()
+    TweenService:Create(Dropdown, TweenInfo.new(0.2), { Size = UDim2.new(1, -8, 0, 38), BackgroundColor3 = Color3.fromRGB(240, 235, 210) }):Play()
 end)
 Dropdown.MouseLeave:Connect(function()
-    TweenService:Create(Dropdown, TweenInfo.new(0.2), { Size = UDim2.new(1, -10, 0, 36), BackgroundColor3 = Color3.fromRGB(160, 180, 160) }):Play()
+    TweenService:Create(Dropdown, TweenInfo.new(0.2), { Size = UDim2.new(1, -10, 0, 36), BackgroundColor3 = Color3.fromRGB(150, 160, 140) }):Play()
 end)
 
 local ListFrame = Instance.new("ScrollingFrame")
 ListFrame.Size = UDim2.new(1, 0, 0, 0)
 ListFrame.Position = UDim2.new(0, 0, 0, 80)
-ListFrame.BackgroundColor3 = Color3.fromRGB(230, 220, 200) -- Pale cream
+ListFrame.BackgroundColor3 = Color3.fromRGB(240, 235, 210) -- Soft ivory
 ListFrame.ClipsDescendants = true
 ListFrame.Parent = Frame
 ListFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
 ListFrame.ScrollBarThickness = 4
-ListFrame.ScrollBarImageColor3 = Color3.fromRGB(190, 180, 170) -- Delicate taupe scrollbar
+ListFrame.ScrollBarImageColor3 = Color3.fromRGB(180, 175, 165) -- Warm gray scrollbar
 ListFrame.BackgroundTransparency = 0.1
 
 local ListFrameCorner = Instance.new("UICorner")
@@ -249,9 +191,9 @@ local buttonCount = 0
 for gameName, fileName in pairs(GameScripts) do
     local Btn = Instance.new("TextButton")
     Btn.Size = UDim2.new(1, -5, 0, 34)
-    Btn.BackgroundColor3 = Color3.fromRGB(230, 220, 200) -- Pale cream
+    Btn.BackgroundColor3 = Color3.fromRGB(240, 235, 210) -- Soft ivory
     Btn.Text = gameName
-    Btn.TextColor3 = Color3.fromRGB(190, 180, 170) -- Delicate taupe text
+    Btn.TextColor3 = Color3.fromRGB(180, 175, 165) -- Warm gray text
     Btn.Font = Enum.Font.Gotham
     Btn.TextSize = 12
     Btn.TextWrapped = true
@@ -265,24 +207,34 @@ for gameName, fileName in pairs(GameScripts) do
 
     local BtnGradient = Instance.new("UIGradient")
     BtnGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(230, 220, 200)), -- Pale cream
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(160, 180, 160)) -- Soft sage
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(240, 235, 210)), -- Soft ivory
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(150, 160, 140)) -- Muted olive
     })
     BtnGradient.Rotation = 90 -- Vertical gradient
     BtnGradient.Parent = Btn
 
     Btn.MouseEnter:Connect(function()
-        TweenService:Create(Btn, TweenInfo.new(0.2), { Size = UDim2.new(1, -3, 0, 36), BackgroundColor3 = Color3.fromRGB(180, 160, 190) }):Play()
+        TweenService:Create(Btn, TweenInfo.new(0.2), { Size = UDim2.new(1, -3, 0, 36), BackgroundColor3 = Color3.fromRGB(200, 170, 170) }):Play()
     end)
     Btn.MouseLeave:Connect(function()
-        TweenService:Create(Btn, TweenInfo.new(0.2), { Size = UDim2.new(1, -5, 0, 34), BackgroundColor3 = Color3.fromRGB(230, 220, 200) }):Play()
+        TweenService:Create(Btn, TweenInfo.new(0.2), { Size = UDim2.new(1, -5, 0, 34), BackgroundColor3 = Color3.fromRGB(240, 235, 210) }):Play()
     end)
 
     Btn.MouseButton1Click:Connect(function()
         Dropdown.Text = "▶ " .. gameName
         toggleListFrame()
 
-        local url = decodeBaseUrl()
+        if fileName == "" then
+            warn("❌ No script file specified for", gameName)
+            StarterGui:SetCore("SendNotification", {
+                Title = "ArceusXNeo",
+                Text = "⚠️ No script available for " .. gameName,
+                Duration = 5
+            })
+            return
+        end
+
+        local url = getBaseUrl()
         if not url then
             warn("❌ URL decoding failed")
             StarterGui:SetCore("SendNotification", {
@@ -294,7 +246,11 @@ for gameName, fileName in pairs(GameScripts) do
         end
         url = url .. fileName
         local success, result = pcall(function()
-            return loadstring(game:HttpGet(url))()
+            local scriptContent = game:HttpGet(url)
+            if not scriptContent or scriptContent == "" then
+                error("Empty or invalid script content for " .. gameName .. " at " .. url)
+            end
+            return loadstring(scriptContent)()
         end)
 
         if not success then
