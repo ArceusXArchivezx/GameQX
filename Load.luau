@@ -30,6 +30,7 @@ local GameScripts = {
     ["99 Nights in the Forest Glass Bridge"] = "Senpei.lua",
     ["Bloxfruits (Coming Soon)"] = "",
     ["RUNAWAY JUMP ROPE"] = "Global.lua",
+    ["Hamood Habibi Tower"] = "Car.luau",
 }
 
 local ScreenGui = Instance.new("ScreenGui")
