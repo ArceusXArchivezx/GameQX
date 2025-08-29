@@ -34,6 +34,7 @@ local GameScripts = {
     ["KPop Demon Hunters Troll Tower"] = "Meyes.luau",
     ["Labubu Glass Bridge"] = "Whoiam.luau",
     ["Cross Invisible Path to MAGIC CARPET"] = "Idkah.lua",
+    ["Color Block Run"] = "Noei.lua",
 }
 
 local ScreenGui = Instance.new("ScreenGui")
