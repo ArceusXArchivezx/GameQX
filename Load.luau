@@ -31,6 +31,7 @@ local GameScripts = {
     ["Bloxfruits (Coming Soon)"] = "",
     ["RUNAWAY JUMP ROPE"] = "Global.lua",
     ["Hamood Habibi Tower"] = "Car.luau",
+    ["KPop Demon Hunters Troll Tower"] = "Meyes.luau",
 }
 
 local ScreenGui = Instance.new("ScreenGui")
