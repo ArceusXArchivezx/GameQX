@@ -33,6 +33,7 @@ local GameScripts = {
     ["Hamood Habibi Tower"] = "Car.luau",
     ["KPop Demon Hunters Troll Tower"] = "Meyes.luau",
     ["Labubu Glass Bridge"] = "Whoiam.luau",
+    ["Cross Invisible Path to MAGIC CARPET"] = "Idkah.lua",
 }
 
 local ScreenGui = Instance.new("ScreenGui")
