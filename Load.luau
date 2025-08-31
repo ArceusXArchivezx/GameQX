@@ -37,6 +37,7 @@ local GameScripts = {
     ["Color Block Run"] = "Noei.lua",
     ["1% Win Obby"] = "Eeeeeeeeeeeee.luau",
     ["IMPOSSIBLE Brainrot Glass Bridge"] = "iloveyou.lua",
+    ["Slap Glass Bridge"] = "Whoiam.luau",
 }
 
 local ScreenGui = Instance.new("ScreenGui")
