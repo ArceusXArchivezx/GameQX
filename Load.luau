@@ -36,6 +36,7 @@ local GameScripts = {
     ["Cross Invisible Path to MAGIC CARPET"] = "Idkah.lua",
     ["Color Block Run"] = "Noei.lua",
     ["1% Win Obby"] = "Eeeeeeeeeeeee.luau",
+    ["IMPOSSIBLE Brainrot Glass Bridge"] = "iloveyou.lua",
 }
 
 local ScreenGui = Instance.new("ScreenGui")
