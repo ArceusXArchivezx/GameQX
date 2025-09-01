@@ -38,6 +38,7 @@ local GameScripts = {
     ["1% Win Obby"] = "Eeeeeeeeeeeee.luau",
     ["IMPOSSIBLE Brainrot Glass Bridge"] = "iloveyou.lua",
     ["Slap Glass Bridge"] = "Whoe.lua",
+    ["Troll Invisible Tower"] = "Zombie01.lua",
 }
 
 local ScreenGui = Instance.new("ScreenGui")
