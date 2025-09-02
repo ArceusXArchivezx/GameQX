@@ -45,6 +45,7 @@ local GameScripts = {
     ["Slap Glass Bridge"] = "Whoe.lua",
     ["Troll Invisible Tower"] = "Zombie01.lua",
     ["Teamwork Tower 2"] = "Victoria.lua",
+    ["Obby But You Get TROLLED"] = "Anastasia.luau",
 }
 
 -- Initialize GUI with error handling
