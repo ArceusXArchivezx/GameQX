@@ -1,6 +1,10 @@
 local StarterGui = game:GetService("StarterGui")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+
+-- Debug print to confirm script start
+print("🔧 Initializing ArceusXNeoGUI script...")
 
 -- Reversed BASE_URL
 local BASE_URL_REVERSED = "/niam/sdaeh/sfer/XQemaG/xzevihcrAXsuecrA/moc.tnetnocresubuhtig.war//:sptth"
@@ -12,6 +16,7 @@ local function getBaseUrl()
         warn("❌ URL decoding failed:", decoded)
         return nil
     end
+    print("🔧 Decoded BASE_URL:", decoded)
     return decoded
 end
 
@@ -42,243 +47,274 @@ local GameScripts = {
     ["Teamwork Tower 2"] = "Victoria.lua",
 }
 
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Parent = game.CoreGui
-ScreenGui.Name = "ArceusXNeoGUI"
+-- Initialize GUI with error handling
+local success, guiError = pcall(function()
+    local ScreenGui = Instance.new("ScreenGui")
+    ScreenGui.Name = "ArceusXNeoGUI_" .. tostring(os.time())
+    ScreenGui.Enabled = true
+    ScreenGui.Parent = Players.LocalPlayer and Players.LocalPlayer.PlayerGui or game.CoreGui
+    print("🔧 ScreenGui created and parented to:", ScreenGui.Parent)
 
-local Frame = Instance.new("Frame")
-Frame.Size = UDim2.new(0, 200, 0, 300)
-Frame.Position = UDim2.new(0.5, -100, 0.5, -150)
-Frame.BackgroundColor3 = Color3.fromRGB(200, 170, 170) -- Muted rose beige
-Frame.Parent = ScreenGui
-Frame.Active = true
-Frame.Draggable = true
+    local Frame = Instance.new("Frame")
+    Frame.Size = UDim2.new(0, 200, 0, 300)
+    Frame.Position = UDim2.new(0.5, -100, 0.5, -150)
+    Frame.BackgroundColor3 = Color3.fromRGB(100, 120, 140) -- Muted slate blue
+    Frame.Parent = ScreenGui
+    Frame.Active = true
+    Frame.Draggable = true
+    print("🔧 Frame created")
 
-local FrameCorner = Instance.new("UICorner")
-FrameCorner.CornerRadius = UDim.new(0, 12)
-FrameCorner.Parent = Frame
+    local FrameCorner = Instance.new("UICorner")
+    FrameCorner.CornerRadius = UDim.new(0, 12)
+    FrameCorner.Parent = Frame
 
-local FrameGradient = Instance.new("UIGradient")
-FrameGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(200, 170, 170)), -- Muted rose beige
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 235, 210)) -- Soft ivory
-})
-FrameGradient.Rotation = 90 -- Vertical gradient
-FrameGradient.Parent = Frame
-
-local FrameShadow = Instance.new("UIStroke")
-FrameShadow.Thickness = 2
-FrameShadow.Color = Color3.fromRGB(150, 160, 140) -- Muted olive outline
-FrameShadow.Transparency = 0.5
-FrameShadow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-FrameShadow.Parent = Frame
-
-local isDragging = false
-local dragStart = nil
-local startPos = nil
-
-Frame.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        isDragging = true
-        dragStart = input.Position
-        startPos = Frame.Position
-    end
-end)
-
-Frame.InputChanged:Connect(function(input)
-    if isDragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
-        local delta = input.Position - dragStart
-        Frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-    end
-end)
-
-UserInputService.InputEnded:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        isDragging = false
-    end
-end)
-
-local CloseButton = Instance.new("TextButton")
-CloseButton.Size = UDim2.new(0, 28, 0, 28)
-CloseButton.Position = UDim2.new(1, -32, 0, 4)
-CloseButton.BackgroundColor3 = Color3.fromRGB(150, 160, 140) -- Muted olive
-CloseButton.Text = "X"
-CloseButton.TextColor3 = Color3.fromRGB(180, 175, 165) -- Warm gray text
-CloseButton.Font = Enum.Font.GothamBold
-CloseButton.TextSize = 14
-CloseButton.Parent = Frame
-
-local CloseButtonCorner = Instance.new("UICorner")
-CloseButtonCorner.CornerRadius = UDim.new(0, 6)
-CloseButtonCorner.Parent = CloseButton
-
-local CloseButtonGradient = Instance.new("UIGradient")
-CloseButtonGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(150, 160, 140)), -- Muted olive
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 235, 210)) -- Soft ivory
-})
-CloseButtonGradient.Rotation = 90 -- Vertical gradient
-CloseButtonGradient.Parent = CloseButton
-
-CloseButton.MouseEnter:Connect(function()
-    TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 30, 0, 30), BackgroundColor3 = Color3.fromRGB(240, 235, 210) }):Play()
-end)
-CloseButton.MouseLeave:Connect(function()
-    TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 28, 0, 28), BackgroundColor3 = Color3.fromRGB(150, 160, 140) }):Play()
-end)
-
-CloseButton.MouseButton1Click:Connect(function()
-    ScreenGui.Enabled = false
-end)
-
-local Dropdown = Instance.new("TextButton")
-Dropdown.Size = UDim2.new(1, -10, 0, 36)
-Dropdown.Position = UDim2.new(0, 5, 0, 40)
-Dropdown.BackgroundColor3 = Color3.fromRGB(150, 160, 140) -- Muted olive
-Dropdown.Text = "▶ Select Game"
-Dropdown.TextColor3 = Color3.fromRGB(180, 175, 165) -- Warm gray text
-Dropdown.Font = Enum.Font.Gotham
-Dropdown.TextSize = 14
-Dropdown.Parent = Frame
-
-local DropdownCorner = Instance.new("UICorner")
-DropdownCorner.CornerRadius = UDim.new(0, 6)
-DropdownCorner.Parent = Dropdown
-
-local DropdownGradient = Instance.new("UIGradient")
-DropdownGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(150, 160, 140)), -- Muted olive
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 235, 210)) -- Soft ivory
-})
-DropdownGradient.Rotation = 90 -- Vertical gradient
-DropdownGradient.Parent = Dropdown
-
-Dropdown.MouseEnter:Connect(function()
-    TweenService:Create(Dropdown, TweenInfo.new(0.2), { Size = UDim2.new(1, -8, 0, 38), BackgroundColor3 = Color3.fromRGB(240, 235, 210) }):Play()
-end)
-Dropdown.MouseLeave:Connect(function()
-    TweenService:Create(Dropdown, TweenInfo.new(0.2), { Size = UDim2.new(1, -10, 0, 36), BackgroundColor3 = Color3.fromRGB(150, 160, 140) }):Play()
-end)
-
-local ListFrame = Instance.new("ScrollingFrame")
-ListFrame.Size = UDim2.new(1, 0, 0, 0)
-ListFrame.Position = UDim2.new(0, 0, 0, 80)
-ListFrame.BackgroundColor3 = Color3.fromRGB(240, 235, 210) -- Soft ivory
-ListFrame.ClipsDescendants = true
-ListFrame.Parent = Frame
-ListFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
-ListFrame.ScrollBarThickness = 4
-ListFrame.ScrollBarImageColor3 = Color3.fromRGB(180, 175, 165) -- Warm gray scrollbar
-ListFrame.BackgroundTransparency = 0.1
-
-local ListFrameCorner = Instance.new("UICorner")
-ListFrameCorner.CornerRadius = UDim.new(0, 6)
-ListFrameCorner.Parent = ListFrame
-
-local isOpen = false
-local function toggleListFrame()
-    isOpen = not isOpen
-    local maxHeight = 200
-    local contentHeight = #ListFrame:GetChildren() * 38 -- Button height (34) + padding (4)
-    local goalHeight = isOpen and math.min(contentHeight, maxHeight) or 0
-    local goalSize = UDim2.new(1, 0, 0, goalHeight)
-
-    TweenService:Create(ListFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
-        Size = goalSize,
-        BackgroundTransparency = isOpen and 0.1 or 1
-    }):Play()
-
-    ListFrame.CanvasSize = UDim2.new(0, 0, 0, contentHeight)
-end
-
-Dropdown.MouseButton1Click:Connect(toggleListFrame)
-
-local UIListLayout = Instance.new("UIListLayout")
-UIListLayout.Parent = ListFrame
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 4)
-
-local buttonCount = 0
-for gameName, fileName in pairs(GameScripts) do
-    local Btn = Instance.new("TextButton")
-    Btn.Size = UDim2.new(1, -5, 0, 34)
-    Btn.BackgroundColor3 = Color3.fromRGB(240, 235, 210) -- Soft ivory
-    Btn.Text = gameName
-    Btn.TextColor3 = Color3.fromRGB(180, 175, 165) -- Warm gray text
-    Btn.Font = Enum.Font.Gotham
-    Btn.TextSize = 12
-    Btn.TextWrapped = true
-    Btn.TextTruncate = Enum.TextTruncate.AtEnd
-    Btn.Parent = ListFrame
-    buttonCount = buttonCount + 1
-
-    local BtnCorner = Instance.new("UICorner")
-    BtnCorner.CornerRadius = UDim.new(0, 6)
-    BtnCorner.Parent = Btn
-
-    local BtnGradient = Instance.new("UIGradient")
-    BtnGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(240, 235, 210)), -- Soft ivory
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(150, 160, 140)) -- Muted olive
+    local FrameGradient = Instance.new("UIGradient")
+    FrameGradient.Color = ColorSequence.new({
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(100, 120, 140)), -- Muted slate blue
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(180, 200, 220)) -- Soft sky blue
     })
-    BtnGradient.Rotation = 90 -- Vertical gradient
-    BtnGradient.Parent = Btn
+    FrameGradient.Rotation = 90 -- Vertical gradient
+    FrameGradient.Parent = Frame
 
-    Btn.MouseEnter:Connect(function()
-        TweenService:Create(Btn, TweenInfo.new(0.2), { Size = UDim2.new(1, -3, 0, 36), BackgroundColor3 = Color3.fromRGB(200, 170, 170) }):Play()
-    end)
-    Btn.MouseLeave:Connect(function()
-        TweenService:Create(Btn, TweenInfo.new(0.2), { Size = UDim2.new(1, -5, 0, 34), BackgroundColor3 = Color3.fromRGB(240, 235, 210) }):Play()
-    end)
+    local FrameShadow = Instance.new("UIStroke")
+    FrameShadow.Thickness = 2
+    FrameShadow.Color = Color3.fromRGB(80, 100, 110) -- Muted teal outline
+    FrameShadow.Transparency = 0.5
+    FrameShadow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    FrameShadow.Parent = Frame
 
-    Btn.MouseButton1Click:Connect(function()
-        Dropdown.Text = "▶ " .. gameName
-        toggleListFrame()
+    local isDragging = false
+    local dragStart = nil
+    local startPos = nil
 
-        if fileName == "" then
-            warn("❌ No script file specified for", gameName)
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXNeo",
-                Text = "⚠️ No script available for " .. gameName,
-                Duration = 5
-            })
-            return
+    Frame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            isDragging = true
+            dragStart = input.Position
+            startPos = Frame.Position
         end
+    end)
 
-        local url = getBaseUrl()
-        if not url then
-            warn("❌ URL decoding failed")
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXNeo",
-                Text = "⚠️ Failed to load script: URL error.",
-                Duration = 5
-            })
-            return
+    Frame.InputChanged:Connect(function(input)
+        if isDragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+            local delta = input.Position - dragStart
+            Frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
         end
-        url = url .. fileName
-        local success, result = pcall(function()
-            local scriptContent = game:HttpGet(url)
-            if not scriptContent or scriptContent == "" then
-                error("Empty or invalid script content for " .. gameName .. " at " .. url)
-            end
-            return loadstring(scriptContent)()
+    end)
+
+    UserInputService.InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            isDragging = false
+        end
+    end)
+
+    local CloseButton = Instance.new("TextButton")
+    CloseButton.Size = UDim2.new(0, 28, 0, 28)
+    CloseButton.Position = UDim2.new(1, -32, 0, 4)
+    CloseButton.BackgroundColor3 = Color3.fromRGB(80, 100, 110) -- Muted teal
+    CloseButton.Text = "X"
+    CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255) -- Pure white text
+    CloseButton.TextTransparency = 0.1 -- Slight transparency for softness
+    CloseButton.Font = Enum.Font.GothamBold
+    CloseButton.TextSize = 14
+    CloseButton.Parent = Frame
+    print("🔧 CloseButton created")
+
+    local CloseButtonCorner = Instance.new("UICorner")
+    CloseButtonCorner.CornerRadius = UDim.new(0, 6)
+    CloseButtonCorner.Parent = CloseButton
+
+    local CloseButtonGradient = Instance.new("UIGradient")
+    CloseButtonGradient.Color = ColorSequence.new({
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(80, 100, 110)), -- Muted teal
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(180, 200, 220)) -- Soft sky blue
+    })
+    CloseButtonGradient.Rotation = 90 -- Vertical gradient
+    CloseButtonGradient.Parent = CloseButton
+
+    CloseButton.MouseEnter:Connect(function()
+        TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 30, 0, 30), BackgroundColor3 = Color3.fromRGB(180, 200, 220) }):Play()
+    end)
+    CloseButton.MouseLeave:Connect(function()
+        TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 28, 0, 28), BackgroundColor3 = Color3.fromRGB(80, 100, 110) }):Play()
+    end)
+
+    CloseButton.MouseButton1Click:Connect(function()
+        ScreenGui.Enabled = false
+        print("🔧 CloseButton clicked, GUI hidden")
+    end)
+
+    local Dropdown = Instance.new("TextButton")
+    Dropdown.Size = UDim2.new(0, 160, 0, 28)
+    Dropdown.Position = UDim2.new(0, 4, 0, 4)
+    Dropdown.BackgroundColor3 = Color3.fromRGB(80, 100, 110) -- Muted teal
+    Dropdown.Text = "▶ Select Game"
+    Dropdown.TextColor3 = Color3.fromRGB(255, 255, 255) -- Pure white text
+    Dropdown.TextTransparency = 0.1 -- Slight transparency for softness
+    Dropdown.Font = Enum.Font.Gotham
+    Dropdown.TextSize = 14
+    Dropdown.Parent = Frame
+    print("🔧 Dropdown created")
+
+    local DropdownCorner = Instance.new("UICorner")
+    DropdownCorner.CornerRadius = UDim.new(0, 6)
+    DropdownCorner.Parent = Dropdown
+
+    local DropdownGradient = Instance.new("UIGradient")
+    DropdownGradient.Color = ColorSequence.new({
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(80, 100, 110)), -- Muted teal
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(180, 200, 220)) -- Soft sky blue
+    })
+    DropdownGradient.Rotation = 90 -- Vertical gradient
+    DropdownGradient.Parent = Dropdown
+
+    Dropdown.MouseEnter:Connect(function()
+        TweenService:Create(Dropdown, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30), BackgroundColor3 = Color3.fromRGB(180, 200, 220) }):Play()
+    end)
+    Dropdown.MouseLeave:Connect(function()
+        TweenService:Create(Dropdown, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28), BackgroundColor3 = Color3.fromRGB(80, 100, 110) }):Play()
+    end)
+
+    local ListFrame = Instance.new("ScrollingFrame")
+    ListFrame.Size = UDim2.new(1, 0, 0, 0)
+    ListFrame.Position = UDim2.new(0, 0, 0, 36)
+    ListFrame.BackgroundColor3 = Color3.fromRGB(180, 200, 220) -- Soft sky blue
+    ListFrame.ClipsDescendants = true
+    ListFrame.Parent = Frame
+    ListFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+    ListFrame.ScrollBarThickness = 4
+    ListFrame.ScrollBarImageColor3 = Color3.fromRGB(255, 255, 255) -- Pure white scrollbar
+    ListFrame.ScrollBarImageTransparency = 0.1 -- Slight transparency for softness
+    ListFrame.BackgroundTransparency = 0.1
+    print("🔧 ListFrame created")
+
+    local ListFrameCorner = Instance.new("UICorner")
+    ListFrameCorner.CornerRadius = UDim.new(0, 6)
+    ListFrameCorner.Parent = ListFrame
+
+    local isOpen = false
+    local function toggleListFrame()
+        isOpen = not isOpen
+        local maxHeight = 200
+        local contentHeight = #ListFrame:GetChildren() * 38 -- Button height (34) + padding (4)
+        local goalHeight = isOpen and math.min(contentHeight, maxHeight) or 0
+        local goalSize = UDim2.new(1, 0, 0, goalHeight)
+
+        TweenService:Create(ListFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+            Size = goalSize,
+            BackgroundTransparency = isOpen and 0.1 or 1
+        }):Play()
+
+        ListFrame.CanvasSize = UDim2.new(0, 0, 0, contentHeight)
+        print("🔧 Dropdown toggled, isOpen:", isOpen, "CanvasSize:", contentHeight)
+    end
+
+    Dropdown.MouseButton1Click:Connect(toggleListFrame)
+
+    local UIListLayout = Instance.new("UIListLayout")
+    UIListLayout.Parent = ListFrame
+    UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+    UIListLayout.Padding = UDim.new(0, 4)
+
+    local buttonCount = 0
+    for gameName, fileName in pairs(GameScripts) do
+        local Btn = Instance.new("TextButton")
+        Btn.Size = UDim2.new(1, -5, 0, 34)
+        Btn.BackgroundColor3 = Color3.fromRGB(180, 200, 220) -- Soft sky blue
+        Btn.Text = gameName
+        Btn.TextColor3 = Color3.fromRGB(255, 255, 255) -- Pure white text
+        Btn.TextTransparency = 0.1 -- Slight transparency for softness
+        Btn.Font = Enum.Font.Gotham
+        Btn.TextSize = 12
+        Btn.TextWrapped = true
+        Btn.TextTruncate = Enum.TextTruncate.AtEnd
+        Btn.Parent = ListFrame
+        buttonCount = buttonCount + 1
+        print("🔧 Created button for:", gameName)
+
+        local BtnCorner = Instance.new("UICorner")
+        BtnCorner.CornerRadius = UDim.new(0, 6)
+        BtnCorner.Parent = Btn
+
+        local BtnGradient = Instance.new("UIGradient")
+        BtnGradient.Color = ColorSequence.new({
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(180, 200, 220)), -- Soft sky blue
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(80, 100, 110)) -- Muted teal
+        })
+        BtnGradient.Rotation = 90 -- Vertical gradient
+        BtnGradient.Parent = Btn
+
+        Btn.MouseEnter:Connect(function()
+            TweenService:Create(Btn, TweenInfo.new(0.2), { Size = UDim2.new(1, -3, 0, 36), BackgroundColor3 = Color3.fromRGB(100, 120, 140) }):Play()
+        end)
+        Btn.MouseLeave:Connect(function()
+            TweenService:Create(Btn, TweenInfo.new(0.2), { Size = UDim2.new(1, -5, 0, 34), BackgroundColor3 = Color3.fromRGB(180, 200, 220) }):Play()
         end)
 
-        if not success then
-            warn("❌ Failed to load script for", gameName, ":", result)
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXNeo",
-                Text = "⚠️ Script Not Supported: " .. tostring(result),
-                Duration = 5
-            })
-        else
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXNeo",
-                Text = "✅ " .. gameName .. " script successfully executed!",
-                Duration = 5
-            })
-        end
-    end)
-end
+        Btn.MouseButton1Click:Connect(function()
+            Dropdown.Text = "▶ " .. gameName
+            toggleListFrame()
+            print("🔧 Selected game:", gameName)
 
-ListFrame.CanvasSize = UDim2.new(0, 0, 0, buttonCount * (34 + UIListLayout.Padding.Offset))
+            if fileName == "" then
+                warn("❌ No script file specified for", gameName)
+                StarterGui:SetCore("SendNotification", {
+                    Title = "ArceusXNeo",
+                    Text = "⚠️ No script available for " .. gameName,
+                    Duration = 5
+                })
+                return
+            end
+
+            local url = getBaseUrl()
+            if not url then
+                warn("❌ URL decoding failed")
+                StarterGui:SetCore("SendNotification", {
+                    Title = "ArceusXNeo",
+                    Text = "⚠️ Failed to load script: URL error.",
+                    Duration = 5
+                })
+                return
+            end
+            url = url .. fileName
+            print("🔧 Attempting to load script from:", url)
+
+            local success, result = pcall(function()
+                local scriptContent = game:HttpGet(url)
+                if not scriptContent or scriptContent == "" then
+                    error("Empty or invalid script content for " .. gameName .. " at " .. url)
+                end
+                print("🔧 Script content fetched for", gameName)
+                return loadstring(scriptContent)()
+            end)
+
+            if not success then
+                warn("❌ Failed to load script for", gameName, ":", result)
+                StarterGui:SetCore("SendNotification", {
+                    Title = "ArceusXNeo",
+                    Text = "⚠️ Script Not Supported: " .. tostring(result),
+                    Duration = 5
+                })
+            else
+                StarterGui:SetCore("SendNotification", {
+                    Title = "ArceusXNeo",
+                    Text = "✅ " .. gameName .. " script successfully executed!",
+                    Duration = 5
+                })
+                print("🔧 Script executed successfully for", gameName)
+            end
+        end)
+    end
+
+    ListFrame.CanvasSize = UDim2.new(0, 0, 0, buttonCount * (34 + UIListLayout.Padding.Offset))
+    print("🔧 GUI initialization complete, buttons created:", buttonCount)
+end)
+
+if not success then
+    warn("❌ GUI initialization failed:", guiError)
+    StarterGui:SetCore("SendNotification", {
+        Title = "ArceusXNeo",
+        Text = "⚠️ Failed to initialize GUI: " .. tostring(guiError),
+        Duration = 5
+    })
+end
