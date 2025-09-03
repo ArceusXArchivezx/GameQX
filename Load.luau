@@ -47,6 +47,7 @@ local GameScripts = {
     ["Teamwork Tower 2"] = "Victoria.lua",
     ["Obby But You Get TROLLED"] = "Anastasia.luau",
     ["Random Tool Tower"] = "Isabella.luau",
+    ["Tower For Admin 2"] = "Dominatus.luau",
 }
 
 -- Initialize GUI with error handling
