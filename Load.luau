@@ -48,6 +48,7 @@ local GameScripts = {
     ["Obby But You Get TROLLED"] = "Anastasia.luau",
     ["Random Tool Tower"] = "Isabella.luau",
     ["Tower For Admin 2"] = "Dominatus.luau",
+    ["Shrink Ray Tower"] = "Eternaxis.luau",
 }
 
 -- Initialize GUI with error handling
