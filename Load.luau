@@ -3,9 +3,6 @@ local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
--- Debug print to confirm script start
-print("🔧 Initializing ArceusXNeoGUI script...")
-
 -- Reversed BASE_URL
 local BASE_URL_REVERSED = "/niam/sdaeh/sfer/XQemaG/xzevihcrAXsuecrA/moc.tnetnocresubuhtig.war//:sptth"
 local function getBaseUrl()
@@ -16,7 +13,6 @@ local function getBaseUrl()
         warn("❌ URL decoding failed:", decoded)
         return nil
     end
-    print("🔧 Decoded BASE_URL:", decoded)
     return decoded
 end
 
@@ -57,7 +53,6 @@ local success, guiError = pcall(function()
     ScreenGui.Name = "ArceusXNeoGUI_" .. tostring(os.time())
     ScreenGui.Enabled = true
     ScreenGui.Parent = Players.LocalPlayer and Players.LocalPlayer.PlayerGui or game.CoreGui
-    print("🔧 ScreenGui created and parented to:", ScreenGui.Parent)
 
     local Frame = Instance.new("Frame")
     Frame.Size = UDim2.new(0, 200, 0, 300)
@@ -66,7 +61,6 @@ local success, guiError = pcall(function()
     Frame.Parent = ScreenGui
     Frame.Active = true
     Frame.Draggable = true
-    print("🔧 Frame created")
 
     local FrameCorner = Instance.new("UICorner")
     FrameCorner.CornerRadius = UDim.new(0, 12)
@@ -122,7 +116,6 @@ local success, guiError = pcall(function()
     CloseButton.Font = Enum.Font.GothamBold
     CloseButton.TextSize = 14
     CloseButton.Parent = Frame
-    print("🔧 CloseButton created")
 
     local CloseButtonCorner = Instance.new("UICorner")
     CloseButtonCorner.CornerRadius = UDim.new(0, 6)
@@ -145,7 +138,6 @@ local success, guiError = pcall(function()
 
     CloseButton.MouseButton1Click:Connect(function()
         ScreenGui.Enabled = false
-        print("🔧 CloseButton clicked, GUI hidden")
     end)
 
     local Dropdown = Instance.new("TextButton")
@@ -158,7 +150,6 @@ local success, guiError = pcall(function()
     Dropdown.Font = Enum.Font.Gotham
     Dropdown.TextSize = 14
     Dropdown.Parent = Frame
-    print("🔧 Dropdown created")
 
     local DropdownCorner = Instance.new("UICorner")
     DropdownCorner.CornerRadius = UDim.new(0, 6)
@@ -190,7 +181,6 @@ local success, guiError = pcall(function()
     ListFrame.ScrollBarImageColor3 = Color3.fromRGB(255, 255, 255) -- Pure white scrollbar
     ListFrame.ScrollBarImageTransparency = 0.1 -- Slight transparency for softness
     ListFrame.BackgroundTransparency = 0.1
-    print("🔧 ListFrame created")
 
     local ListFrameCorner = Instance.new("UICorner")
     ListFrameCorner.CornerRadius = UDim.new(0, 6)
@@ -210,7 +200,6 @@ local success, guiError = pcall(function()
         }):Play()
 
         ListFrame.CanvasSize = UDim2.new(0, 0, 0, contentHeight)
-        print("🔧 Dropdown toggled, isOpen:", isOpen, "CanvasSize:", contentHeight)
     end
 
     Dropdown.MouseButton1Click:Connect(toggleListFrame)
@@ -234,7 +223,6 @@ local success, guiError = pcall(function()
         Btn.TextTruncate = Enum.TextTruncate.AtEnd
         Btn.Parent = ListFrame
         buttonCount = buttonCount + 1
-        print("🔧 Created button for:", gameName)
 
         local BtnCorner = Instance.new("UICorner")
         BtnCorner.CornerRadius = UDim.new(0, 6)
@@ -258,7 +246,6 @@ local success, guiError = pcall(function()
         Btn.MouseButton1Click:Connect(function()
             Dropdown.Text = "▶ " .. gameName
             toggleListFrame()
-            print("🔧 Selected game:", gameName)
 
             if fileName == "" then
                 warn("❌ No script file specified for", gameName)
@@ -281,14 +268,12 @@ local success, guiError = pcall(function()
                 return
             end
             url = url .. fileName
-            print("🔧 Attempting to load script from:", url)
 
             local success, result = pcall(function()
                 local scriptContent = game:HttpGet(url)
                 if not scriptContent or scriptContent == "" then
                     error("Empty or invalid script content for " .. gameName .. " at " .. url)
                 end
-                print("🔧 Script content fetched for", gameName)
                 return loadstring(scriptContent)()
             end)
 
@@ -305,13 +290,11 @@ local success, guiError = pcall(function()
                     Text = "✅ " .. gameName .. " script successfully executed!",
                     Duration = 5
                 })
-                print("🔧 Script executed successfully for", gameName)
             end
         end)
     end
 
     ListFrame.CanvasSize = UDim2.new(0, 0, 0, buttonCount * (34 + UIListLayout.Padding.Offset))
-    print("🔧 GUI initialization complete, buttons created:", buttonCount)
 end)
 
 if not success then
