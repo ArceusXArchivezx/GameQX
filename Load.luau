@@ -47,6 +47,7 @@ local GameScripts = {
     ["Green Bean Tower Huge"] = "Titanora.luau",
     ["Green Bean Tower Green"] = "Infinitrix.luau",
     ["SAMMY VS JANDEL TOWER"] = "Veylthar.luau",
+    ["Green Bean Tower Team"] = "Obliviron.luau",
 }
 
 local success, guiError = pcall(function()
