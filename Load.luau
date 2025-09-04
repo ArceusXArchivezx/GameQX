@@ -46,6 +46,7 @@ local GameScripts = {
     ["Shrink Ray Tower"] = "Eternaxis.luau",
     ["Green Bean Tower Huge"] = "Titanora.luau",
     ["Green Bean Tower Green"] = "Infinitrix.luau",
+    ["SAMMY VS JANDEL TOWER"] = "Veylthar.luau",
 }
 
 local success, guiError = pcall(function()
