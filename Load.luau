@@ -46,7 +46,7 @@ local GameScripts = {
     ["Tower For Admin 2"] = "Primordius.luau",
     ["Shrink Ray Tower"] = "Eternaxis.luau",
     ["Green Bean Tower Huge"] = "Titanora.luau",
-    ["Green Bean Tower New"] = "Infinitrix.luau",
+    ["Green Bean Tower Green"] = "Infinitrix.luau",
 }
 
 -- Initialize GUI with error handling
