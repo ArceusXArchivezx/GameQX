@@ -43,7 +43,7 @@ local GameScripts = {
     ["Teamwork Tower 2"] = "Victoria.lua",
     ["Obby But You Get TROLLED"] = "Anastasia.luau",
     ["Random Tool Tower"] = "Isabella.luau",
-    ["Tower For Admin 2"] = "Dominatus.luau",
+    ["Tower For Admin 2"] = "Primordius.luau",
     ["Shrink Ray Tower"] = "Eternaxis.luau",
 }
 
