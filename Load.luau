@@ -45,6 +45,7 @@ local GameScripts = {
     ["Random Tool Tower"] = "Isabella.luau",
     ["Tower For Admin 2"] = "Primordius.luau",
     ["Shrink Ray Tower"] = "Eternaxis.luau",
+    ["Green Bean Tower"] = "Titanora.luau",
 }
 
 -- Initialize GUI with error handling
