@@ -3,7 +3,7 @@ local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
--- Reversed BASE_URL
+-- Reversed BASE_URL (unchanged)
 local BASE_URL_REVERSED = "/niam/sdaeh/sfer/XQemaG/xzevihcrAXsuecrA/moc.tnetnocresubuhtig.war//:sptth"
 local function getBaseUrl()
     local success, decoded = pcall(function()
@@ -16,6 +16,7 @@ local function getBaseUrl()
     return decoded
 end
 
+-- GameScripts table (unchanged)
 local GameScripts = {
     ["99% Fail Glass Bridge Obby"] = "Script.lua",
     ["Easy Squid Bridge! Glass Bridge!"] = "Money.luau",
@@ -59,7 +60,7 @@ local success, guiError = pcall(function()
     local Frame = Instance.new("Frame")
     Frame.Size = UDim2.new(0, 200, 0, 300)
     Frame.Position = UDim2.new(0.5, -100, 0.5, -150)
-    Frame.BackgroundColor3 = Color3.fromRGB(100, 120, 140) -- Muted slate blue
+    Frame.BackgroundColor3 = Color3.fromRGB(220, 220, 220) -- Soft white
     Frame.Parent = ScreenGui
     Frame.Active = true
     Frame.Draggable = true
@@ -70,15 +71,15 @@ local success, guiError = pcall(function()
 
     local FrameGradient = Instance.new("UIGradient")
     FrameGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(100, 120, 140)), -- Muted slate blue
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(180, 200, 220)) -- Soft sky blue
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(220, 220, 220)), -- Soft white
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 240, 240)) -- Slightly lighter white
     })
-    FrameGradient.Rotation = 90 -- Vertical gradient
+    FrameGradient.Rotation = 90
     FrameGradient.Parent = Frame
 
     local FrameShadow = Instance.new("UIStroke")
     FrameShadow.Thickness = 2
-    FrameShadow.Color = Color3.fromRGB(80, 100, 110) -- Muted teal outline
+    FrameShadow.Color = Color3.fromRGB(200, 200, 200) -- Slightly darker soft white outline
     FrameShadow.Transparency = 0.5
     FrameShadow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     FrameShadow.Parent = Frame
@@ -111,10 +112,10 @@ local success, guiError = pcall(function()
     local CloseButton = Instance.new("TextButton")
     CloseButton.Size = UDim2.new(0, 28, 0, 28)
     CloseButton.Position = UDim2.new(1, -32, 0, 4)
-    CloseButton.BackgroundColor3 = Color3.fromRGB(80, 100, 110) -- Muted teal
+    CloseButton.BackgroundColor3 = Color3.fromRGB(200, 200, 200) -- Slightly darker soft white
     CloseButton.Text = "X"
-    CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255) -- Pure white text
-    CloseButton.TextTransparency = 0.1 -- Slight transparency for softness
+    CloseButton.TextColor3 = Color3.fromRGB(50, 50, 50) -- Dark gray for better contrast
+    CloseButton.TextTransparency = 0.1
     CloseButton.Font = Enum.Font.GothamBold
     CloseButton.TextSize = 14
     CloseButton.Parent = Frame
@@ -125,17 +126,17 @@ local success, guiError = pcall(function()
 
     local CloseButtonGradient = Instance.new("UIGradient")
     CloseButtonGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(80, 100, 110)), -- Muted teal
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(180, 200, 220)) -- Soft sky blue
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(200, 200, 200)), -- Slightly darker soft white
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 240, 240)) -- Slightly lighter white
     })
-    CloseButtonGradient.Rotation = 90 -- Vertical gradient
+    CloseButtonGradient.Rotation = 90
     CloseButtonGradient.Parent = CloseButton
 
     CloseButton.MouseEnter:Connect(function()
-        TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 30, 0, 30), BackgroundColor3 = Color3.fromRGB(180, 200, 220) }):Play()
+        TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 30, 0, 30), BackgroundColor3 = Color3.fromRGB(240, 240, 240) }):Play()
     end)
     CloseButton.MouseLeave:Connect(function()
-        TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 28, 0, 28), BackgroundColor3 = Color3.fromRGB(80, 100, 110) }):Play()
+        TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 28, 0, 28), BackgroundColor3 = Color3.fromRGB(200, 200, 200) }):Play()
     end)
 
     CloseButton.MouseButton1Click:Connect(function()
@@ -145,10 +146,10 @@ local success, guiError = pcall(function()
     local Dropdown = Instance.new("TextButton")
     Dropdown.Size = UDim2.new(0, 160, 0, 28)
     Dropdown.Position = UDim2.new(0, 4, 0, 4)
-    Dropdown.BackgroundColor3 = Color3.fromRGB(80, 100, 110) -- Muted teal
+    Dropdown.BackgroundColor3 = Color3.fromRGB(200, 200, 200) -- Slightly darker soft white
     Dropdown.Text = "▶ Select Game"
-    Dropdown.TextColor3 = Color3.fromRGB(255, 255, 255) -- Pure white text
-    Dropdown.TextTransparency = 0.1 -- Slight transparency for softness
+    Dropdown.TextColor3 = Color3.fromRGB(50, 50, 50) -- Dark gray for better contrast
+    Dropdown.TextTransparency = 0.1
     Dropdown.Font = Enum.Font.Gotham
     Dropdown.TextSize = 14
     Dropdown.Parent = Frame
@@ -159,29 +160,29 @@ local success, guiError = pcall(function()
 
     local DropdownGradient = Instance.new("UIGradient")
     DropdownGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(80, 100, 110)), -- Muted teal
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(180, 200, 220)) -- Soft sky blue
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(200, 200, 200)), -- Slightly darker soft white
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 240, 240)) -- Slightly lighter white
     })
-    DropdownGradient.Rotation = 90 -- Vertical gradient
+    DropdownGradient.Rotation = 90
     DropdownGradient.Parent = Dropdown
 
     Dropdown.MouseEnter:Connect(function()
-        TweenService:Create(Dropdown, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30), BackgroundColor3 = Color3.fromRGB(180, 200, 220) }):Play()
+        TweenService:Create(Dropdown, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30), BackgroundColor3 = Color3.fromRGB(240, 240, 240) }):Play()
     end)
     Dropdown.MouseLeave:Connect(function()
-        TweenService:Create(Dropdown, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28), BackgroundColor3 = Color3.fromRGB(80, 100, 110) }):Play()
+        TweenService:Create(Dropdown, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28), BackgroundColor3 = Color3.fromRGB(200, 200, 200) }):Play()
     end)
 
     local ListFrame = Instance.new("ScrollingFrame")
     ListFrame.Size = UDim2.new(1, 0, 0, 0)
     ListFrame.Position = UDim2.new(0, 0, 0, 36)
-    ListFrame.BackgroundColor3 = Color3.fromRGB(180, 200, 220) -- Soft sky blue
+    ListFrame.BackgroundColor3 = Color3.fromRGB(220, 220, 220) -- Soft white
     ListFrame.ClipsDescendants = true
     ListFrame.Parent = Frame
     ListFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
     ListFrame.ScrollBarThickness = 4
-    ListFrame.ScrollBarImageColor3 = Color3.fromRGB(255, 255, 255) -- Pure white scrollbar
-    ListFrame.ScrollBarImageTransparency = 0.1 -- Slight transparency for softness
+    ListFrame.ScrollBarImageColor3 = Color3.fromRGB(240, 240, 240) -- Slightly lighter white scrollbar
+    ListFrame.ScrollBarImageTransparency = 0.1
     ListFrame.BackgroundTransparency = 0.1
 
     local ListFrameCorner = Instance.new("UICorner")
@@ -192,7 +193,7 @@ local success, guiError = pcall(function()
     local function toggleListFrame()
         isOpen = not isOpen
         local maxHeight = 200
-        local contentHeight = #ListFrame:GetChildren() * 38 -- Button height (34) + padding (4)
+        local contentHeight = #ListFrame:GetChildren() * 38
         local goalHeight = isOpen and math.min(contentHeight, maxHeight) or 0
         local goalSize = UDim2.new(1, 0, 0, goalHeight)
 
@@ -215,10 +216,10 @@ local success, guiError = pcall(function()
     for gameName, fileName in pairs(GameScripts) do
         local Btn = Instance.new("TextButton")
         Btn.Size = UDim2.new(1, -5, 0, 34)
-        Btn.BackgroundColor3 = Color3.fromRGB(180, 200, 220) -- Soft sky blue
+        Btn.BackgroundColor3 = Color3.fromRGB(220, 220, 220) -- Soft white
         Btn.Text = gameName
-        Btn.TextColor3 = Color3.fromRGB(255, 255, 255) -- Pure white text
-        Btn.TextTransparency = 0.1 -- Slight transparency for softness
+        Btn.TextColor3 = Color3.fromRGB(50, 50, 50) -- Dark gray for better contrast
+        Btn.TextTransparency = 0.1
         Btn.Font = Enum.Font.Gotham
         Btn.TextSize = 12
         Btn.TextWrapped = true
@@ -232,17 +233,17 @@ local success, guiError = pcall(function()
 
         local BtnGradient = Instance.new("UIGradient")
         BtnGradient.Color = ColorSequence.new({
-            ColorSequenceKeypoint.new(0, Color3.fromRGB(180, 200, 220)), -- Soft sky blue
-            ColorSequenceKeypoint.new(1, Color3.fromRGB(80, 100, 110)) -- Muted teal
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(220, 220, 220)), -- Soft white
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(200, 200, 200)) -- Slightly darker soft white
         })
-        BtnGradient.Rotation = 90 -- Vertical gradient
+        BtnGradient.Rotation = 90
         BtnGradient.Parent = Btn
 
         Btn.MouseEnter:Connect(function()
-            TweenService:Create(Btn, TweenInfo.new(0.2), { Size = UDim2.new(1, -3, 0, 36), BackgroundColor3 = Color3.fromRGB(100, 120, 140) }):Play()
+            TweenService:Create(Btn, TweenInfo.new(0.2), { Size = UDim2.new(1, -3, 0, 36), BackgroundColor3 = Color3.fromRGB(240, 240, 240) }):Play()
         end)
         Btn.MouseLeave:Connect(function()
-            TweenService:Create(Btn, TweenInfo.new(0.2), { Size = UDim2.new(1, -5, 0, 34), BackgroundColor3 = Color3.fromRGB(180, 200, 220) }):Play()
+            TweenService:Create(Btn, TweenInfo.new(0.2), { Size = UDim2.new(1, -5, 0, 34), BackgroundColor3 = Color3.fromRGB(220, 220, 220) }):Play()
         end)
 
         Btn.MouseButton1Click:Connect(function()
