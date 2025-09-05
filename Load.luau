@@ -52,6 +52,7 @@ local GameScripts = {
     ["Troll Smart IQ Tower"] = "Excalyros.luau",
     ["Grow Ray Tower"] = "Hyperionis.luau",
     ["Susu Tower"] = "Voragnar.luau",
+    ["Obby for Free Rewards"] = "Celesthor.luau",
 }
 
 local success, guiError = pcall(function()
