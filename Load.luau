@@ -53,6 +53,7 @@ local GameScripts = {
     ["Grow Ray Tower"] = "Hyperionis.luau",
     ["Susu Tower"] = "Voragnar.luau",
     ["Obby for Free Rewards"] = "Celesthor.luau",
+    ["Escape The Tsunami"] = "Drakonis Core.Moon",
 }
 
 local success, guiError = pcall(function()
