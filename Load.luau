@@ -62,6 +62,7 @@ local GameScripts = {
     ["Troll is a pin tower"] = "Magnus Rex.Moon",
     ["Super Lucky Block Tower"] = "Astravor.Moon",
     ["Prop Troll Tower"] = "Eternadrax.luau",
+    ["Wall Climb Tower"] = "Titanexus.Moon",
 }
 
 local success, guiError = pcall(function()
