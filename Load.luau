@@ -56,6 +56,7 @@ local GameScripts = {
     ["Escape The Tsunami"] = "Drakonis Core.Moon",
     ["Zipline Tower"] = "Solypharion.Moon",
     ["Troll Sleep Tower"] = "Zenithros.Moon",
+    ["Realrosa Tower"] = "OmegaDrax.Moon",
 }
 
 local success, guiError = pcall(function()
