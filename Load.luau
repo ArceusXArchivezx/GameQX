@@ -60,6 +60,7 @@ local GameScripts = {
     ["Fusion Troll Tower"] = "Colossara.Moon",
     ["Troll Easy Tower"] = "Supremara.Moon",
     ["Troll is a pin tower"] = "Magnus Rex.Moon",
+    ["Super Lucky Block Tower"] = "Astravor.Moon",
 }
 
 local success, guiError = pcall(function()
