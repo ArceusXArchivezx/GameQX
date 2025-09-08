@@ -65,6 +65,7 @@ local GameScripts = {
     ["Wall Climb Tower"] = "Titanexus.Moon",
     ["Experiment Troll Tower"] = "Kronarion.luau",
     ["Morph Tower"] = "Aethel.luau",
+    ["Size Troll Tower"] = "Aevum.Moon",
 }
 
 local success, guiError = pcall(function()
