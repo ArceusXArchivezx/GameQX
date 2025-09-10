@@ -69,6 +69,7 @@ local GameScripts = {
     ["STEAL COOKIES"] = "Aetherium.Moon",
     ["Banksy Troll Tower"] = "Akasha.lua",
     ["UNBOXING Troll Tower"] = "Alakir.luau",
+    ["(Tower 2) Wall Run Tower"] = "Alcyoneus.luau",
 }
 
 local success, guiError = pcall(function()
