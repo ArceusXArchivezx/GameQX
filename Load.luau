@@ -71,6 +71,7 @@ local GameScripts = {
     ["UNBOXING Troll Tower"] = "Alakir.luau",
     ["(Tower 2) Wall Run Tower"] = "Alcyoneus.luau",
     ["Tower Minigames"] = "Aldrazar.luau",
+    ["Super Green Bean Tower"] = "Almagest.luau",
 }
 
 local success, guiError = pcall(function()
