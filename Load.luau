@@ -72,6 +72,7 @@ local GameScripts = {
     ["(Tower 2) Wall Run Tower"] = "Alcyoneus.luau",
     ["Tower Minigames"] = "Aldrazar.luau",
     ["Super Green Bean Tower"] = "Almagest.luau",
+    ["RESCUE K-pop Demon Hunters Tower"] = "Ananta.Moon",
 }
 
 local success, guiError = pcall(function()
