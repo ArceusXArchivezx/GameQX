@@ -92,7 +92,7 @@ LoadingBarCorner.CornerRadius = UDim.new(0, 8)
 -- Animasi Loading Bar
 local TweenService = game:GetService("TweenService")
 local tweenInfo = TweenInfo.new(
-    40, -- Durasi animasi diubah menjadi 50 detik
+    10, -- Durasi animasi diubah menjadi 50 detik
     Enum.EasingStyle.Sine, -- Gaya animasi lembut
     Enum.EasingDirection.InOut,
     0, -- Jumlah pengulangan
@@ -102,7 +102,7 @@ local tweenInfo = TweenInfo.new(
 local tween = TweenService:Create(LoadingBar, tweenInfo, {Size = UDim2.new(1, -20, 1, 0)})
 tween:Play()
 
-task.wait(40) -- Menyesuaikan waktu tunggu dengan durasi animasi
+task.wait(10) -- Menyesuaikan waktu tunggu dengan durasi animasi
 ScreenGui:Destroy()
 
 if Status == "ONLINE" then
