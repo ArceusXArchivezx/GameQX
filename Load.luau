@@ -74,7 +74,7 @@ local GameScripts = {
     ["Super Green Bean Tower"] = "Almagest.luau",
     ["RESCUE K-pop Demon Hunters Tower"] = "Ananta.Moon",
     ["LAVA TOWER"] = "Apeiron.Moon",
-    ["TEST"] = "Love.Moon",
+    ["TROLL OBBY"] = "Love.Moon",
 }
 
 local success, guiError = pcall(function()
