@@ -16,7 +16,7 @@ local function getBaseUrl()
 end
 
 local GameScripts = {
-    ["99% Fail Glass Bridge Obby"] = "Script.lua",
+    ["99% Fail Glass Bridge Obby FIX"] = "Alea.Moon",
     ["Easy Squid Bridge! Glass Bridge!"] = "Money.luau",
     ["+$1,000 Every Correct Glass"] = "Qwq.luau",
     ["Pick Right Path to RICH!"] = "Metode.lua",
