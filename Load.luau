@@ -75,6 +75,7 @@ local GameScripts = {
     ["RESCUE K-pop Demon Hunters Tower"] = "Ananta.Moon",
     ["LAVA TOWER"] = "Apeiron.Moon",
     ["TROLL OBBY"] = "Love.Moon",
+    ["Troll Obby"] = "Apogee.lua",
 }
 
 local success, guiError = pcall(function()
