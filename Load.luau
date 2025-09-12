@@ -78,6 +78,7 @@ local GameScripts = {
     ["Troll Obby"] = "Apogee.lua",
     ["Infinite Giga Jump Troll Tower"] = "Arcanix.Moon",
     ["Build a Zoo(Season One)"] = "Arclight.Moon",
+    ["Skaters Of Hell"] = "Aethra.Moon",
 }
 
 local success, guiError = pcall(function()
