@@ -80,6 +80,7 @@ local GameScripts = {
     ["Build a Zoo(Season One)"] = "Arclight.Moon",
     ["Skaters Of Hell"] = "Aethra.Moon",
     ["Pogo Obby"] = "Astraeus.N",
+    ["Obby But You're Cursed"] = "Avalon.N",
 }
 
 local success, guiError = pcall(function()
