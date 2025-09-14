@@ -1,6 +1,6 @@
-local Status = "OFFLINE" -- "ONLINE" / "OFFLINE"
+local Status = "ONLINE" -- "ONLINE" / "OFFLINE"
 local NoteType = "WARNING" -- Bisa WARNING / INFO / NOTICE
-local Reason = "This Is In It's Down" -- Ubah sesuai kebutuhan
+local Reason = "This Is In Working Mode" -- Ubah sesuai kebutuhan
 
 local ScriptToRun = function()
     print("Done")
