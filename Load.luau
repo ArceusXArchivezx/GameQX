@@ -81,6 +81,7 @@ local GameScripts = {
     ["Skaters Of Hell"] = "Aethra.Moon",
     ["Pogo Obby"] = "Astraeus.N",
     ["Obby But You're Cursed"] = "Avalon.N",
+    ["Gravity Coil Tower"] = "Axanar.n",
 }
 
 local success, guiError = pcall(function()
