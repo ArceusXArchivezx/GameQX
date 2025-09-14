@@ -83,6 +83,7 @@ local GameScripts = {
     ["Obby But You're Cursed"] = "Avalon.N",
     ["Gravity Coil Tower"] = "Axanar.n",
     ["Speed Run to VIP Obby"] = "Azimuth.LOVE",
+    ["Roller Skate Legends"] = "Belexus.Moon",
 }
 
 local success, guiError = pcall(function()
