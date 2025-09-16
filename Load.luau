@@ -85,6 +85,7 @@ local GameScripts = {
     ["Speed Run to VIP Obby"] = "Azimuth.LOVE",
     ["Roller Skate Legends"] = "Belexus.Moon",
     ["MrBeast Tower"] = "Dragon.lua",
+    ["Rope Swing Obby"] = "HoleH.N",
 }
 
 local success, guiError = pcall(function()
