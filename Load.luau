@@ -86,6 +86,7 @@ local GameScripts = {
     ["Roller Skate Legends"] = "Belexus.Moon",
     ["MrBeast Tower"] = "Dragon.lua",
     ["Rope Swing Obby"] = "HoleH.N",
+    ["Swing Obby"] = "Draconis Astra.Lua",
 }
 
 local success, guiError = pcall(function()
