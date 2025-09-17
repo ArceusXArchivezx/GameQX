@@ -88,6 +88,7 @@ local GameScripts = {
     ["Rope Swing Obby"] = "HoleH.N",
     ["Swing Obby"] = "Draconis Astra.Lua",
     ["Floor is Lava Tower"] = "Ignis Celestia.lua",
+    ["Easy Color Switch Obby"] = "Astraghon.Lua",
 }
 
 local success, guiError = pcall(function()
