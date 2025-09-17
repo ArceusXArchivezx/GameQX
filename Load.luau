@@ -87,6 +87,7 @@ local GameScripts = {
     ["MrBeast Tower"] = "Dragon.lua",
     ["Rope Swing Obby"] = "HoleH.N",
     ["Swing Obby"] = "Draconis Astra.Lua",
+    ["Floor is Lava Tower"] = "Ignis Celestia.lua",
 }
 
 local success, guiError = pcall(function()
