@@ -91,6 +91,7 @@ local GameScripts = {
     ["Easy Color Switch Obby"] = "Astraghon.Lua",
     ["Ultimate Rainbow Obby"] = "Caelumdraco.lua",
     ["Kawaii Tower 2"] = "Solardrakon.lua",
+    ["Color Troll Tower"] = "Cosmydrax.lua",
 }
 
 local success, guiError = pcall(function()
