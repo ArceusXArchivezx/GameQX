@@ -89,6 +89,7 @@ local GameScripts = {
     ["Swing Obby"] = "Draconis Astra.Lua",
     ["Floor is Lava Tower"] = "Ignis Celestia.lua",
     ["Easy Color Switch Obby"] = "Astraghon.Lua",
+    ["Ultimate Rainbow Obby"] = "Caelumdraco.lua",
 }
 
 local success, guiError = pcall(function()
