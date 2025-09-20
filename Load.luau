@@ -95,6 +95,7 @@ local GameScripts = {
     ["EXTREME Slap Tower"] = "Galaxion.Moon",
     ["Random Ability Tower"] = "Orbis Draco.Moon",
     ["Jump Into Team Green Bean"] = "Stellardrake.Moon",
+    ["Mrbeast's Deadly Obby"] = "Voidwyrm.Moon",
 }
 
 local success, guiError = pcall(function()
