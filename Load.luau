@@ -94,6 +94,7 @@ local GameScripts = {
     ["Color Troll Tower"] = "Cosmydrax.lua",
     ["EXTREME Slap Tower"] = "Galaxion.Moon",
     ["Random Ability Tower"] = "Orbis Draco.Moon",
+    ["Jump Into Team Green Bean"] = "Stellardrake.Moon",
 }
 
 local success, guiError = pcall(function()
