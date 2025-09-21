@@ -97,6 +97,7 @@ local GameScripts = {
     ["Jump Into Team Green Bean"] = "Stellardrake.Moon",
     ["Mrbeast's Deadly Obby"] = "Voidwyrm.Moon",
     ["AURA FARM TOWER"] = "Lunardracarys.Moon",
+    ["Brainrot Camo Troll Tower"] = "Nebulonax.Moon",
 }
 
 local success, guiError = pcall(function()
