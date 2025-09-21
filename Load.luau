@@ -98,6 +98,7 @@ local GameScripts = {
     ["Mrbeast's Deadly Obby"] = "Voidwyrm.Moon",
     ["AURA FARM TOWER"] = "Lunardracarys.Moon",
     ["Brainrot Camo Troll Tower"] = "Nebulonax.Moon",
+    ["Draw Troll Tower"] = "Astralis Draco.Moon",
 }
 
 local success, guiError = pcall(function()
