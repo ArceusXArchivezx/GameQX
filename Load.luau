@@ -101,6 +101,7 @@ local GameScripts = {
     ["Draw Troll Tower"] = "Astralis Draco.Moon",
     ["Break Bones Tower"] = "Cometdrake",
     ["Ragdoll Physics Tower"] = "Solarion",
+    ["Rizz Tower"] = "Terraghon.Moon",
 }
 
 local success, guiError = pcall(function()
