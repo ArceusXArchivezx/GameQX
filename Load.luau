@@ -99,6 +99,7 @@ local GameScripts = {
     ["AURA FARM TOWER"] = "Lunardracarys.Moon",
     ["Brainrot Camo Troll Tower"] = "Nebulonax.Moon",
     ["Draw Troll Tower"] = "Astralis Draco.Moon",
+    ["Break Bones Tower"] = "Cometdrake",
 }
 
 local success, guiError = pcall(function()
