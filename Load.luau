@@ -107,6 +107,7 @@ local GameScripts = {
     ["Hug a Troll Tower"] = "Drakkar",
     ["Portal Gun Tower"] = "Smaug",
     ["Don't Get Crushed Tower"] = "Fafnir",
+    ["Break Bones Tower"] = "Bahamut",
 }
 
 local success, guiError = pcall(function()
