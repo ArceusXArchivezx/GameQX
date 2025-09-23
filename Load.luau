@@ -106,6 +106,7 @@ local GameScripts = {
     ["GRAB"] = "Vermithrax",
     ["Hug a Troll Tower"] = "Drakkar",
     ["Portal Gun Tower"] = "Smaug",
+    ["Don't Get Crushed Tower"] = "Fafnir",
 }
 
 local success, guiError = pcall(function()
