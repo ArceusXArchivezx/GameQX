@@ -110,6 +110,7 @@ local GameScripts = {
     ["Break Bones Tower"] = "Bahamut",
     ["Cut Trees"] = "Tiamat",
     ["Portal Troll Tower"] = "Ancalagon",
+    ["Build A Beehive"] = "Glaurung",
 }
 
 local success, guiError = pcall(function()
