@@ -107,6 +107,7 @@ local GameScripts = {
     ["🌺 Build A Beehive【New Flowers】"] = "Glaurung",
     ["Escape 99 Nights in the Forest Tower"] = "Sancellar",
     ["Escape from TungTung's Tower🧠"] = "Pyrausta",
+    ["Don't Wake The Rainbow Friends"] = "Ouroboros",
 }
 
 local success, guiError = pcall(function()
