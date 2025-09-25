@@ -110,6 +110,7 @@ local GameScripts = {
     ["Don't Wake The Rainbow Friends"] = "Ouroboros",
     ["[NEW!] Don't Wake The Baddies!"] = "Vritra",
     ["PacMan Survival!"] = "Ladon",
+    ["Don't Wake the 99 Nights in the Forest!"] = "Nidhogg",
 }
 
 local success, guiError = pcall(function()
