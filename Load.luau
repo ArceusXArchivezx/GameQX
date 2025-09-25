@@ -108,6 +108,7 @@ local GameScripts = {
     ["Escape 99 Nights in the Forest Tower"] = "Sancellar",
     ["Escape from TungTung's Tower🧠"] = "Pyrausta",
     ["Don't Wake The Rainbow Friends"] = "Ouroboros",
+    ["[NEW!] Don't Wake The Baddies!"] = "Vritra",
 }
 
 local success, guiError = pcall(function()
