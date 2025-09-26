@@ -113,6 +113,7 @@ local GameScripts = {
     ["Don't Wake the 99 Nights in the Forest!"] = "Nidhogg",
     ["Don't Wake the Alien Brainrots!"] = "Quetzalcoatl",
     ["Endless Escape"] = "Ryujin",
+    ["[🤪67] Shred a Brainrot"] = "Shenlong",
 }
 
 local success, guiError = pcall(function()
