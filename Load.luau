@@ -112,6 +112,7 @@ local GameScripts = {
     ["PacMan Survival!"] = "Ladon",
     ["Don't Wake the 99 Nights in the Forest!"] = "Nidhogg",
     ["Don't Wake the Alien Brainrots!"] = "Quetzalcoatl",
+    ["Endless Escape"] = "Ryujin",
 }
 
 local success, guiError = pcall(function()
