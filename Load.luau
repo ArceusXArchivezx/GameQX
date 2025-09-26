@@ -115,6 +115,7 @@ local GameScripts = {
     ["Endless Escape"] = "Ryujin",
     ["[🤪67] Shred a Brainrot"] = "Shenlong",
     ["💀 RIP BRAINROT"] = "Zmey",
+    ["🌈 Chill Rainbow Tower Obby (400+ Levels)"] = "Apep",
 }
 
 local success, guiError = pcall(function()
