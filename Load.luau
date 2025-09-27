@@ -116,6 +116,7 @@ local GameScripts = {
     ["[🤪67] Shred a Brainrot"] = "Shenlong",
     ["💀 RIP BRAINROT"] = "Zmey",
     ["🌈 Chill Rainbow Tower Obby (400+ Levels)"] = "Apep",
+    ["🍌Tower Of Banana - Tower Of Hell"] = "Leviathan",
 }
 
 local success, guiError = pcall(function()
