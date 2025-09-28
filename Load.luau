@@ -120,6 +120,7 @@ local GameScripts = {
     ["Freeze Troll Tower 🧊"] = "Wyrm",
     ["Be a Beggar!"] = "Cailleach",
     ["67 Slap Tower [NEW MOVES] ☠️🥭"] = "Orochi",
+    ["[🐲] Your Goblin Mine! 💰"] = "Falkor",
 }
 
 local success, guiError = pcall(function()
