@@ -118,6 +118,7 @@ local GameScripts = {
     ["🌈 Chill Rainbow Tower Obby (400+ Levels)"] = "Apep",
     ["🍌Tower Of Banana - Tower Of Hell"] = "Leviathan",
     ["Freeze Troll Tower 🧊"] = "Wyrm",
+    ["Be a Beggar!"] = "Cailleach",
 }
 
 local success, guiError = pcall(function()
