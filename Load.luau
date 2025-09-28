@@ -119,6 +119,7 @@ local GameScripts = {
     ["🍌Tower Of Banana - Tower Of Hell"] = "Leviathan",
     ["Freeze Troll Tower 🧊"] = "Wyrm",
     ["Be a Beggar!"] = "Cailleach",
+    ["67 Slap Tower [NEW MOVES] ☠️🥭"] = "Orochi",
 }
 
 local success, guiError = pcall(function()
