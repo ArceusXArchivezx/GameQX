@@ -121,6 +121,7 @@ local GameScripts = {
     ["Be a Beggar!"] = "Cailleach",
     ["67 Slap Tower [NEW MOVES] ☠️🥭"] = "Orochi",
     ["[🐲] Your Goblin Mine! 💰"] = "Falkor",
+    ["[UPD] Don't Wake The Gardener 🍅"] = "Draco",
 }
 
 local success, guiError = pcall(function()
