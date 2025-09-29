@@ -122,6 +122,7 @@ local GameScripts = {
     ["67 Slap Tower [NEW MOVES] ☠️🥭"] = "Orochi",
     ["[🐲] Your Goblin Mine! 💰"] = "Falkor",
     ["[UPD] Don't Wake The Gardener 🍅"] = "Draco",
+    ["+1 Speed Gym Escape! 💪"] = "Norbert",
 }
 
 local success, guiError = pcall(function()
