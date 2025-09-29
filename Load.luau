@@ -123,6 +123,7 @@ local GameScripts = {
     ["[🐲] Your Goblin Mine! 💰"] = "Falkor",
     ["[UPD] Don't Wake The Gardener 🍅"] = "Draco",
     ["+1 Speed Gym Escape! 💪"] = "Norbert",
+    ["+1 Speed Troll Escape"] = "Saphira",
 }
 
 local success, guiError = pcall(function()
