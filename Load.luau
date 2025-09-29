@@ -124,6 +124,7 @@ local GameScripts = {
     ["[UPD] Don't Wake The Gardener 🍅"] = "Draco",
     ["+1 Speed Gym Escape! 💪"] = "Norbert",
     ["+1 Speed Troll Escape"] = "Saphira",
+    ["Climb a Tower"] = "Kalessin",
 }
 
 local success, guiError = pcall(function()
