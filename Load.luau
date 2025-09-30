@@ -127,6 +127,7 @@ local GameScripts = {
     ["Climb a Tower"] = "Kalessin",
     ["[🦖] Animal Training ⭐️ [Jurassic World🦕]"] = "Puff",
     ["Teleport Troll Tower"] = "Maleficent",
+    ["Don't Get Crushed By a Giant Rock 🪨"] = "Toothless",
 }
 
 local success, guiError = pcall(function()
