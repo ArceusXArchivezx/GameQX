@@ -125,6 +125,7 @@ local GameScripts = {
     ["+1 Speed Gym Escape! 💪"] = "Norbert",
     ["+1 Speed Troll Escape"] = "Saphira",
     ["Climb a Tower"] = "Kalessin",
+    ["[🦖] Animal Training ⭐️ [Jurassic World🦕]"] = "Puff",
 }
 
 local success, guiError = pcall(function()
