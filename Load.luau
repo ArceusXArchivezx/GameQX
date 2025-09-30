@@ -126,6 +126,7 @@ local GameScripts = {
     ["+1 Speed Troll Escape"] = "Saphira",
     ["Climb a Tower"] = "Kalessin",
     ["[🦖] Animal Training ⭐️ [Jurassic World🦕]"] = "Puff",
+    ["Teleport Troll Tower"] = "Maleficent",
 }
 
 local success, guiError = pcall(function()
