@@ -102,7 +102,7 @@ local tweenInfo = TweenInfo.new(
 local tween = TweenService:Create(LoadingBar, tweenInfo, {Size = UDim2.new(1, -20, 1, 0)})
 tween:Play()
 
-task.wait(10) -- Menyesuaikan waktu tunggu dengan durasi animasi
+task.wait(1) -- Menyesuaikan waktu tunggu dengan durasi animasi
 ScreenGui:Destroy()
 
 if Status == "ONLINE" then
