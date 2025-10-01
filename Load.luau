@@ -129,6 +129,7 @@ local GameScripts = {
     ["Teleport Troll Tower"] = "Maleficent",
     ["Don't Get Crushed By a Giant Rock 🪨"] = "Toothless",
     ["[UPD2]⚡99 Nights Forest Escape[+1 Speed]"] = "Elliot",
+    ["Find The Pets [72]"] = "Figment",
 }
 
 local success, guiError = pcall(function()
