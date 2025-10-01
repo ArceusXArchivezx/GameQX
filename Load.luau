@@ -130,6 +130,7 @@ local GameScripts = {
     ["Don't Get Crushed By a Giant Rock 🪨"] = "Toothless",
     ["[UPD2]⚡99 Nights Forest Escape[+1 Speed]"] = "Elliot",
     ["Find The Pets [72]"] = "Figment",
+    ["Escape Green Bean"] = "Charizard",
 }
 
 local success, guiError = pcall(function()
