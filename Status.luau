@@ -1,6 +1,6 @@
 local Status = "ONLINE" -- "ONLINE" / "OFFLINE"
 local NoteType = "NOTE" -- Bisa WARNING / INFO / NOTICE
-local Reason = "Hi Senpei :3" -- Ubah sesuai kebutuhan
+local Reason = "I Just Want to Cry" -- Ubah sesuai kebutuhan
 
 local ScriptToRun = function()
     print("Done")
