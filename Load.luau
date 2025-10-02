@@ -140,8 +140,8 @@ local success, guiError = pcall(function()
     ScreenGui.Parent = Players.LocalPlayer and Players.LocalPlayer.PlayerGui or game.CoreGui
 
     local Frame = Instance.new("Frame")
-    Frame.Size = UDim2.new(0, 200, 0, 100) -- Adjusted height for TextBox and one button
-    Frame.Position = UDim2.new(0.5, -100, 0.5, -50)
+    Frame.Size = UDim2.new(0, 200, 0, 132) -- Adjusted height for TextBox and two buttons
+    Frame.Position = UDim2.new(0.5, -100, 0.5, -66)
     Frame.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
     Frame.Parent = ScreenGui
     Frame.Active = true
@@ -286,6 +286,37 @@ local success, guiError = pcall(function()
         TweenService:Create(AutoFoundButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28), BackgroundColor3 = Color3.fromRGB(200, 200, 200) }):Play()
     end)
 
+    local PremiumButton = Instance.new("TextButton")
+    PremiumButton.Size = UDim2.new(0, 160, 0, 28)
+    PremiumButton.Position = UDim2.new(0, 4, 0, 68)
+    PremiumButton.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+    PremiumButton.Text = "Tired of Getting Key?, Buy Premium"
+    PremiumButton.TextColor3 = Color3.fromRGB(50, 50, 50)
+    PremiumButton.TextTransparency = 0.1
+    PremiumButton.Font = Enum.Font.Gotham
+    PremiumButton.TextSize = 12 -- Slightly smaller to fit longer text
+    PremiumButton.TextWrapped = true
+    PremiumButton.Parent = Frame
+
+    local PremiumButtonCorner = Instance.new("UICorner")
+    PremiumButtonCorner.CornerRadius = UDim.new(0, 6)
+    PremiumButtonCorner.Parent = PremiumButton
+
+    local PremiumButtonGradient = Instance.new("UIGradient")
+    PremiumButtonGradient.Color = ColorSequence.new({
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(200, 200, 200)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 240, 240))
+    })
+    PremiumButtonGradient.Rotation = 90
+    PremiumButtonGradient.Parent = PremiumButton
+
+    PremiumButton.MouseEnter:Connect(function()
+        TweenService:Create(PremiumButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30), BackgroundColor3 = Color3.fromRGB(240, 240, 240) }):Play()
+    end)
+    PremiumButton.MouseLeave:Connect(function()
+        TweenService:Create(PremiumButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28), BackgroundColor3 = Color3.fromRGB(200, 200, 200) }):Play()
+    end)
+
     local function executeScript(gameName)
         local fileName = GameScripts[gameName]
         if not fileName then
@@ -360,6 +391,14 @@ local success, guiError = pcall(function()
                 Duration = 5
             })
         end
+    end)
+
+    PremiumButton.MouseButton1Click:Connect(function()
+        StarterGui:SetCore("SendNotification", {
+            Title = "ArceusXNeo",
+            Text = "🌟 Get Premium to skip keys! Visit: https://theleviathan.my.canva.site/",
+            Duration = 7
+        })
     end)
 end)
 
