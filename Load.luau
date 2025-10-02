@@ -294,7 +294,7 @@ local success, guiError = pcall(function()
     PremiumButton.TextColor3 = Color3.fromRGB(50, 50, 50)
     PremiumButton.TextTransparency = 0.1
     PremiumButton.Font = Enum.Font.Gotham
-    PremiumButton.TextSize = 12 -- Slightly smaller to fit longer text
+    PremiumButton.TextSize = 12
     PremiumButton.TextWrapped = true
     PremiumButton.Parent = Frame
 
@@ -322,7 +322,7 @@ local success, guiError = pcall(function()
         if not fileName then
             warn("❌ No script found for", gameName)
             StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXNeo",
+                Title = "ArceusXArchive",
                 Text = "⚠️ No script available for " .. gameName,
                 Duration = 5
             })
@@ -334,7 +334,7 @@ local success, guiError = pcall(function()
         if not url then
             warn("❌ URL decoding failed")
             StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXNeo",
+                Title = "ArceusXArchive",
                 Text = "⚠️ Failed to load script: URL error.",
                 Duration = 5
             })
@@ -354,13 +354,13 @@ local success, guiError = pcall(function()
         if not success then
             warn("❌ Failed to load script for", gameName, ":", result)
             StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXNeo",
+                Title = "ArceusXArchive",
                 Text = "⚠️ Script Not Supported: " .. tostring(result),
                 Duration = 5
             })
         else
             StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXNeo",
+                Title = "ArceusXArchive",
                 Text = "✅ " .. gameName .. " script successfully executed!",
                 Duration = 5
             })
@@ -380,32 +380,45 @@ local success, guiError = pcall(function()
         if not successNekoi then
             warn("❌ Failed to load Nekoi script:", resultNekoi)
             StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXNeo",
+                Title = "ArceusXArchive",
                 Text = "⚠️ Failed to load Nekoi script: " .. tostring(resultNekoi),
                 Duration = 5
             })
         else
             StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXNeo",
-                Text = "✅ Nekoi script successfully executed!",
+                Title = "ArceusXArchive",
+                Text = "✅ successfully executed!",
                 Duration = 5
             })
         end
     end)
 
     PremiumButton.MouseButton1Click:Connect(function()
-        StarterGui:SetCore("SendNotification", {
-            Title = "ArceusXNeo",
-            Text = "🌟 Get Premium to skip keys! Visit: https://theleviathan.my.canva.site/",
-            Duration = 7
-        })
+        local premiumUrl = "https://theleviathan.my.canva.site/"
+        local success, errorMsg = pcall(function()
+            setclipboard(premiumUrl)
+        end)
+        if success then
+            StarterGui:SetCore("SendNotification", {
+                Title = "ArceusXArchive",
+                Text = "✅ Premium URL copied to clipboard!",
+                Duration = 5
+            })
+        else
+            warn("❌ Failed to copy Premium URL:", errorMsg)
+            StarterGui:SetCore("SendNotification", {
+                Title = "ArceusXArchive",
+                Text = "⚠️ Failed to copy Premium URL: " .. tostring(errorMsg),
+                Duration = 5
+            })
+        end
     end)
 end)
 
 if not success then
     warn("❌ GUI initialization failed:", guiError)
     StarterGui:SetCore("SendNotification", {
-        Title = "ArceusXNeo",
+        Title = "ArceusXArchive",
         Text = "⚠️ Failed to initialize GUI: " .. tostring(guiError),
         Duration = 5
     })
