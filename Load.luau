@@ -131,6 +131,7 @@ local GameScripts = {
     ["[UPD2]⚡99 Nights Forest Escape[+1 Speed]"] = "Elliot",
     ["Find The Pets [72]"] = "Figment",
     ["Escape Green Bean"] = "Charizard",
+    ["Survive Nightmare Deer"] = "Rathalos",
 }
 
 local success, guiError = pcall(function()
