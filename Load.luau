@@ -134,6 +134,7 @@ local GameScripts = {
     ["Survive Nightmare Deer"] = "Rathalos",
     ["[UPD] Escape from 99 Nights in the forest monster!"] = "Alduin",
     ["Escape The Lava 🔥"] = "Spyro",
+    ["⚡ Speed Runner!"] = "CyanBloodbane",
 }
 
 local success, guiError = pcall(function()
