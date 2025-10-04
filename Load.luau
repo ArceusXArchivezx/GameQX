@@ -135,6 +135,7 @@ local GameScripts = {
     ["[UPD] Escape from 99 Nights in the forest monster!"] = "Alduin",
     ["Escape The Lava 🔥"] = "Spyro",
     ["⚡ Speed Runner!"] = "CyanBloodbane",
+    ["The Obby Elevator [Beta]"] = "Khellendros",
 }
 
 local success, guiError = pcall(function()
