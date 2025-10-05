@@ -137,6 +137,7 @@ local GameScripts = {
     ["⚡ Speed Runner!"] = "CyanBloodbane",
     ["The Obby Elevator [Beta]"] = "Khellendros",
     ["Blocks Troll Tower"] = "Bheithir",
+    ["Hop Into 99 Nights in The Forest OWL!"] = "Grael",
 }
 
 local success, guiError = pcall(function()
