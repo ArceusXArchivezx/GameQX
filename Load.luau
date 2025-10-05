@@ -138,6 +138,7 @@ local GameScripts = {
     ["The Obby Elevator [Beta]"] = "Khellendros",
     ["Blocks Troll Tower"] = "Bheithir",
     ["Hop Into 99 Nights in The Forest OWL!"] = "Grael",
+    ["Don't Press The Button Furious Jumper"] = "Voltrex",
 }
 
 local success, guiError = pcall(function()
