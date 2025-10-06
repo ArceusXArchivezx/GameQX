@@ -139,6 +139,7 @@ local GameScripts = {
     ["Blocks Troll Tower"] = "Bheithir",
     ["Hop Into 99 Nights in The Forest OWL!"] = "Grael",
     ["Don't Press The Button Furious Jumper"] = "Voltrex",
+    ["Escape Running Felipe Head 2🏃‍♂️"] = "Ignacia",
 }
 
 local success, guiError = pcall(function()
