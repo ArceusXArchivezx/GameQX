@@ -140,6 +140,7 @@ local GameScripts = {
     ["Hop Into 99 Nights in The Forest OWL!"] = "Grael",
     ["Don't Press The Button Furious Jumper"] = "Voltrex",
     ["Escape Running Felipe Head 2🏃‍♂️"] = "Ignacia",
+    ["99 Nights in the Forest Jump Rope"] = "Terrox",
 }
 
 local success, guiError = pcall(function()
