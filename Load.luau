@@ -141,6 +141,7 @@ local GameScripts = {
     ["Don't Press The Button Furious Jumper"] = "Voltrex",
     ["Escape Running Felipe Head 2🏃‍♂️"] = "Ignacia",
     ["99 Nights in the Forest Jump Rope"] = "Terrox",
+    ["Brainrot Color Bridge"] = "Zephyros",
 }
 
 local success, guiError = pcall(function()
