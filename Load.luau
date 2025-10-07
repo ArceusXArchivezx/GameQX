@@ -142,6 +142,7 @@ local GameScripts = {
     ["Escape Running Felipe Head 2🏃‍♂️"] = "Ignacia",
     ["99 Nights in the Forest Jump Rope"] = "Terrox",
     ["Brainrot Color Bridge"] = "Zephyros",
+    ["99 Nights in the Forest Color Bridge"] = "Brume",
 }
 
 local success, guiError = pcall(function()
