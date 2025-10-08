@@ -146,6 +146,7 @@ local GameScripts = {
     ["Spring Troll Tower ⚙️"] = "Solarius",
     ["Become 99 Nights Monster [BOOK 2]"] = "Obsidian",
     ["[😂] 99 Nights Gun Tower"] = "Granite",
+    ["Cattos Lizard ATTACK RP (HALLOWEEN)"] = "Cinder",
 }
 
 local success, guiError = pcall(function()
