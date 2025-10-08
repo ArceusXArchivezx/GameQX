@@ -145,6 +145,7 @@ local GameScripts = {
     ["99 Nights in the Forest Color Bridge"] = "Brume",
     ["Spring Troll Tower ⚙️"] = "Solarius",
     ["Become 99 Nights Monster [BOOK 2]"] = "Obsidian",
+    ["[😂] 99 Nights Gun Tower"] = "Granite",
 }
 
 local success, guiError = pcall(function()
