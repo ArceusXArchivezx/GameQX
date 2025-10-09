@@ -149,6 +149,7 @@ local GameScripts = {
     ["Cattos Lizard ATTACK RP (HALLOWEEN)"] = "Cinder",
     ["Karkerkar Kurkur Tower"] = "Ember",
     ["Become Tiky and Everything Else Again"] = "Blaze",
+    ["[X3] Mount Serenity 🌸"] = "Inferno",
 }
 
 local success, guiError = pcall(function()
