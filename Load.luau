@@ -151,6 +151,7 @@ local GameScripts = {
     ["Become Tiky and Everything Else Again"] = "Blaze",
     ["[X3] Mount Serenity 🌸"] = "Inferno",
     ["[x5 EVENT] MOUNT FOREVER"] = "Frost",
+    ["[UPDATE] Mount Cow"] = "Glacier",
 }
 
 local success, guiError = pcall(function()
