@@ -152,6 +152,7 @@ local GameScripts = {
     ["[X3] Mount Serenity 🌸"] = "Inferno",
     ["[x5 EVENT] MOUNT FOREVER"] = "Frost",
     ["[UPDATE] Mount Cow"] = "Glacier",
+    ["[AURA!!🔥]🏔️ Mount Acariz"] = "Tempest",
 }
 
 local success, guiError = pcall(function()
