@@ -150,6 +150,7 @@ local GameScripts = {
     ["Karkerkar Kurkur Tower"] = "Ember",
     ["Become Tiky and Everything Else Again"] = "Blaze",
     ["[X3] Mount Serenity 🌸"] = "Inferno",
+    ["[x5 EVENT] MOUNT FOREVER"] = "Frost",
 }
 
 local success, guiError = pcall(function()
