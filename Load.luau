@@ -156,6 +156,7 @@ local GameScripts = {
     ["[Event 3x] Mount Garvix Beta [1.0]"] = "Cyclone",
     ["[Event X10] Mount Nowa"] = "Quake",
     ["[COIL + X2] Gunung Malaikat"] = "Abyss",
+    ["[BACK] Yahayuk Mount V.02"] = "Nadir",
 }
 
 local success, guiError = pcall(function()
