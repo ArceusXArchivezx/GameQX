@@ -154,6 +154,7 @@ local GameScripts = {
     ["[UPDATE] Mount Cow"] = "Glacier",
     ["[AURA!!🔥]🏔️ Mount Acarizz"] = "Tempest",
     ["[Event 3x] Mount Garvix Beta [1.0]"] = "Cyclone",
+    ["[Event X10] Mount Nowa"] = "Quake",
 }
 
 local success, guiError = pcall(function()
