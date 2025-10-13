@@ -160,6 +160,7 @@ local GameScripts = {
     ["Cheap HD Admin Troll Tower [3 Robux]"] = "Tremor",
     ["Cheap OP Admin Tower [3 Robux]"] = "Nebulor",
     ["[NEW🏝️] The Spirit of Wallhop Tower"] = "Quasarth",
+    ["[🎃] The Core of Wallhop Tower"] = "Pulsara",
 }
 
 local success, guiError = pcall(function()
