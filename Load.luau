@@ -159,6 +159,7 @@ local GameScripts = {
     ["[BACK] Yahayuk Mount V.02"] = "Nadir",
     ["Cheap HD Admin Troll Tower [3 Robux]"] = "Tremor",
     ["Cheap OP Admin Tower [3 Robux]"] = "Nebulor",
+    ["[NEW🏝️] The Spirit of Wallhop Tower"] = "Quasarth",
 }
 
 local success, guiError = pcall(function()
