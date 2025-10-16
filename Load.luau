@@ -16,152 +16,142 @@ local function getBaseUrl()
 end
 
 local GameScripts = {
-    ["99% Fail Glass Bridge Obby"] = "Alea.Moon",
-    ["Easy Squid Bridge! Glass Bridge!"] = "Money.luau",
-    ["+$1,000 Every Correct Glass"] = "Qwq.luau",
-    ["Legends Of Speed ⚡"] = "Terpercaya.lua",
-    ["⚡Ninja Legends"] = "Indo.lua",
-    ["K-Pop Demon Hunter Trolling Tower"] = "Clean.luau",
-    ["💸$15,000 Glass Bridge (Squid Game Obby) 📈"] = "Money1.luau",
-    ["Cross Glass Bridge to RICH!"] = "GV.lua",
-    ["$45,600 Jump Rope"] = "Roblox.lua",
-    ["Brookhaven 🏡RP"] = "12v.lua",
-    ["99 Nights in the Forest Glass Bridge"] = "Senpei.lua",
-    ["RUNAWAY JUMP ROPE"] = "Global.lua",
-    ["Hamood Habibi Tower 🎵"] = "Car.luau",
-    ["🎤KPop Demon Hunters Troll Tower💜"] = "Meyes.luau",
-    ["Labubu Glass Bridge"] = "Whoiam.luau",
-    ["Cross Invisible Path to MAGIC CARPET!"] = "Idkah.lua",
-    ["Color Block Run"] = "Noei.lua",
-    ["1% Win Obby"] = "Eeeeeeeeeeeee.luau",
-    ["IMPOSSIBLE Brainrot Glass Bridge"] = "iloveyou.lua",
-    ["Slap Glass Bridge"] = "Whoe.lua",
-    ["Troll Invisible Tower🖐️"] = "Zombie01.lua",
-    ["Teamwork Tower 2"] = "Victoria.lua",
-    ["[NEW] Obby But You Get TROLLED!"] = "Anastasia.luau",
-    ["Random Tool Tower🎲"] = "Isabella.luau",
-    ["Tower For Admin 2 😎"] = "Primordius.luau",
-    ["[🔫] Shrink Ray Tower"] = "Eternaxis.luau",
-    ["[🌱] Green Bean Tower (HUGE UPDATE)"] = "Titanora.luau",
-    ["SAMMY VS JANDEL TOWER! (HUGE UPDATE)"] = "Veylthar.luau",
-    ["UwU's Tower 💕"] = "Kronethys.luau",
-    ["Troll Smart IQ Tower 🧠"] = "Excalyros.luau",
-    ["Grow Ray Tower 📈"] = "Hyperionis.luau",
-    ["[UPDATE!] Susu Tower 🥛"] = "Voragnar.luau",
-    ["Obby For Free UGC 🎁"] = "Celesthor.luau",
-    ["Escape The Tsunami 🌊"] = "Drakonis Core.Moon",
-    ["Zipline Tower 😈"] = "Solypharion.Moon",
-    ["Troll Sleep Tower 🥱"] = "Zenithros.Moon",
-    ["Realrosa Tower [+Wallhop Practice]"] = "OmegaDrax.Moon",
-    ["Fusion Troll Tower"] = "Colossara.Moon",
-    ["Troll Easy Tower"] = "Supremara.Moon",
-    ["Troll is a pin tower"] = "Magnus Rex.Moon",
-    ["Super Lucky Block Tower"] = "Astravor.Moon",
-    ["Prop Troll Tower"] = "Eternadrax.luau",
-    ["Wall Climb Tower"] = "Titanexus.Moon",
-    ["Experiment Troll Tower"] = "Kronarion.luau",
-    ["[UPD] Morph Tower"] = "Aethel.luau",
-    ["[🎲] Size Troll Tower"] = "Aevum.Moon",
-    ["STEAL COOKIES🍪"] = "Aetherium.Moon",
-    ["Banksy Troll Tower ✋"] = "Akasha.lua",
-    ["UNBOXING Troll Tower"] = "Alakir.luau",
-    ["[🔫] Wall Run Tower"] = "Alcyoneus.luau",
-    ["Tower Minigames"] = "Aldrazar.luau",
-    ["Super Green Bean Tower 🌱"] = "Almagest.luau",
-    ["🎶RESCUE K-pop Demon Hunters Tower 🎶"] = "Ananta.Moon",
-    ["LAVA TOWER"] = "Apeiron.Moon",
-    ["TROLL OBBY"] = "Love.Moon",
-    ["Troll Obby"] = "Apogee.lua",
-    ["Infinite Giga Jump Troll Tower"] = "Arcanix.Moon",
-    ["❄️Build a Zoo[Snow]"] = "Arclight.Moon",
-    ["Skaters Of Hell"] = "Aethra.Moon",
-    ["[W11] Pogo Obby"] = "Astraeus.N",
-    ["[🌎W3] Obby But You're Cursed"] = "Avalon.N",
-    ["Gravity Coil Tower 🎈☂"] = "Axanar.n",
-    ["🏃‍♂️Speed Run to VIP Obby!!🏃‍♂️"] = "Azimuth.LOVE",
-    ["[UPD]Roller Skate Legends 🔥"] = "Belexus.Moon",
-    ["[💵] MrBeast Tower"] = "Dragon.lua",
-    ["[W10] Rope Swing Obby"] = "HoleH.N",
-    ["Swing Obby"] = "Draconis Astra.Lua",
-    ["🔥Floor is Lava Tower"] = "Ignis Celestia.lua",
-    ["Easy Color Switch Obby!"] = "Astraghon.Lua",
-    ["🌟Ultimate Rainbow Obby🌈"] = "Caelumdraco.lua",
-    ["Kawaii Tower 2"] = "Solardrakon.lua",
-    ["Color Troll Tower"] = "Cosmydrax.lua",
-    ["EXTREME Slap Tower 😈"] = "Galaxion.Moon",
-    ["Random Ability Tower"] = "Orbis Draco.Moon",
-    ["Jump Into Team Green Bean"] = "Stellardrake.Moon",
-    ["Mrbeast's Deadly Obby"] = "Voidwyrm.Moon",
-    ["AURA FARM TOWER"] = "Lunardracarys.Moon",
-    ["Brainrot Camo Troll Tower"] = "Nebulonax.Moon",
-    ["Draw Troll Tower"] = "Astralis Draco.Moon",
-    ["Ragdoll Physics Tower"] = "Solarion",
-    ["[UPD] Rizz Tower"] = "Terraghon.Moon",
-    ["JUMP Hug Tower! 🤗"] = "Ignis",
-    ["GRAB"] = "Vermithrax",
-    ["Hug a Troll Tower 💛"] = "Drakkar",
-    ["Don't Get Crushed Tower! 😈"] = "Fafnir",
-    ["Break Bones Tower"] = "Bahamut",
-    ["🌲 Cut Trees"] = "Tiamat",
-    ["Portal Gun Tower 🌀"] = "Ancalagon",
-    ["🌺 Build A Beehive【New Flowers】"] = "Glaurung",
-    ["Escape 99 Nights in the Forest Tower"] = "Sancellar",
-    ["Escape from TungTung's Tower🧠"] = "Pyrausta",
-    ["Don't Wake The Rainbow Friends"] = "Ouroboros",
-    ["[NEW!] Don't Wake The Baddies!"] = "Vritra",
-    ["PacMan Survival!"] = "Ladon",
-    ["Don't Wake the 99 Nights in the Forest!"] = "Nidhogg",
-    ["Don't Wake the Alien Brainrots!"] = "Quetzalcoatl",
-    ["Endless Escape"] = "Ryujin",
-    ["[🎁] Shred a Brainrot"] = "Shenlong",
-    ["💀 RIP BRAINROT"] = "Zmey",
-    ["🌈 Chill Rainbow Tower Obby (400+ Levels)"] = "Apep",
-    ["🍌Tower Of Banana - Tower Of Hell"] = "Leviathan",
-    ["Freeze Troll Tower 🧊"] = "Wyrm",
-    ["Be a Beggar!"] = "Cailleach",
-    ["67 Slap Tower [NEW MOVES] ☠️🥭"] = "Orochi",
-    ["[🐲] Your Goblin Mine! 💰"] = "Falkor",
-    ["[UPD] Don't Wake The Gardener 🍅"] = "Draco",
-    ["+1 Speed Gym Escape! 💪"] = "Norbert",
-    ["+1 Speed Troll Escape"] = "Saphira",
-    ["Climb a Tower"] = "Kalessin",
-    ["[⏳] Animal Training ⭐️ [🐰🚦🐢]"] = "Puff",
-    ["Teleport Troll Tower"] = "Maleficent",
-    ["Don't Get Crushed By a Giant Rock 🪨"] = "Toothless",
-    ["[UPD2]⚡99 Nights Forest Escape[+1 Speed]"] = "Elliot",
-    ["Find The Pets [72]"] = "Figment",
-    ["Escape Green Bean"] = "Charizard",
-    ["Survive Nightmare Deer"] = "Rathalos",
-    ["[UPD] Escape from 99 Nights in the forest monster!"] = "Alduin",
-    ["Escape The Lava 🔥"] = "Spyro",
-    ["⚡ Speed Runner!"] = "CyanBloodbane",
-    ["The Obby Elevator [Beta]"] = "Khellendros",
-    ["Blocks Troll Tower"] = "Bheithir",
-    ["Hop Into 99 Nights in The Forest OWL!"] = "Grael",
-    ["Don't Press The Button Furious Jumper"] = "Voltrex",
-    ["Escape Running Felipe Head 2🏃‍♂️"] = "Ignacia",
-    ["99 Nights in the Forest Jump Rope"] = "Terrox",
-    ["Brainrot Color Bridge"] = "Zephyros",
-    ["99 Nights in the Forest Color Bridge"] = "Brume",
-    ["Spring Troll Tower ⚙️"] = "Solarius",
-    ["Become 99 Nights Monster [BOOK 2]"] = "Obsidian",
-    ["[😂] 99 Nights Gun Tower"] = "Granite",
-    ["Cattos Lizard ATTACK RP (HALLOWEEN)"] = "Cinder",
-    ["Karkerkar Kurkur Tower"] = "Ember",
-    ["Become Tiky and Everything Else Again"] = "Blaze",
-    ["[X3] Mount Serenity 🌸"] = "Inferno",
-    ["[x5 EVENT] MOUNT FOREVER"] = "Frost",
-    ["[UPDATE] Mount Cow"] = "Glacier",
-    ["Xylophos"] = "Tempest",
-    ["[Event 3x] Mount Garvix Beta [1.0]"] = "Cyclone",
-    ["[Event X10] Mount Nowa"] = "Quake",
-    ["[COIL + X2] Gunung Malaikat"] = "Abyss",
-    ["[BACK] Yahayuk Mount V.02"] = "Nadir",
-    ["Cheap HD Admin Troll Tower [3 Robux]"] = "Tremor",
-    ["Cheap OP Admin Tower [3 Robux]"] = "Nebulor",
-    ["[NEW🏝️] The Spirit of Wallhop Tower"] = "Quasarth",
-    ["[🎃] The Core of Wallhop Tower"] = "Pulsara",
-    ["[🎃] Wall Hop Tower!"] = "Vel'kor",
+    ["10721852444"] = "Alea.Moon",
+    ["3101667897"] = "Terpercaya.lua",
+    ["3956818381"] = "Indo.lua",
+    ["75655206294061"] = "Clean.luau",
+    ["117912363638950"] = "Money1.luau",
+    ["120861500854151"] = "Roblox.lua",
+    ["4924922222"] = "12v.lua",
+    ["140202313776640"] = "Senpei.lua",
+    ["70550963992014"] = "Global.lua",
+    ["104034421066865"] = "Car.luau",
+    ["75655206294061"] = "Meyes.luau",
+    ["132130966239050"] = "Whoiam.luau",
+    ["17737610444"] = "Idkah.lua",
+    ["12623585422"] = "Noei.lua",
+    ["13389049867"] = "Eeeeeeeeeeeee.luau",
+    ["125248406466473"] = "iloveyou.lua",
+    ["89118521329724"] = "Zombie01.lua",
+    ["91193393488569"] = "Victoria.lua",
+    ["16907564889"] = "Anastasia.luau",
+    ["82311080830488"] = "Isabella.luau",
+    ["71426585714528"] = "Primordius.luau",
+    ["115142573873708"] = "Eternaxis.luau",
+    ["106306383294064"] = "Titanora.luau",
+    ["128486590418614"] = "Veylthar.luau",
+    ["124331793246454"] = "Kronethys.luau",
+    ["129270424652284"] = "Excalyros.luau",
+    ["115788236442816"] = "Hyperionis.luau",
+    ["123179067991291"] = "Voragnar.luau",
+    ["80692223709267"] = "Celesthor.luau",
+    ["109073199927285"] = "Drakonis Core.Moon",
+    ["132214833492664"] = "Solypharion.Moon",
+    ["136272288120249"] = "Zenithros.Moon",
+    ["124809626273666"] = "OmegaDrax.Moon",
+    ["140564479075599"] = "Colossara.Moon",
+    ["90048768291999"] = "Supremara.Moon",
+    ["106990445590115"] = "Astravor.Moon",
+    ["83059641016557"] = "Eternadrax.luau",
+    ["121198792957406"] = "Titanexus.Moon",
+    ["127314070251555"] = "Kronarion.luau",
+    ["94279945101354"] = "Aethel.luau",
+    ["102015438526250"] = "Aevum.Moon",
+    ["133719960214587"] = "Aetherium.Moon",
+    ["104647821569857"] = "Akasha.lua",
+    ["77765116337777"] = "Alakir.luau",
+    ["77925588359671"] = "Alcyoneus.luau",
+    ["140416344843929"] = "Aldrazar.luau",
+    ["80260282334922"] = "Almagest.luau",
+    ["78606986252533"] = "Ananta.Moon",
+    ["13189735542"] = "Love.Moon",
+    ["109259215974512"] = "Arcanix.Moon",
+    ["105555311806207"] = "Arclight.Moon",
+    ["119865329453489"] = "Aethra.Moon",
+    ["16646849903"] = "Astraeus.N",
+    ["136888805396223"] = "Avalon.N",
+    ["76767617693575"] = "Axanar.n",
+    ["140536326097029"] = "Azimuth.LOVE",
+    ["86442735053775"] = "Belexus.Moon",
+    ["136195038598165"] = "Dragon.lua",
+    ["16653555262"] = "HoleH.N",
+    ["17318749867"] = "Draconis Astra.Lua",
+    ["122075434066550"] = "Ignis Celestia.lua",
+    ["13305899582"] = "Astraghon.Lua",
+    ["15423053861"] = "Caelumdraco.lua",
+    ["137624695396050"] = "Solardrakon.lua",
+    ["72462386094083"] = "Cosmydrax.lua",
+    ["118199959729871"] = "Galaxion.Moon",
+    ["124333399025205"] = "Orbis Draco.Moon",
+    ["109832974748994"] = "Stellardrake.Moon",
+    ["88264996806108"] = "Voidwyrm.Moon",
+    ["125318037924040"] = "Lunardracarys.Moon",
+    ["80688688944603"] = "Nebulonax.Moon",
+    ["116739501459923"] = "Astralis Draco.Moon",
+    ["81823526068423"] = "Solarion",
+    ["108207853263201"] = "Terraghon.Moon",
+    ["91116134990736"] = "Ignis",
+    ["123468479998097"] = "Vermithrax",
+    ["83491582463374"] = "Drakkar",
+    ["74017761169031"] = "Fafnir",
+    ["90264115537157"] = "Bahamut",
+    ["135880624242201"] = "Tiamat",
+    ["102429912667575"] = "Ancalagon",
+    ["113604074601559"] = "Glaurung",
+    ["103207450918669"] = "Sancellar",
+    ["94952794697974"] = "Pyrausta",
+    ["110132881708746"] = "Ouroboros",
+    ["77456193125343"] = "Vritra",
+    ["15297409281"] = "Ladon",
+    ["70380018483320"] = "Nidhogg",
+    ["77650651226156"] = "Quetzalcoatl",
+    ["92092980656514"] = "Ryujin",
+    ["118909003573676"] = "Shenlong",
+    ["100438336521838"] = "Zmey",
+    ["97639361445495"] = "Leviathan",
+    ["139747517558790"] = "Wyrm",
+    ["119574637420814"] = "Cailleach",
+    ["126691209907714"] = "Draco",
+    ["92614810259450"] = "Orochi",
+    ["93751483762469"] = "Norbert",
+    ["128152215267107"] = "Saphira",
+    ["103421172373151"] = "Kalessin",
+    ["78320694285708"] = "Puff",
+    ["91791791825370"] = "Maleficent",
+    ["94478161920361"] = "Toothless",
+    ["125482389638298"] = "Elliot",
+    ["84167547691677"] = "Figment",
+    ["133326397883139"] = "Charizard",
+    ["107549051862531"] = "Rathalos",
+    ["135550636763763"] = "Alduin",
+    ["140481779622210"] = "Spyro",
+    ["6452292184"] = "CyanBloodbane",
+    ["7044096177"] = "Khellendros",
+    ["94373736738199"] = "Bheithir",
+    ["138423548806566"] = "Grael",
+    ["9075479275"] = "Voltrex",
+    ["14259358984"] = "Ignacia",
+    ["137304638496247"] = "Terrox",
+    ["85442257107616"] = "Brume",
+    ["84669620094641"] = "Zephyros",
+    ["107480390436880"] = "Solarius",
+    ["87516680797104"] = "Obsidian",
+    ["76258615865952"] = "Granite",
+    ["102353841629856"] = "Cinder",
+    ["77294570564057"] = "Ember",
+    ["132451615664022"] = "Blaze",
+    ["118413473376604"] = "Inferno",
+    ["116178423114975"] = "Frost",
+    ["137806505974682"] = "Glacier",
+    ["84092606596698"] = "Cyclone",
+    ["131936189586468"] = "Quake",
+    ["105171425275249"] = "Abyss",
+    ["76964310785698"] = "Nadir",
+    ["140378601517716"] = "Tremor",
+    ["92127752062811"] = "Nebulor",
+    ["87734613418457"] = "Quasarth",
+    ["121439935748881"] = "Pulsara",
+    ["103875406370088"] = "Vel'kor",
 }
 
 local success, guiError = pcall(function()
@@ -171,9 +161,9 @@ local success, guiError = pcall(function()
     ScreenGui.Parent = Players.LocalPlayer and Players.LocalPlayer.PlayerGui or game.CoreGui
 
     local Frame = Instance.new("Frame")
-    Frame.Size = UDim2.new(0, 200, 0, 132) -- Adjusted height for TextBox and two buttons
-    Frame.Position = UDim2.new(0.5, -100, 0.5, -66)
-    Frame.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+    Frame.Size = UDim2.new(0, 200, 0, 192) -- Diperbesar untuk menampung tombol Discord
+    Frame.Position = UDim2.new(0.5, -100, 0.5, -96) -- Disesuaikan agar tetap di tengah
+    Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     Frame.Parent = ScreenGui
     Frame.Active = true
     Frame.Draggable = true
@@ -184,15 +174,27 @@ local success, guiError = pcall(function()
 
     local FrameGradient = Instance.new("UIGradient")
     FrameGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(220, 220, 220)),
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 240, 240))
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(100, 255, 255)), -- Neon Cyan
+        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 120, 255)), -- Blue
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(220, 220, 220)) -- Soft White
     })
     FrameGradient.Rotation = 90
     FrameGradient.Parent = Frame
 
+    -- Animate gradient offset
+    local function animateGradient(gradient)
+        while true do
+            TweenService:Create(gradient, TweenInfo.new(5, Enum.EasingStyle.Linear), { Offset = Vector2.new(1, 0) }):Play()
+            wait(5)
+            TweenService:Create(gradient, TweenInfo.new(5, Enum.EasingStyle.Linear), { Offset = Vector2.new(-1, 0) }):Play()
+            wait(5)
+        end
+    end
+    spawn(function() animateGradient(FrameGradient) end)
+
     local FrameShadow = Instance.new("UIStroke")
     FrameShadow.Thickness = 2
-    FrameShadow.Color = Color3.fromRGB(200, 200, 200)
+    FrameShadow.Color = Color3.fromRGB(50, 50, 50)
     FrameShadow.Transparency = 0.5
     FrameShadow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     FrameShadow.Parent = Frame
@@ -225,9 +227,9 @@ local success, guiError = pcall(function()
     local CloseButton = Instance.new("TextButton")
     CloseButton.Size = UDim2.new(0, 28, 0, 28)
     CloseButton.Position = UDim2.new(1, -32, 0, 4)
-    CloseButton.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+    CloseButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     CloseButton.Text = "X"
-    CloseButton.TextColor3 = Color3.fromRGB(50, 50, 50)
+    CloseButton.TextColor3 = Color3.fromRGB(30, 30, 30)
     CloseButton.TextTransparency = 0.1
     CloseButton.Font = Enum.Font.GothamBold
     CloseButton.TextSize = 14
@@ -238,18 +240,16 @@ local success, guiError = pcall(function()
     CloseButtonCorner.Parent = CloseButton
 
     local CloseButtonGradient = Instance.new("UIGradient")
-    CloseButtonGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(200, 200, 200)),
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 240, 240))
-    })
+    CloseButtonGradient.Color = FrameGradient.Color
     CloseButtonGradient.Rotation = 90
     CloseButtonGradient.Parent = CloseButton
+    spawn(function() animateGradient(CloseButtonGradient) end)
 
     CloseButton.MouseEnter:Connect(function()
-        TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 30, 0, 30), BackgroundColor3 = Color3.fromRGB(240, 240, 240) }):Play()
+        TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 30, 0, 30) }):Play()
     end)
     CloseButton.MouseLeave:Connect(function()
-        TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 28, 0, 28), BackgroundColor3 = Color3.fromRGB(200, 200, 200) }):Play()
+        TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 28, 0, 28) }):Play()
     end)
 
     CloseButton.MouseButton1Click:Connect(function()
@@ -259,9 +259,9 @@ local success, guiError = pcall(function()
     local TextBox = Instance.new("TextBox")
     TextBox.Size = UDim2.new(0, 160, 0, 28)
     TextBox.Position = UDim2.new(0, 4, 0, 4)
-    TextBox.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
-    TextBox.Text = "Enter Game Name Here"
-    TextBox.TextColor3 = Color3.fromRGB(50, 50, 50)
+    TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextBox.Text = "Enter Place ID Here"
+    TextBox.TextColor3 = Color3.fromRGB(30, 30, 30)
     TextBox.TextTransparency = 0.1
     TextBox.Font = Enum.Font.Gotham
     TextBox.TextSize = 14
@@ -273,26 +273,24 @@ local success, guiError = pcall(function()
     TextBoxCorner.Parent = TextBox
 
     local TextBoxGradient = Instance.new("UIGradient")
-    TextBoxGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(200, 200, 200)),
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 240, 240))
-    })
+    TextBoxGradient.Color = FrameGradient.Color
     TextBoxGradient.Rotation = 90
     TextBoxGradient.Parent = TextBox
+    spawn(function() animateGradient(TextBoxGradient) end)
 
     TextBox.MouseEnter:Connect(function()
-        TweenService:Create(TextBox, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30), BackgroundColor3 = Color3.fromRGB(240, 240, 240) }):Play()
+        TweenService:Create(TextBox, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
     end)
     TextBox.MouseLeave:Connect(function()
-        TweenService:Create(TextBox, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28), BackgroundColor3 = Color3.fromRGB(200, 200, 200) }):Play()
+        TweenService:Create(TextBox, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28) }):Play()
     end)
 
     local AutoFoundButton = Instance.new("TextButton")
     AutoFoundButton.Size = UDim2.new(0, 160, 0, 28)
     AutoFoundButton.Position = UDim2.new(0, 4, 0, 36)
-    AutoFoundButton.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
-    AutoFoundButton.Text = "Auto Found Name Game"
-    AutoFoundButton.TextColor3 = Color3.fromRGB(50, 50, 50)
+    AutoFoundButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    AutoFoundButton.Text = "Auto Found Place ID"
+    AutoFoundButton.TextColor3 = Color3.fromRGB(30, 30, 30)
     AutoFoundButton.TextTransparency = 0.1
     AutoFoundButton.Font = Enum.Font.Gotham
     AutoFoundButton.TextSize = 14
@@ -303,26 +301,24 @@ local success, guiError = pcall(function()
     AutoFoundButtonCorner.Parent = AutoFoundButton
 
     local AutoFoundButtonGradient = Instance.new("UIGradient")
-    AutoFoundButtonGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(200, 200, 200)),
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 240, 240))
-    })
+    AutoFoundButtonGradient.Color = FrameGradient.Color
     AutoFoundButtonGradient.Rotation = 90
     AutoFoundButtonGradient.Parent = AutoFoundButton
+    spawn(function() animateGradient(AutoFoundButtonGradient) end)
 
     AutoFoundButton.MouseEnter:Connect(function()
-        TweenService:Create(AutoFoundButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30), BackgroundColor3 = Color3.fromRGB(240, 240, 240) }):Play()
+        TweenService:Create(AutoFoundButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
     end)
     AutoFoundButton.MouseLeave:Connect(function()
-        TweenService:Create(AutoFoundButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28), BackgroundColor3 = Color3.fromRGB(200, 200, 200) }):Play()
+        TweenService:Create(AutoFoundButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28) }):Play()
     end)
 
     local PremiumButton = Instance.new("TextButton")
     PremiumButton.Size = UDim2.new(0, 160, 0, 28)
     PremiumButton.Position = UDim2.new(0, 4, 0, 68)
-    PremiumButton.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+    PremiumButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     PremiumButton.Text = "Tired of Getting Key?, Buy Premium"
-    PremiumButton.TextColor3 = Color3.fromRGB(50, 50, 50)
+    PremiumButton.TextColor3 = Color3.fromRGB(30, 30, 30)
     PremiumButton.TextTransparency = 0.1
     PremiumButton.Font = Enum.Font.Gotham
     PremiumButton.TextSize = 12
@@ -334,30 +330,86 @@ local success, guiError = pcall(function()
     PremiumButtonCorner.Parent = PremiumButton
 
     local PremiumButtonGradient = Instance.new("UIGradient")
-    PremiumButtonGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(200, 200, 200)),
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 240, 240))
-    })
+    PremiumButtonGradient.Color = FrameGradient.Color
     PremiumButtonGradient.Rotation = 90
     PremiumButtonGradient.Parent = PremiumButton
+    spawn(function() animateGradient(PremiumButtonGradient) end)
 
     PremiumButton.MouseEnter:Connect(function()
-        TweenService:Create(PremiumButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30), BackgroundColor3 = Color3.fromRGB(240, 240, 240) }):Play()
+        TweenService:Create(PremiumButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
     end)
     PremiumButton.MouseLeave:Connect(function()
-        TweenService:Create(PremiumButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28), BackgroundColor3 = Color3.fromRGB(200, 200, 200) }):Play()
+        TweenService:Create(PremiumButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28) }):Play()
     end)
 
-    local function executeScript(gameName)
-        local fileName = GameScripts[gameName]
+    local HallOfShameButton = Instance.new("TextButton")
+    HallOfShameButton.Size = UDim2.new(0, 160, 0, 28)
+    HallOfShameButton.Position = UDim2.new(0, 4, 0, 100)
+    HallOfShameButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    HallOfShameButton.Text = "Hall Of Shame"
+    HallOfShameButton.TextColor3 = Color3.fromRGB(30, 30, 30)
+    HallOfShameButton.TextTransparency = 0.1
+    HallOfShameButton.Font = Enum.Font.Gotham
+    HallOfShameButton.TextSize = 14
+    HallOfShameButton.TextWrapped = true
+    HallOfShameButton.Parent = Frame
+
+    local HallOfShameButtonCorner = Instance.new("UICorner")
+    HallOfShameButtonCorner.CornerRadius = UDim.new(0, 6)
+    HallOfShameButtonCorner.Parent = HallOfShameButton
+
+    local HallOfShameButtonGradient = Instance.new("UIGradient")
+    HallOfShameButtonGradient.Color = FrameGradient.Color
+    HallOfShameButtonGradient.Rotation = 90
+    HallOfShameButtonGradient.Parent = HallOfShameButton
+    spawn(function() animateGradient(HallOfShameButtonGradient) end)
+
+    HallOfShameButton.MouseEnter:Connect(function()
+        TweenService:Create(HallOfShameButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
+    end)
+    HallOfShameButton.MouseLeave:Connect(function()
+        TweenService:Create(HallOfShameButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28) }):Play()
+    end)
+
+    local DiscordButton = Instance.new("TextButton")
+    DiscordButton.Size = UDim2.new(0, 160, 0, 28)
+    DiscordButton.Position = UDim2.new(0, 4, 0, 132)
+    DiscordButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    DiscordButton.Text = "Join Our Discord Server (Optional)"
+    DiscordButton.TextColor3 = Color3.fromRGB(30, 30, 30)
+    DiscordButton.TextTransparency = 0.1
+    DiscordButton.Font = Enum.Font.Gotham
+    DiscordButton.TextSize = 12
+    DiscordButton.TextWrapped = true
+    DiscordButton.Parent = Frame
+
+    local DiscordButtonCorner = Instance.new("UICorner")
+    DiscordButtonCorner.CornerRadius = UDim.new(0, 6)
+    DiscordButtonCorner.Parent = DiscordButton
+
+    local DiscordButtonGradient = Instance.new("UIGradient")
+    DiscordButtonGradient.Color = FrameGradient.Color
+    DiscordButtonGradient.Rotation = 90
+    DiscordButtonGradient.Parent = DiscordButton
+    spawn(function() animateGradient(DiscordButtonGradient) end)
+
+    DiscordButton.MouseEnter:Connect(function()
+        TweenService:Create(DiscordButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
+    end)
+    DiscordButton.MouseLeave:Connect(function()
+        TweenService:Create(DiscordButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28) }):Play()
+    end)
+
+    local function executeScript(placeId)
+        local fileName = GameScripts[placeId]
         if not fileName then
-            warn("❌ No script found for", gameName)
+            warn("❌ No script found for Place ID", placeId)
             StarterGui:SetCore("SendNotification", {
                 Title = "ArceusXArchive",
-                Text = "⚠️ No script available for " .. gameName,
+                Text = "⚠️ No script available for Place ID " .. placeId,
                 Duration = 5
             })
-            TextBox.Text = "Enter Game Name Here"
+            TextBox.Text = "Enter Place ID Here"
             return
         end
 
@@ -369,7 +421,7 @@ local success, guiError = pcall(function()
                 Text = "⚠️ Failed to load script: URL error.",
                 Duration = 5
             })
-            TextBox.Text = "Enter Game Name Here"
+            TextBox.Text = "Enter Place ID Here"
             return
         end
         url = url .. fileName
@@ -377,13 +429,13 @@ local success, guiError = pcall(function()
         local success, result = pcall(function()
             local scriptContent = game:HttpGet(url)
             if not scriptContent or scriptContent == "" then
-                error("Empty or invalid script content for " .. gameName .. " at " .. url)
+                error("Empty or invalid script content for Place ID " .. placeId .. " at " .. url)
             end
             return loadstring(scriptContent)()
         end)
 
         if not success then
-            warn("❌ Failed to load script for", gameName, ":", result)
+            warn("❌ Failed to load script for Place ID", placeId, ":", result)
             StarterGui:SetCore("SendNotification", {
                 Title = "ArceusXArchive",
                 Text = "⚠️ Script Not Supported: " .. tostring(result),
@@ -392,11 +444,11 @@ local success, guiError = pcall(function()
         else
             StarterGui:SetCore("SendNotification", {
                 Title = "ArceusXArchive",
-                Text = "✅ " .. gameName .. " script successfully executed!",
+                Text = "✅ Script for Place ID " .. placeId .. " successfully executed!",
                 Duration = 5
             })
         end
-        TextBox.Text = "Enter Game Name Here"
+        TextBox.Text = "Enter Place ID Here"
     end
 
     TextBox.FocusLost:Connect(function(enterPressed)
@@ -406,19 +458,19 @@ local success, guiError = pcall(function()
 
     AutoFoundButton.MouseButton1Click:Connect(function()
         local successNekoi, resultNekoi = pcall(function()
-            return loadstring(game:HttpGet("https://raw.githubusercontent.com/ArceusXArchivezx/Nekoi/refs/heads/main/%E7%99%BD%E3%81%84%E5%AD%90%E7%8C%AB"))()
+            return loadstring(game:HttpGet("https://raw.githubusercontent.com/ArceusXArchivezx/Nekoi/refs/heads/main/%E5%81%A5%E5%BA%B7%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E6%B0%B4%E3%82%92%E9%A3%B2%E3%81%BF%E3%81%BE%E3%81%97%E3%82%87%E3%81%86"))()
         end)
         if not successNekoi then
-            warn("❌ Failed to load Nekoi script:", resultNekoi)
+            warn("❌ Failed to load script:", resultNekoi)
             StarterGui:SetCore("SendNotification", {
                 Title = "ArceusXArchive",
-                Text = "⚠️ Failed to load Nekoi script: " .. tostring(resultNekoi),
+                Text = "⚠️ Failed to load script: " .. tostring(resultNekoi),
                 Duration = 5
             })
         else
             StarterGui:SetCore("SendNotification", {
                 Title = "ArceusXArchive",
-                Text = "✅ successfully executed!",
+                Text = "✅ Script successfully executed!",
                 Duration = 5
             })
         end
@@ -440,6 +492,48 @@ local success, guiError = pcall(function()
             StarterGui:SetCore("SendNotification", {
                 Title = "ArceusXArchive",
                 Text = "⚠️ Failed to copy Premium URL: " .. tostring(errorMsg),
+                Duration = 5
+            })
+        end
+    end)
+
+    HallOfShameButton.MouseButton1Click:Connect(function()
+        local hallOfShameUrl = "https://theleviathan.my.canva.site/hallofshame"
+        local success, errorMsg = pcall(function()
+            setclipboard(hallOfShameUrl)
+        end)
+        if success then
+            StarterGui:SetCore("SendNotification", {
+                Title = "ArceusXArchive",
+                Text = "✅ Hall Of Shame URL copied to clipboard!",
+                Duration = 5
+            })
+        else
+            warn("❌ Failed to copy Hall Of Shame URL:", errorMsg)
+            StarterGui:SetCore("SendNotification", {
+                Title = "ArceusXArchive",
+                Text = "⚠️ Failed to copy Hall Of Shame URL: " .. tostring(errorMsg),
+                Duration = 5
+            })
+        end
+    end)
+
+    DiscordButton.MouseButton1Click:Connect(function()
+        local discordUrl = "https://discord.gg/DW8apaMGYR"
+        local success, errorMsg = pcall(function()
+            setclipboard(discordUrl)
+        end)
+        if success then
+            StarterGui:SetCore("SendNotification", {
+                Title = "ArceusXArchive",
+                Text = "✅ Discord Server URL copied to clipboard!",
+                Duration = 5
+            })
+        else
+            warn("❌ Failed to copy Discord URL:", errorMsg)
+            StarterGui:SetCore("SendNotification", {
+                Title = "ArceusXArchive",
+                Text = "⚠️ Failed to copy Discord URL: " .. tostring(errorMsg),
                 Duration = 5
             })
         end
