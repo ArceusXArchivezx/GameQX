@@ -152,18 +152,18 @@ local GameScripts = {
     ["87734613418457"] = "Quasarth",
     ["121439935748881"] = "Pulsara",
     ["103875406370088"] = "Vel'kor",
-    ["91490659446272"] = "Singularith",
 }
 
 local success, guiError = pcall(function()
     local ScreenGui = Instance.new("ScreenGui")
     ScreenGui.Name = "ArceusXNeoGUI_" .. tostring(os.time())
     ScreenGui.Enabled = true
-    ScreenGui.Parent = Players.LocalPlayer and Players.LocalPlayer.PlayerGui or game.CoreGui
+    ScreenGui.ResetOnSpawn = false -- Mencegah GUI hilang saat respawn
+    ScreenGui.Parent = game.CoreGui -- Selalu di CoreGui agar tetap ada saat respawn/mati
 
     local Frame = Instance.new("Frame")
-    Frame.Size = UDim2.new(0, 200, 0, 192) -- Diperbesar untuk menampung tombol Discord
-    Frame.Position = UDim2.new(0.5, -100, 0.5, -96) -- Disesuaikan agar tetap di tengah
+    Frame.Size = UDim2.new(0, 200, 0, 192)
+    Frame.Position = UDim2.new(0.5, -100, 0.5, -96)
     Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     Frame.Parent = ScreenGui
     Frame.Active = true
