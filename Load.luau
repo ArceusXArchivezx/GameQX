@@ -154,6 +154,7 @@ local GameScripts = {
     ["103875406370088"] = "Vel'kor",
     ["91490659446272"] = "Singularith",
     ["137533333619498"] = "Voidflare",
+    ["116053813135621"] = "Astralith",
 }
 
 local success, guiError = pcall(function()
