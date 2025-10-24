@@ -164,6 +164,7 @@ local GameScripts = {
     ["106782625995423"] = "Darkflare",
     ["90593834103802"] = "Stellara",
     ["135663842983553"] = "Cosmovyx",
+    ["94116744819156"] = "Andromedon",
 }
 
 local success, guiError = pcall(function()
