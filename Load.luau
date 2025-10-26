@@ -171,8 +171,8 @@ local success, guiError = pcall(function()
     local ScreenGui = Instance.new("ScreenGui")
     ScreenGui.Name = "ArceusXNeoGUI_" .. tostring(os.time())
     ScreenGui.Enabled = true
-    ScreenGui.ResetOnSpawn = false -- Mencegah GUI hilang saat respawn
-    ScreenGui.Parent = game.CoreGui -- Selalu di CoreGui agar tetap ada saat respawn/mati
+    ScreenGui.ResetOnSpawn = false
+    ScreenGui.Parent = game.CoreGui
 
     local Frame = Instance.new("Frame")
     Frame.Size = UDim2.new(0, 200, 0, 192)
@@ -188,23 +188,37 @@ local success, guiError = pcall(function()
 
     local FrameGradient = Instance.new("UIGradient")
     FrameGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(100, 255, 255)), -- Neon Cyan
-        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 120, 255)), -- Blue
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(220, 220, 220)) -- Soft White
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)), -- Red
+        ColorSequenceKeypoint.new(0.2, Color3.fromRGB(255, 165, 0)), -- Orange
+        ColorSequenceKeypoint.new(0.4, Color3.fromRGB(255, 255, 0)), -- Yellow
+        ColorSequenceKeypoint.new(0.6, Color3.fromRGB(0, 255, 0)), -- Green
+        ColorSequenceKeypoint.new(0.8, Color3.fromRGB(0, 0, 255)), -- Blue
+        ColorSequenceKeypoint.new(0.9, Color3.fromRGB(75, 0, 130)), -- Indigo
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 0, 255)) -- Magenta
     })
-    FrameGradient.Rotation = 90
+    FrameGradient.Rotation = 0
     FrameGradient.Parent = Frame
 
-    -- Animate gradient offset
+    -- Animate rainbow rotation
     local function animateGradient(gradient)
         while true do
-            TweenService:Create(gradient, TweenInfo.new(5, Enum.EasingStyle.Linear), { Offset = Vector2.new(1, 0) }):Play()
-            wait(5)
-            TweenService:Create(gradient, TweenInfo.new(5, Enum.EasingStyle.Linear), { Offset = Vector2.new(-1, 0) }):Play()
-            wait(5)
+            TweenService:Create(gradient, TweenInfo.new(3, Enum.EasingStyle.Linear), { Rotation = 360 }):Play()
+            wait(3)
+            gradient.Rotation = 0
         end
     end
     spawn(function() animateGradient(FrameGradient) end)
+
+    -- Pulsating animation for Frame
+    local function animatePulsate()
+        while true do
+            TweenService:Create(Frame, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 204, 0, 196) }):Play()
+            wait(1)
+            TweenService:Create(Frame, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 200, 0, 192) }):Play()
+            wait(1)
+        end
+    end
+    spawn(animatePulsate)
 
     local FrameShadow = Instance.new("UIStroke")
     FrameShadow.Thickness = 2
@@ -212,6 +226,68 @@ local success, guiError = pcall(function()
     FrameShadow.Transparency = 0.5
     FrameShadow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     FrameShadow.Parent = Frame
+
+    local FrameGlow = Instance.new("UIStroke")
+    FrameGlow.Thickness = 3
+    FrameGlow.Color = Color3.fromRGB(255, 255, 255)
+    FrameGlow.Transparency = 0.3
+    FrameGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    FrameGlow.Parent = Frame
+
+    -- Animate glow effect
+    local function animateGlow(stroke)
+        while true do
+            TweenService:Create(stroke, TweenInfo.new(1.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Transparency = 0.8 }):Play()
+            wait(1.5)
+            TweenService:Create(stroke, TweenInfo.new(1.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Transparency = 0.3 }):Play()
+            wait(1.5)
+        end
+    end
+    spawn(function() animateGlow(FrameGlow) end)
+
+    -- Particle effect (simulated with UI elements)
+    local ParticleFrame = Instance.new("Frame")
+    ParticleFrame.Size = UDim2.new(1, 20, 1, 20)
+    ParticleFrame.Position = UDim2.new(0, -10, 0, -10)
+    ParticleFrame.BackgroundTransparency = 1
+    ParticleFrame.Parent = Frame
+
+    local function createParticle()
+        local particle = Instance.new("Frame")
+        particle.Size = UDim2.new(0, 5, 0, 5)
+        particle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        particle.Position = UDim2.new(math.random(), math.random(0, 200), math.random(), math.random(0, 192))
+        particle.Parent = ParticleFrame
+        local particleCorner = Instance.new("UICorner")
+        particleCorner.CornerRadius = UDim.new(1, 0)
+        particleCorner.Parent = particle
+        local particleGradient = Instance.new("UIGradient")
+        particleGradient.Color = FrameGradient.Color
+        particleGradient.Rotation = 0
+        particleGradient.Parent = particle
+        spawn(function() animateGradient(particleGradient) end)
+
+        -- Animate particle
+        local function moveParticle()
+            local targetX = math.random(0, 200)
+            local targetY = math.random(0, 192)
+            TweenService:Create(particle, TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+                Position = UDim2.new(0, targetX, 0, targetY),
+                BackgroundTransparency = 0.7
+            }):Play()
+            wait(2)
+            particle:Destroy()
+        end
+        spawn(moveParticle)
+    end
+
+    -- Spawn particles periodically
+    spawn(function()
+        while true do
+            createParticle()
+            wait(0.3)
+        end
+    end)
 
     local isDragging = false
     local dragStart = nil
@@ -255,9 +331,17 @@ local success, guiError = pcall(function()
 
     local CloseButtonGradient = Instance.new("UIGradient")
     CloseButtonGradient.Color = FrameGradient.Color
-    CloseButtonGradient.Rotation = 90
+    CloseButtonGradient.Rotation = 0
     CloseButtonGradient.Parent = CloseButton
     spawn(function() animateGradient(CloseButtonGradient) end)
+
+    local CloseButtonGlow = Instance.new("UIStroke")
+    CloseButtonGlow.Thickness = 2
+    CloseButtonGlow.Color = Color3.fromRGB(255, 255, 255)
+    CloseButtonGlow.Transparency = 0.3
+    CloseButtonGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    CloseButtonGlow.Parent = CloseButton
+    spawn(function() animateGlow(CloseButtonGlow) end)
 
     CloseButton.MouseEnter:Connect(function()
         TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 30, 0, 30) }):Play()
@@ -288,9 +372,17 @@ local success, guiError = pcall(function()
 
     local TextBoxGradient = Instance.new("UIGradient")
     TextBoxGradient.Color = FrameGradient.Color
-    TextBoxGradient.Rotation = 90
+    TextBoxGradient.Rotation = 0
     TextBoxGradient.Parent = TextBox
     spawn(function() animateGradient(TextBoxGradient) end)
+
+    local TextBoxGlow = Instance.new("UIStroke")
+    TextBoxGlow.Thickness = 2
+    TextBoxGlow.Color = Color3.fromRGB(255, 255, 255)
+    TextBoxGlow.Transparency = 0.3
+    TextBoxGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    TextBoxGlow.Parent = TextBox
+    spawn(function() animateGlow(TextBoxGlow) end)
 
     TextBox.MouseEnter:Connect(function()
         TweenService:Create(TextBox, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
@@ -316,9 +408,17 @@ local success, guiError = pcall(function()
 
     local AutoFoundButtonGradient = Instance.new("UIGradient")
     AutoFoundButtonGradient.Color = FrameGradient.Color
-    AutoFoundButtonGradient.Rotation = 90
+    AutoFoundButtonGradient.Rotation = 0
     AutoFoundButtonGradient.Parent = AutoFoundButton
     spawn(function() animateGradient(AutoFoundButtonGradient) end)
+
+    local AutoFoundButtonGlow = Instance.new("UIStroke")
+    AutoFoundButtonGlow.Thickness = 2
+    AutoFoundButtonGlow.Color = Color3.fromRGB(255, 255, 255)
+    AutoFoundButtonGlow.Transparency = 0.3
+    AutoFoundButtonGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    AutoFoundButtonGlow.Parent = AutoFoundButton
+    spawn(function() animateGlow(AutoFoundButtonGlow) end)
 
     AutoFoundButton.MouseEnter:Connect(function()
         TweenService:Create(AutoFoundButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
@@ -345,9 +445,17 @@ local success, guiError = pcall(function()
 
     local PremiumButtonGradient = Instance.new("UIGradient")
     PremiumButtonGradient.Color = FrameGradient.Color
-    PremiumButtonGradient.Rotation = 90
+    PremiumButtonGradient.Rotation = 0
     PremiumButtonGradient.Parent = PremiumButton
     spawn(function() animateGradient(PremiumButtonGradient) end)
+
+    local PremiumButtonGlow = Instance.new("UIStroke")
+    PremiumButtonGlow.Thickness = 2
+    PremiumButtonGlow.Color = Color3.fromRGB(255, 255, 255)
+    PremiumButtonGlow.Transparency = 0.3
+    PremiumButtonGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    PremiumButtonGlow.Parent = PremiumButton
+    spawn(function() animateGlow(PremiumButtonGlow) end)
 
     PremiumButton.MouseEnter:Connect(function()
         TweenService:Create(PremiumButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
@@ -374,9 +482,17 @@ local success, guiError = pcall(function()
 
     local HallOfShameButtonGradient = Instance.new("UIGradient")
     HallOfShameButtonGradient.Color = FrameGradient.Color
-    HallOfShameButtonGradient.Rotation = 90
+    HallOfShameButtonGradient.Rotation = 0
     HallOfShameButtonGradient.Parent = HallOfShameButton
     spawn(function() animateGradient(HallOfShameButtonGradient) end)
+
+    local HallOfShameButtonGlow = Instance.new("UIStroke")
+    HallOfShameButtonGlow.Thickness = 2
+    HallOfShameButtonGlow.Color = Color3.fromRGB(255, 255, 255)
+    HallOfShameButtonGlow.Transparency = 0.3
+    HallOfShameButtonGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    HallOfShameButtonGlow.Parent = HallOfShameButton
+    spawn(function() animateGlow(HallOfShameButtonGlow) end)
 
     HallOfShameButton.MouseEnter:Connect(function()
         TweenService:Create(HallOfShameButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
@@ -403,9 +519,17 @@ local success, guiError = pcall(function()
 
     local DiscordButtonGradient = Instance.new("UIGradient")
     DiscordButtonGradient.Color = FrameGradient.Color
-    DiscordButtonGradient.Rotation = 90
+    DiscordButtonGradient.Rotation = 0
     DiscordButtonGradient.Parent = DiscordButton
     spawn(function() animateGradient(DiscordButtonGradient) end)
+
+    local DiscordButtonGlow = Instance.new("UIStroke")
+    DiscordButtonGlow.Thickness = 2
+    DiscordButtonGlow.Color = Color3.fromRGB(255, 255, 255)
+    DiscordButtonGlow.Transparency = 0.3
+    DiscordButtonGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    DiscordButtonGlow.Parent = DiscordButton
+    spawn(function() animateGlow(DiscordButtonGlow) end)
 
     DiscordButton.MouseEnter:Connect(function()
         TweenService:Create(DiscordButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
