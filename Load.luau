@@ -165,6 +165,7 @@ local GameScripts = {
     ["90593834103802"] = "Stellara",
     ["135663842983553"] = "Cosmovyx",
     ["94116744819156"] = "Andromedon",
+    ["97393953768282"] = "Siriusar",
 }
 
 local success, guiError = pcall(function()
