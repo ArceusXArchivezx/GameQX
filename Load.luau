@@ -169,12 +169,50 @@ local GameScripts = {
     ["87697066373562"] = "Polarine",
 }
 
+local ROYGBIV = {
+    Color3.fromRGB(255, 0, 0), -- Red
+    Color3.fromRGB(255, 165, 0), -- Orange
+    Color3.fromRGB(255, 255, 0), -- Yellow
+    Color3.fromRGB(0, 255, 0), -- Green
+    Color3.fromRGB(0, 0, 255), -- Blue
+    Color3.fromRGB(75, 0, 130), -- Indigo
+    Color3.fromRGB(148, 0, 211) -- Violet
+}
+
+local function getRandomROYGBIVGradient()
+    local keypoints = {}
+    for i = 0, 1, 0.2 do
+        table.insert(keypoints, ColorSequenceKeypoint.new(i, ROYGBIV[math.random(1, #ROYGBIV)]))
+    end
+    return ColorSequence.new(keypoints)
+end
+
 local success, guiError = pcall(function()
+    -- Welcome notification
+    StarterGui:SetCore("SendNotification", {
+        Title = "ArceusXArchive",
+        Text = "Welcome to ArceusXArchive!",
+        Duration = 5
+    })
+
     local ScreenGui = Instance.new("ScreenGui")
     ScreenGui.Name = "ArceusXNeoGUI_" .. tostring(os.time())
     ScreenGui.Enabled = true
     ScreenGui.ResetOnSpawn = false
     ScreenGui.Parent = game.CoreGui
+
+    -- Black background
+    local BackgroundFrame = Instance.new("Frame")
+    BackgroundFrame.Size = UDim2.new(0, 220, 0, 212)
+    BackgroundFrame.Position = UDim2.new(0.5, -110, 0.5, -106)
+    BackgroundFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    BackgroundFrame.BackgroundTransparency = 0
+    BackgroundFrame.ZIndex = 0
+    BackgroundFrame.Parent = ScreenGui
+
+    local BackgroundCorner = Instance.new("UICorner")
+    BackgroundCorner.CornerRadius = UDim.new(0, 12)
+    BackgroundCorner.Parent = BackgroundFrame
 
     local Frame = Instance.new("Frame")
     Frame.Size = UDim2.new(0, 200, 0, 192)
@@ -183,30 +221,24 @@ local success, guiError = pcall(function()
     Frame.Parent = ScreenGui
     Frame.Active = true
     Frame.Draggable = true
+    Frame.ZIndex = 1
 
     local FrameCorner = Instance.new("UICorner")
     FrameCorner.CornerRadius = UDim.new(0, 12)
     FrameCorner.Parent = Frame
 
     local FrameGradient = Instance.new("UIGradient")
-    FrameGradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)), -- Red
-        ColorSequenceKeypoint.new(0.2, Color3.fromRGB(255, 165, 0)), -- Orange
-        ColorSequenceKeypoint.new(0.4, Color3.fromRGB(255, 255, 0)), -- Yellow
-        ColorSequenceKeypoint.new(0.6, Color3.fromRGB(0, 255, 0)), -- Green
-        ColorSequenceKeypoint.new(0.8, Color3.fromRGB(0, 0, 255)), -- Blue
-        ColorSequenceKeypoint.new(0.9, Color3.fromRGB(75, 0, 130)), -- Indigo
-        ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 0, 255)) -- Magenta
-    })
+    FrameGradient.Color = getRandomROYGBIVGradient()
     FrameGradient.Rotation = 0
     FrameGradient.Parent = Frame
 
-    -- Animate rainbow rotation
+    -- Animate rainbow rotation and random color update
     local function animateGradient(gradient)
         while true do
             TweenService:Create(gradient, TweenInfo.new(3, Enum.EasingStyle.Linear), { Rotation = 360 }):Play()
             wait(3)
             gradient.Rotation = 0
+            gradient.Color = getRandomROYGBIVGradient()
         end
     end
     spawn(function() animateGradient(FrameGradient) end)
@@ -247,7 +279,7 @@ local success, guiError = pcall(function()
     end
     spawn(function() animateGlow(FrameGlow) end)
 
-    -- Particle effect (simulated with UI elements)
+    -- Particle effect
     local ParticleFrame = Instance.new("Frame")
     ParticleFrame.Size = UDim2.new(1, 20, 1, 20)
     ParticleFrame.Position = UDim2.new(0, -10, 0, -10)
@@ -264,7 +296,7 @@ local success, guiError = pcall(function()
         particleCorner.CornerRadius = UDim.new(1, 0)
         particleCorner.Parent = particle
         local particleGradient = Instance.new("UIGradient")
-        particleGradient.Color = FrameGradient.Color
+        particleGradient.Color = getRandomROYGBIVGradient()
         particleGradient.Rotation = 0
         particleGradient.Parent = particle
         spawn(function() animateGradient(particleGradient) end)
@@ -291,6 +323,26 @@ local success, guiError = pcall(function()
         end
     end)
 
+    -- Real-time clock
+    local ClockLabel = Instance.new("TextLabel")
+    ClockLabel.Size = UDim2.new(0, 160, 0, 20)
+    ClockLabel.Position = UDim2.new(0, 4, 0, 100)
+    ClockLabel.BackgroundTransparency = 1
+    ClockLabel.Text = "00:00:00 WIB"
+    ClockLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    ClockLabel.TextTransparency = 0.1
+    ClockLabel.Font = Enum.Font.Gotham
+    ClockLabel.TextSize = 12
+    ClockLabel.Parent = Frame
+
+    spawn(function()
+        while true do
+            local time = os.date("*t", os.time() + 7 * 3600) -- UTC+7 for WIB
+            ClockLabel.Text = string.format("%02d:%02d:%02d WIB", time.hour, time.min, time.sec)
+            wait(1)
+        end
+    end)
+
     local isDragging = false
     local dragStart = nil
     local startPos = nil
@@ -307,6 +359,7 @@ local success, guiError = pcall(function()
         if isDragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
             local delta = input.Position - dragStart
             Frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+            BackgroundFrame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X - 10, startPos.Y.Scale, startPos.Y.Offset + delta.Y - 10)
         end
     end)
 
@@ -332,7 +385,7 @@ local success, guiError = pcall(function()
     CloseButtonCorner.Parent = CloseButton
 
     local CloseButtonGradient = Instance.new("UIGradient")
-    CloseButtonGradient.Color = FrameGradient.Color
+    CloseButtonGradient.Color = getRandomROYGBIVGradient()
     CloseButtonGradient.Rotation = 0
     CloseButtonGradient.Parent = CloseButton
     spawn(function() animateGradient(CloseButtonGradient) end)
@@ -373,7 +426,7 @@ local success, guiError = pcall(function()
     TextBoxCorner.Parent = TextBox
 
     local TextBoxGradient = Instance.new("UIGradient")
-    TextBoxGradient.Color = FrameGradient.Color
+    TextBoxGradient.Color = getRandomROYGBIVGradient()
     TextBoxGradient.Rotation = 0
     TextBoxGradient.Parent = TextBox
     spawn(function() animateGradient(TextBoxGradient) end)
@@ -409,7 +462,7 @@ local success, guiError = pcall(function()
     AutoFoundButtonCorner.Parent = AutoFoundButton
 
     local AutoFoundButtonGradient = Instance.new("UIGradient")
-    AutoFoundButtonGradient.Color = FrameGradient.Color
+    AutoFoundButtonGradient.Color = getRandomROYGBIVGradient()
     AutoFoundButtonGradient.Rotation = 0
     AutoFoundButtonGradient.Parent = AutoFoundButton
     spawn(function() animateGradient(AutoFoundButtonGradient) end)
@@ -446,7 +499,7 @@ local success, guiError = pcall(function()
     PremiumButtonCorner.Parent = PremiumButton
 
     local PremiumButtonGradient = Instance.new("UIGradient")
-    PremiumButtonGradient.Color = FrameGradient.Color
+    PremiumButtonGradient.Color = getRandomROYGBIVGradient()
     PremiumButtonGradient.Rotation = 0
     PremiumButtonGradient.Parent = PremiumButton
     spawn(function() animateGradient(PremiumButtonGradient) end)
@@ -464,80 +517,6 @@ local success, guiError = pcall(function()
     end)
     PremiumButton.MouseLeave:Connect(function()
         TweenService:Create(PremiumButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28) }):Play()
-    end)
-
-    local HallOfShameButton = Instance.new("TextButton")
-    HallOfShameButton.Size = UDim2.new(0, 160, 0, 28)
-    HallOfShameButton.Position = UDim2.new(0, 4, 0, 100)
-    HallOfShameButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    HallOfShameButton.Text = "Hall Of Shame"
-    HallOfShameButton.TextColor3 = Color3.fromRGB(30, 30, 30)
-    HallOfShameButton.TextTransparency = 0.1
-    HallOfShameButton.Font = Enum.Font.Gotham
-    HallOfShameButton.TextSize = 14
-    HallOfShameButton.TextWrapped = true
-    HallOfShameButton.Parent = Frame
-
-    local HallOfShameButtonCorner = Instance.new("UICorner")
-    HallOfShameButtonCorner.CornerRadius = UDim.new(0, 6)
-    HallOfShameButtonCorner.Parent = HallOfShameButton
-
-    local HallOfShameButtonGradient = Instance.new("UIGradient")
-    HallOfShameButtonGradient.Color = FrameGradient.Color
-    HallOfShameButtonGradient.Rotation = 0
-    HallOfShameButtonGradient.Parent = HallOfShameButton
-    spawn(function() animateGradient(HallOfShameButtonGradient) end)
-
-    local HallOfShameButtonGlow = Instance.new("UIStroke")
-    HallOfShameButtonGlow.Thickness = 2
-    HallOfShameButtonGlow.Color = Color3.fromRGB(255, 255, 255)
-    HallOfShameButtonGlow.Transparency = 0.3
-    HallOfShameButtonGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    HallOfShameButtonGlow.Parent = HallOfShameButton
-    spawn(function() animateGlow(HallOfShameButtonGlow) end)
-
-    HallOfShameButton.MouseEnter:Connect(function()
-        TweenService:Create(HallOfShameButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
-    end)
-    HallOfShameButton.MouseLeave:Connect(function()
-        TweenService:Create(HallOfShameButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28) }):Play()
-    end)
-
-    local DiscordButton = Instance.new("TextButton")
-    DiscordButton.Size = UDim2.new(0, 160, 0, 28)
-    DiscordButton.Position = UDim2.new(0, 4, 0, 132)
-    DiscordButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    DiscordButton.Text = "Join Our Discord Server (Optional)"
-    DiscordButton.TextColor3 = Color3.fromRGB(30, 30, 30)
-    DiscordButton.TextTransparency = 0.1
-    DiscordButton.Font = Enum.Font.Gotham
-    DiscordButton.TextSize = 12
-    DiscordButton.TextWrapped = true
-    DiscordButton.Parent = Frame
-
-    local DiscordButtonCorner = Instance.new("UICorner")
-    DiscordButtonCorner.CornerRadius = UDim.new(0, 6)
-    DiscordButtonCorner.Parent = DiscordButton
-
-    local DiscordButtonGradient = Instance.new("UIGradient")
-    DiscordButtonGradient.Color = FrameGradient.Color
-    DiscordButtonGradient.Rotation = 0
-    DiscordButtonGradient.Parent = DiscordButton
-    spawn(function() animateGradient(DiscordButtonGradient) end)
-
-    local DiscordButtonGlow = Instance.new("UIStroke")
-    DiscordButtonGlow.Thickness = 2
-    DiscordButtonGlow.Color = Color3.fromRGB(255, 255, 255)
-    DiscordButtonGlow.Transparency = 0.3
-    DiscordButtonGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    DiscordButtonGlow.Parent = DiscordButton
-    spawn(function() animateGlow(DiscordButtonGlow) end)
-
-    DiscordButton.MouseEnter:Connect(function()
-        TweenService:Create(DiscordButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
-    end)
-    DiscordButton.MouseLeave:Connect(function()
-        TweenService:Create(DiscordButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28) }):Play()
     end)
 
     local function executeScript(placeId)
@@ -632,48 +611,6 @@ local success, guiError = pcall(function()
             StarterGui:SetCore("SendNotification", {
                 Title = "ArceusXArchive",
                 Text = "⚠️ Failed to copy Premium URL: " .. tostring(errorMsg),
-                Duration = 5
-            })
-        end
-    end)
-
-    HallOfShameButton.MouseButton1Click:Connect(function()
-        local hallOfShameUrl = "https://theleviathan.my.canva.site/hallofshame"
-        local success, errorMsg = pcall(function()
-            setclipboard(hallOfShameUrl)
-        end)
-        if success then
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXArchive",
-                Text = "✅ Hall Of Shame URL copied to clipboard!",
-                Duration = 5
-            })
-        else
-            warn("❌ Failed to copy Hall Of Shame URL:", errorMsg)
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXArchive",
-                Text = "⚠️ Failed to copy Hall Of Shame URL: " .. tostring(errorMsg),
-                Duration = 5
-            })
-        end
-    end)
-
-    DiscordButton.MouseButton1Click:Connect(function()
-        local discordUrl = "https://discord.gg/DW8apaMGYR"
-        local success, errorMsg = pcall(function()
-            setclipboard(discordUrl)
-        end)
-        if success then
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXArchive",
-                Text = "✅ Discord Server URL copied to clipboard!",
-                Duration = 5
-            })
-        else
-            warn("❌ Failed to copy Discord URL:", errorMsg)
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXArchive",
-                Text = "⚠️ Failed to copy Discord URL: " .. tostring(errorMsg),
                 Duration = 5
             })
         end
