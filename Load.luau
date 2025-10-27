@@ -171,6 +171,7 @@ local GameScripts = {
     ["127804672565817"] = "Nadirix",
     ["125337660180093"] = "Aetheris",
     ["129916920179384"] = "Lunarix",
+    ["118930028098583"] = "Solaron",
 }
 
 local ROYGBIV = {
