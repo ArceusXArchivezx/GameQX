@@ -179,6 +179,7 @@ local GameScripts = {
     ["75336043355205"] = "Antaresh",
     ["99034404545832"] = "Betelgor",
     ["80482032675584"] = "Canopix",
+    ["130453270520042"] = "Fomalhax",
 }
 
 local ROYGBIV = {
