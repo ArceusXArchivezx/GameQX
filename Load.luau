@@ -185,6 +185,7 @@ local GameScripts = {
     ["116433680177156"] = "Orionyx",
     ["81672832974176"] = "Lyranox",
     ["115680054300509"] = "Ursarix",
+    ["88644333175263"] = "Draconix",
 }
 
 local ROYGBIV = {
