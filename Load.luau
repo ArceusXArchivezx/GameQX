@@ -214,6 +214,7 @@ local GameScripts = {
     ["135653357039371"] = "Eventidar",
     ["75275402548831"] = "Redshiftar",
     ["103104599827022"] = "Blueshiftar",
+    ["135285975690941"] = "Expanthor",
 }
 
 local ROYGBIV = {
