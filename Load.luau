@@ -213,6 +213,7 @@ local GameScripts = {
     ["98711018939494"] = "Wormholis",
     ["135653357039371"] = "Eventidar",
     ["75275402548831"] = "Redshiftar",
+    ["103104599827022"] = "Blueshiftar",
 }
 
 local ROYGBIV = {
