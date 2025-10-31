@@ -223,6 +223,7 @@ local GameScripts = {
     ["95883290231059"] = "Voidripper",
     ["110429357957262"] = "Starweaver",
     ["99849807606260"] = "Galacticore",
+    ["115456230773566"] = "Constellux",
 }
 
 local ROYGBIV = {
