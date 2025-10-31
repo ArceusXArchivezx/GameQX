@@ -229,6 +229,7 @@ local GameScripts = {
     ["98757204462933"] = "Sunforger",
     ["73493765209038"] = "DustDevourer",
     ["140277708007710"] = "RingGazer",
+    ["81336028304509"] = "Orbiton",
 }
 
 local ROYGBIV = {
