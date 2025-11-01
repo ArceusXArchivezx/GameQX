@@ -234,6 +234,7 @@ local GameScripts = {
     ["102348365706836"] = "RocheLimitor",
     ["126688949103299"] = "Kuiperon",
     ["109286987552172"] = "Oorth",
+    ["106823440585954"] = "Nyxolar",
 }
 
 local ROYGBIV = {
