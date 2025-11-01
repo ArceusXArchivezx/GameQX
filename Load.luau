@@ -242,6 +242,7 @@ local GameScripts = {
     ["93908541542709"] = "Voidwhisper",
     ["122233217802229"] = "SilentScream",
     ["128018459895270"] = "InfiniteWing",
+    ["132441576270109"] = "TimelessOne",
 }
 
 local ROYGBIV = {
