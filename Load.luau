@@ -1,19 +1,13 @@
 local StarterGui = game:GetService("StarterGui")
-local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
-local Players = game:GetService("Players")
+
 
 local BASE_URL_REVERSED = "/niam/sdaeh/sfer/XQemaG/xzevihcrAXsuecrA/moc.tnetnocresubuhtig.war//:sptth"
 local function getBaseUrl()
-    local success, decoded = pcall(function()
-        return string.reverse(BASE_URL_REVERSED)
-    end)
-    if not success then
-        warn("❌ URL decoding failed:", decoded)
-        return nil
-    end
-    return decoded
+    local ok, url = pcall(string.reverse, BASE_URL_REVERSED)
+    return ok and url or nil
 end
+
 
 local GameScripts = {
     ["10721852444"] = "Alea.Moon",
@@ -249,459 +243,140 @@ local GameScripts = {
     ["91769674270735"] = "Amethyx",
 }
 
-local ROYGBIV = {
-    Color3.fromRGB(255, 0, 0), -- Red
-    Color3.fromRGB(255, 165, 0), -- Orange
-    Color3.fromRGB(255, 255, 0), -- Yellow
-    Color3.fromRGB(0, 255, 0), -- Green
-    Color3.fromRGB(0, 0, 255), -- Blue
-    Color3.fromRGB(75, 0, 130), -- Indigo
-    Color3.fromRGB(148, 0, 211) -- Violet
-}
 
-local function getRandomROYGBIVGradient()
-    local keypoints = {}
-    for i = 0, 1, 0.2 do
-        table.insert(keypoints, ColorSequenceKeypoint.new(i, ROYGBIV[math.random(1, #ROYGBIV)]))
-    end
-    return ColorSequence.new(keypoints)
+local ROYGBIV = {Color3.fromRGB(255,0,0), Color3.fromRGB(255,165,0), Color3.fromRGB(255,255,0),
+    Color3.fromRGB(0,255,0), Color3.fromRGB(0,0,255), Color3.fromRGB(75,0,130), Color3.fromRGB(148,0,211)}
+
+local function randGradient()
+    local kp = {}
+    for i = 0, 1, 0.25 do table.insert(kp, ColorSequenceKeypoint.new(i, ROYGBIV[math.random(#ROYGBIV)])) end
+    return ColorSequence.new(kp)
 end
 
-local success, guiError = pcall(function()
-    -- Welcome notification
+
+local screen = Instance.new("ScreenGui")
+screen.Name = "CMD_Bar_2_" .. os.time()
+screen.ResetOnSpawn = false
+screen.Parent = game.CoreGui
+
+local bar = Instance.new("Frame")
+bar.Size = UDim2.new(0, 200, 0, 40)
+bar.Position = UDim2.new(0.5, -100, 0, 20)
+bar.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+bar.BorderSizePixel = 0
+bar.Active = true
+bar.Draggable = true
+bar.Parent = screen
+
+Instance.new("UICorner", bar).CornerRadius = UDim.new(0, 8)
+
+local gradient = Instance.new("UIGradient", bar)
+gradient.Color = randGradient()
+gradient.Rotation = 0
+
+local stroke = Instance.new("UIStroke", bar)
+stroke.Thickness = 2
+stroke.Color = Color3.fromRGB(255, 255, 255)
+stroke.Transparency = 0.3
+
+
+spawn(function()
+    while wait(3) do
+        TweenService:Create(gradient, TweenInfo.new(3), {Rotation = 360}):Play()
+        wait(3); gradient.Rotation = 0; gradient.Color = randGradient()
+    end
+end)
+
+spawn(function()
+    while wait(1.5) do
+        TweenService:Create(bar, TweenInfo.new(1), {Size = UDim2.new(0, 204, 0, 42)}):Play()
+        wait(1)
+        TweenService:Create(bar, TweenInfo.new(1), {Size = UDim2.new(0, 200, 0, 40)}):Play()
+        wait(1)
+    end
+end)
+
+
+local inputContainer = Instance.new("Frame", bar)
+inputContainer.Size = UDim2.new(0, 156, 0, 28)
+inputContainer.Position = UDim2.new(0, 8, 0, 6)
+inputContainer.BackgroundTransparency = 1
+
+
+local input = Instance.new("TextBox", inputContainer)
+input.Size = UDim2.new(0, 96, 1, 0)
+input.Position = UDim2.new(0, 0, 0, 0)
+input.PlaceholderText = "Place ID"
+input.Text = ""
+input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+input.BackgroundTransparency = 0.15
+input.TextColor3 = Color3.fromRGB(255, 255, 255)
+input.Font = Enum.Font.Gotham
+input.TextSize = 12
+input.ClearTextOnFocus = false
+Instance.new("UICorner", input).CornerRadius = UDim.new(0, 6)
+
+
+local autoBtn = Instance.new("TextButton", inputContainer)
+autoBtn.Size = UDim2.new(0, 34, 1, 0)
+autoBtn.Position = UDim2.new(0, 96, 0, 0)
+autoBtn.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+autoBtn.Text = "A"
+autoBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+autoBtn.Font = Enum.Font.GothamBold
+autoBtn.TextSize = 13
+Instance.new("UICorner", autoBtn).CornerRadius = UDim.new(0, 6)
+
+
+local closeBtn = Instance.new("TextButton", inputContainer)
+closeBtn.Size = UDim2.new(0, 26, 1, 0)
+closeBtn.Position = UDim2.new(0, 130, 0, 0)
+closeBtn.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
+closeBtn.Text = "X"
+closeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+closeBtn.Font = Enum.Font.GothamBold
+closeBtn.TextSize = 13
+Instance.new("UICorner", closeBtn).CornerRadius = UDim.new(0, 6)
+
+
+local function runScript(id)
+    local file = GameScripts[id]
+    if not file then
+        StarterGui:SetCore("SendNotification", {Title="CMD Bar 2", Text="No script: "..id, Duration=3})
+        return
+    end
+    local url = getBaseUrl() .. file
+    local ok, res = pcall(function()
+        return loadstring(game:HttpGet(url))()
+    end)
     StarterGui:SetCore("SendNotification", {
-        Title = "ArceusXArchive",
-        Text = "Welcome to ArceusXArchive!",
-        Duration = 5
+        Title = "CMD Bar 2",
+        Text = ok and "Executed!" or "Failed!",
+        Duration = 3
     })
+end
 
-    local ScreenGui = Instance.new("ScreenGui")
-    ScreenGui.Name = "ArceusXNeoGUI_" .. tostring(os.time())
-    ScreenGui.Enabled = true
-    ScreenGui.ResetOnSpawn = false
-    ScreenGui.Parent = game.CoreGui
-
-    -- Black background
-    local BackgroundFrame = Instance.new("Frame")
-    BackgroundFrame.Size = UDim2.new(0, 220, 0, 212)
-    BackgroundFrame.Position = UDim2.new(0.5, -110, 0.5, -106)
-    BackgroundFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-    BackgroundFrame.BackgroundTransparency = 0
-    BackgroundFrame.ZIndex = 0
-    BackgroundFrame.Parent = ScreenGui
-
-    local BackgroundCorner = Instance.new("UICorner")
-    BackgroundCorner.CornerRadius = UDim.new(0, 12)
-    BackgroundCorner.Parent = BackgroundFrame
-
-    local Frame = Instance.new("Frame")
-    Frame.Size = UDim2.new(0, 200, 0, 192)
-    Frame.Position = UDim2.new(0.5, -100, 0.5, -96)
-    Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Frame.Parent = ScreenGui
-    Frame.Active = true
-    Frame.Draggable = true
-    Frame.ZIndex = 1
-
-    local FrameCorner = Instance.new("UICorner")
-    FrameCorner.CornerRadius = UDim.new(0, 12)
-    FrameCorner.Parent = Frame
-
-    local FrameGradient = Instance.new("UIGradient")
-    FrameGradient.Color = getRandomROYGBIVGradient()
-    FrameGradient.Rotation = 0
-    FrameGradient.Parent = Frame
-
-    -- Animate rainbow rotation and random color update
-    local function animateGradient(gradient)
-        while true do
-            TweenService:Create(gradient, TweenInfo.new(3, Enum.EasingStyle.Linear), { Rotation = 360 }):Play()
-            wait(3)
-            gradient.Rotation = 0
-            gradient.Color = getRandomROYGBIVGradient()
-        end
+input.FocusLost:Connect(function(enter)
+    if enter and input.Text ~= "" then
+        runScript(input.Text)
+        input.Text = ""
     end
-    spawn(function() animateGradient(FrameGradient) end)
+end)
 
-    -- Pulsating animation for Frame
-    local function animatePulsate()
-        while true do
-            TweenService:Create(Frame, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 204, 0, 196) }):Play()
-            wait(1)
-            TweenService:Create(Frame, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 200, 0, 192) }):Play()
-            wait(1)
-        end
-    end
-    spawn(animatePulsate)
-
-    local FrameShadow = Instance.new("UIStroke")
-    FrameShadow.Thickness = 2
-    FrameShadow.Color = Color3.fromRGB(50, 50, 50)
-    FrameShadow.Transparency = 0.5
-    FrameShadow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    FrameShadow.Parent = Frame
-
-    local FrameGlow = Instance.new("UIStroke")
-    FrameGlow.Thickness = 3
-    FrameGlow.Color = Color3.fromRGB(255, 255, 255)
-    FrameGlow.Transparency = 0.3
-    FrameGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    FrameGlow.Parent = Frame
-
-    -- Animate glow effect
-    local function animateGlow(stroke)
-        while true do
-            TweenService:Create(stroke, TweenInfo.new(1.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Transparency = 0.8 }):Play()
-            wait(1.5)
-            TweenService:Create(stroke, TweenInfo.new(1.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Transparency = 0.3 }):Play()
-            wait(1.5)
-        end
-    end
-    spawn(function() animateGlow(FrameGlow) end)
-
-    -- Particle effect
-    local ParticleFrame = Instance.new("Frame")
-    ParticleFrame.Size = UDim2.new(1, 20, 1, 20)
-    ParticleFrame.Position = UDim2.new(0, -10, 0, -10)
-    ParticleFrame.BackgroundTransparency = 1
-    ParticleFrame.Parent = Frame
-
-    local function createParticle()
-        local particle = Instance.new("Frame")
-        particle.Size = UDim2.new(0, 5, 0, 5)
-        particle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        particle.Position = UDim2.new(math.random(), math.random(0, 200), math.random(), math.random(0, 192))
-        particle.Parent = ParticleFrame
-        local particleCorner = Instance.new("UICorner")
-        particleCorner.CornerRadius = UDim.new(1, 0)
-        particleCorner.Parent = particle
-        local particleGradient = Instance.new("UIGradient")
-        particleGradient.Color = getRandomROYGBIVGradient()
-        particleGradient.Rotation = 0
-        particleGradient.Parent = particle
-        spawn(function() animateGradient(particleGradient) end)
-
-        -- Animate particle
-        local function moveParticle()
-            local targetX = math.random(0, 200)
-            local targetY = math.random(0, 192)
-            TweenService:Create(particle, TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-                Position = UDim2.new(0, targetX, 0, targetY),
-                BackgroundTransparency = 0.7
-            }):Play()
-            wait(2)
-            particle:Destroy()
-        end
-        spawn(moveParticle)
-    end
-
-    -- Spawn particles periodically
-    spawn(function()
-        while true do
-            createParticle()
-            wait(0.3)
-        end
-    end)
-
-    -- Real-time clock
-    local ClockLabel = Instance.new("TextLabel")
-    ClockLabel.Size = UDim2.new(0, 160, 0, 20)
-    ClockLabel.Position = UDim2.new(0, 4, 0, 100)
-    ClockLabel.BackgroundTransparency = 1
-    ClockLabel.Text = "00:00:00 WIB"
-    ClockLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-    ClockLabel.TextTransparency = 0.1
-    ClockLabel.Font = Enum.Font.Gotham
-    ClockLabel.TextSize = 12
-    ClockLabel.Parent = Frame
-
-    spawn(function()
-        while true do
-            local time = os.date("*t", os.time() + 7 * 3600) -- UTC+7 for WIB
-            ClockLabel.Text = string.format("%02d:%02d:%02d WIB", time.hour, time.min, time.sec)
-            wait(1)
-        end
-    end)
-
-    local isDragging = false
-    local dragStart = nil
-    local startPos = nil
-
-    Frame.InputBegan:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-            isDragging = true
-            dragStart = input.Position
-            startPos = Frame.Position
-        end
-    end)
-
-    Frame.InputChanged:Connect(function(input)
-        if isDragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
-            local delta = input.Position - dragStart
-            Frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-            BackgroundFrame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X - 10, startPos.Y.Scale, startPos.Y.Offset + delta.Y - 10)
-        end
-    end)
-
-    UserInputService.InputEnded:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-            isDragging = false
-        end
-    end)
-
-    local CloseButton = Instance.new("TextButton")
-    CloseButton.Size = UDim2.new(0, 28, 0, 28)
-    CloseButton.Position = UDim2.new(1, -32, 0, 4)
-    CloseButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    CloseButton.Text = "X"
-    CloseButton.TextColor3 = Color3.fromRGB(30, 30, 30)
-    CloseButton.TextTransparency = 0.1
-    CloseButton.Font = Enum.Font.GothamBold
-    CloseButton.TextSize = 14
-    CloseButton.Parent = Frame
-
-    local CloseButtonCorner = Instance.new("UICorner")
-    CloseButtonCorner.CornerRadius = UDim.new(0, 6)
-    CloseButtonCorner.Parent = CloseButton
-
-    local CloseButtonGradient = Instance.new("UIGradient")
-    CloseButtonGradient.Color = getRandomROYGBIVGradient()
-    CloseButtonGradient.Rotation = 0
-    CloseButtonGradient.Parent = CloseButton
-    spawn(function() animateGradient(CloseButtonGradient) end)
-
-    local CloseButtonGlow = Instance.new("UIStroke")
-    CloseButtonGlow.Thickness = 2
-    CloseButtonGlow.Color = Color3.fromRGB(255, 255, 255)
-    CloseButtonGlow.Transparency = 0.3
-    CloseButtonGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    CloseButtonGlow.Parent = CloseButton
-    spawn(function() animateGlow(CloseButtonGlow) end)
-
-    CloseButton.MouseEnter:Connect(function()
-        TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 30, 0, 30) }):Play()
-    end)
-    CloseButton.MouseLeave:Connect(function()
-        TweenService:Create(CloseButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 28, 0, 28) }):Play()
-    end)
-
-    CloseButton.MouseButton1Click:Connect(function()
-        ScreenGui.Enabled = false
-    end)
-
-    local TextBox = Instance.new("TextBox")
-    TextBox.Size = UDim2.new(0, 160, 0, 28)
-    TextBox.Position = UDim2.new(0, 4, 0, 4)
-    TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    TextBox.Text = "Enter Place ID Here"
-    TextBox.TextColor3 = Color3.fromRGB(30, 30, 30)
-    TextBox.TextTransparency = 0.1
-    TextBox.Font = Enum.Font.Gotham
-    TextBox.TextSize = 14
-    TextBox.ClearTextOnFocus = true
-    TextBox.Parent = Frame
-
-    local TextBoxCorner = Instance.new("UICorner")
-    TextBoxCorner.CornerRadius = UDim.new(0, 6)
-    TextBoxCorner.Parent = TextBox
-
-    local TextBoxGradient = Instance.new("UIGradient")
-    TextBoxGradient.Color = getRandomROYGBIVGradient()
-    TextBoxGradient.Rotation = 0
-    TextBoxGradient.Parent = TextBox
-    spawn(function() animateGradient(TextBoxGradient) end)
-
-    local TextBoxGlow = Instance.new("UIStroke")
-    TextBoxGlow.Thickness = 2
-    TextBoxGlow.Color = Color3.fromRGB(255, 255, 255)
-    TextBoxGlow.Transparency = 0.3
-    TextBoxGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    TextBoxGlow.Parent = TextBox
-    spawn(function() animateGlow(TextBoxGlow) end)
-
-    TextBox.MouseEnter:Connect(function()
-        TweenService:Create(TextBox, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
-    end)
-    TextBox.MouseLeave:Connect(function()
-        TweenService:Create(TextBox, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28) }):Play()
-    end)
-
-    local AutoFoundButton = Instance.new("TextButton")
-    AutoFoundButton.Size = UDim2.new(0, 160, 0, 28)
-    AutoFoundButton.Position = UDim2.new(0, 4, 0, 36)
-    AutoFoundButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    AutoFoundButton.Text = "Auto Found Place ID"
-    AutoFoundButton.TextColor3 = Color3.fromRGB(30, 30, 30)
-    AutoFoundButton.TextTransparency = 0.1
-    AutoFoundButton.Font = Enum.Font.Gotham
-    AutoFoundButton.TextSize = 14
-    AutoFoundButton.Parent = Frame
-
-    local AutoFoundButtonCorner = Instance.new("UICorner")
-    AutoFoundButtonCorner.CornerRadius = UDim.new(0, 6)
-    AutoFoundButtonCorner.Parent = AutoFoundButton
-
-    local AutoFoundButtonGradient = Instance.new("UIGradient")
-    AutoFoundButtonGradient.Color = getRandomROYGBIVGradient()
-    AutoFoundButtonGradient.Rotation = 0
-    AutoFoundButtonGradient.Parent = AutoFoundButton
-    spawn(function() animateGradient(AutoFoundButtonGradient) end)
-
-    local AutoFoundButtonGlow = Instance.new("UIStroke")
-    AutoFoundButtonGlow.Thickness = 2
-    AutoFoundButtonGlow.Color = Color3.fromRGB(255, 255, 255)
-    AutoFoundButtonGlow.Transparency = 0.3
-    AutoFoundButtonGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    AutoFoundButtonGlow.Parent = AutoFoundButton
-    spawn(function() animateGlow(AutoFoundButtonGlow) end)
-
-    AutoFoundButton.MouseEnter:Connect(function()
-        TweenService:Create(AutoFoundButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
-    end)
-    AutoFoundButton.MouseLeave:Connect(function()
-        TweenService:Create(AutoFoundButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28) }):Play()
-    end)
-
-    local PremiumButton = Instance.new("TextButton")
-    PremiumButton.Size = UDim2.new(0, 160, 0, 28)
-    PremiumButton.Position = UDim2.new(0, 4, 0, 68)
-    PremiumButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    PremiumButton.Text = "Tired of Getting Key?, Buy Premium"
-    PremiumButton.TextColor3 = Color3.fromRGB(30, 30, 30)
-    PremiumButton.TextTransparency = 0.1
-    PremiumButton.Font = Enum.Font.Gotham
-    PremiumButton.TextSize = 12
-    PremiumButton.TextWrapped = true
-    PremiumButton.Parent = Frame
-
-    local PremiumButtonCorner = Instance.new("UICorner")
-    PremiumButtonCorner.CornerRadius = UDim.new(0, 6)
-    PremiumButtonCorner.Parent = PremiumButton
-
-    local PremiumButtonGradient = Instance.new("UIGradient")
-    PremiumButtonGradient.Color = getRandomROYGBIVGradient()
-    PremiumButtonGradient.Rotation = 0
-    PremiumButtonGradient.Parent = PremiumButton
-    spawn(function() animateGradient(PremiumButtonGradient) end)
-
-    local PremiumButtonGlow = Instance.new("UIStroke")
-    PremiumButtonGlow.Thickness = 2
-    PremiumButtonGlow.Color = Color3.fromRGB(255, 255, 255)
-    PremiumButtonGlow.Transparency = 0.3
-    PremiumButtonGlow.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    PremiumButtonGlow.Parent = PremiumButton
-    spawn(function() animateGlow(PremiumButtonGlow) end)
-
-    PremiumButton.MouseEnter:Connect(function()
-        TweenService:Create(PremiumButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 162, 0, 30) }):Play()
-    end)
-    PremiumButton.MouseLeave:Connect(function()
-        TweenService:Create(PremiumButton, TweenInfo.new(0.2), { Size = UDim2.new(0, 160, 0, 28) }):Play()
-    end)
-
-    local function executeScript(placeId)
-        local fileName = GameScripts[placeId]
-        if not fileName then
-            warn("❌ No script found for Place ID", placeId)
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXArchive",
-                Text = "⚠️ No script available for Place ID " .. placeId,
-                Duration = 5
-            })
-            TextBox.Text = "Enter Place ID Here"
-            return
-        end
-
-        local url = getBaseUrl()
-        if not url then
-            warn("❌ URL decoding failed")
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXArchive",
-                Text = "⚠️ Failed to load script: URL error.",
-                Duration = 5
-            })
-            TextBox.Text = "Enter Place ID Here"
-            return
-        end
-        url = url .. fileName
-
-        local success, result = pcall(function()
-            local scriptContent = game:HttpGet(url)
-            if not scriptContent or scriptContent == "" then
-                error("Empty or invalid script content for Place ID " .. placeId .. " at " .. url)
-            end
-            return loadstring(scriptContent)()
-        end)
-
-        if not success then
-            warn("❌ Failed to load script for Place ID", placeId, ":", result)
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXArchive",
-                Text = "⚠️ Script Not Supported: " .. tostring(result),
-                Duration = 5
-            })
-        else
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXArchive",
-                Text = "✅ Script for Place ID " .. placeId .. " successfully executed!",
-                Duration = 5
-            })
-        end
-        TextBox.Text = "Enter Place ID Here"
-    end
-
-    TextBox.FocusLost:Connect(function(enterPressed)
-        if not enterPressed then return end
-        executeScript(TextBox.Text)
-    end)
-
-    AutoFoundButton.MouseButton1Click:Connect(function()
-        local successNekoi, resultNekoi = pcall(function()
-            return loadstring(game:HttpGet("https://raw.githubusercontent.com/ArceusXArchivezx/Nekoi/refs/heads/main/%E5%81%A5%E5%BA%B7%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E6%B0%B4%E3%82%92%E9%A3%B2%E3%81%BF%E3%81%BE%E3%81%97%E3%82%87%E3%81%86"))()
-        end)
-        if not successNekoi then
-            warn("❌ Failed to load script:", resultNekoi)
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXArchive",
-                Text = "⚠️ Failed to load script: " .. tostring(resultNekoi),
-                Duration = 5
-            })
-        else
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXArchive",
-                Text = "✅ Script successfully executed!",
-                Duration = 5
-            })
-        end
-    end)
-
-    PremiumButton.MouseButton1Click:Connect(function()
-        local premiumUrl = "https://theleviathan.my.canva.site/"
-        local success, errorMsg = pcall(function()
-            setclipboard(premiumUrl)
-        end)
-        if success then
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXArchive",
-                Text = "✅ Premium URL copied to clipboard!",
-                Duration = 5
-            })
-        else
-            warn("❌ Failed to copy Premium URL:", errorMsg)
-            StarterGui:SetCore("SendNotification", {
-                Title = "ArceusXArchive",
-                Text = "⚠️ Failed to copy Premium URL: " .. tostring(errorMsg),
-                Duration = 5
-            })
-        end
+autoBtn.MouseButton1Click:Connect(function()
+    pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArceusXArchivezx/Nekoi/refs/heads/main/%E5%81%A5%E5%BA%B7%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E6%B0%B4%E3%82%92%E9%A3%B2%E3%81%BF%E3%81%BE%E3%81%97%E3%82%87%E3%81%86"))()
+        StarterGui:SetCore("SendNotification", {Title="CMD Bar 2", Text="Auto Found!", Duration=3})
     end)
 end)
 
-if not success then
-    warn("❌ GUI initialization failed:", guiError)
-    StarterGui:SetCore("SendNotification", {
-        Title = "ArceusXArchive",
-        Text = "⚠️ Failed to initialize GUI: " .. tostring(guiError),
-        Duration = 5
-    })
-end
+closeBtn.MouseButton1Click:Connect(function()
+    screen:Destroy()
+end)
+
+
+StarterGui:SetCore("SendNotification", {
+    Title = "ArceusXArchive",
+    Text = "YouTube @ArceusXArchive",
+    Duration = 10
+})
