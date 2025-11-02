@@ -342,7 +342,7 @@ Instance.new("UICorner", closeBtn).CornerRadius = UDim.new(0, 6)
 local function runScript(id)
     local file = GameScripts[id]
     if not file then
-        StarterGui:SetCore("SendNotification", {Title="CMD Bar 2", Text="No script: "..id, Duration=3})
+        StarterGui:SetCore("SendNotification", {Title="ArceusXArchive", Text="No script: "..id, Duration=3})
         return
     end
     local url = getBaseUrl() .. file
