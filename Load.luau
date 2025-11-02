@@ -350,7 +350,7 @@ local function runScript(id)
         return loadstring(game:HttpGet(url))()
     end)
     StarterGui:SetCore("SendNotification", {
-        Title = "CMD Bar 2",
+        Title = "ArceusXArchive",
         Text = ok and "Executed!" or "Failed!",
         Duration = 3
     })
@@ -366,7 +366,7 @@ end)
 autoBtn.MouseButton1Click:Connect(function()
     pcall(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ArceusXArchivezx/Nekoi/refs/heads/main/%E5%81%A5%E5%BA%B7%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E6%B0%B4%E3%82%92%E9%A3%B2%E3%81%BF%E3%81%BE%E3%81%97%E3%82%87%E3%81%86"))()
-        StarterGui:SetCore("SendNotification", {Title="CMD Bar 2", Text="Auto Found!", Duration=3})
+        StarterGui:SetCore("SendNotification", {Title="ArceusXArchive", Text="Auto Found!", Duration=3})
     end)
 end)
 
