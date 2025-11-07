@@ -1,13 +1,23 @@
-local StarterGui = game:GetService("StarterGui")
-local TweenService = game:GetService("TweenService")
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 
-local BASE_URL_REVERSED = "/niam/sdaeh/sfer/XQemaG/xzevihcrAXsuecrA/moc.tnetnocresubuhtig.war//:sptth"
-local function getBaseUrl()
-    local ok, url = pcall(string.reverse, BASE_URL_REVERSED)
-    return ok and url or nil
-end
+local Window = Fluent:CreateWindow({
+    Title = "ArceusXArchive",
+    SubTitle = "| AX-Archive",
+    TabWidth = 140,
+    Size = UDim2.fromOffset(400, 380),
+    Acrylic = true,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl
+})
 
+local Tabs = {
+    Main = Window:AddTab({ Title = "Game ID", Icon = "terminal" }),
+    Mount = Window:AddTab({ Title = "Mount & Gunung", Icon = "anchor" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
 
 local GameScripts = {
     ["10721852444"] = "Alea.Moon", ["3101667897"] = "Terpercaya.lua", ["3956818381"] = "Indo.lua",
@@ -89,154 +99,71 @@ local GameScripts = {
     ["91769674270735"] = "Amethyx"
 }
 
--- Rainbow
-local ROYGBIV = {Color3.fromRGB(255,0,0), Color3.fromRGB(255,165,0), Color3.fromRGB(255,255,0),
-    Color3.fromRGB(0,255,0), Color3.fromRGB(0,0,255), Color3.fromRGB(75,0,130), Color3.fromRGB(148,0,211)}
+local BASE_URL = "https://raw.githubusercontent.com/ArceusXArchivezx/Games/main/"
 
-local function randGradient()
-    local kp = {}
-    for i = 0, 1, 0.25 do table.insert(kp, ColorSequenceKeypoint.new(i, ROYGBIV[math.random(#ROYGBIV)])) end
-    return ColorSequence.new(kp)
-end
+Tabs.Main:AddInput("PlaceID", {
+    Title = "Enter Place ID",
+    Placeholder = "Example: 10721852444",
+    Numeric = true,
+    Finished = true,
+    Callback = function(id)
+        id = tostring(id):match("%d+")
+        if not id or id == "" then
+            Fluent:Notify({ Title = "Error", Content = "Invalid ID!", Duration = 3 })
+            return
+        end
 
--- === GUI 200px ===
-local screen = Instance.new("ScreenGui")
-screen.Name = "CMD_Bar_2_" .. os.time()
-screen.ResetOnSpawn = false
-screen.Parent = game.CoreGui
+        local file = GameScripts[id]
+        if not file then
+            Fluent:Notify({ Title = "Not Found", Content = "No script for ID: " .. id, Duration = 4 })
+            return
+        end
 
-local bar = Instance.new("Frame")
-bar.Size = UDim2.new(0, 200, 0, 40)
-bar.Position = UDim2.new(0.5, -100, 0, 20)
-bar.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-bar.BorderSizePixel = 0
-bar.Active = true
-bar.Draggable = true
-bar.Parent = screen
-
-Instance.new("UICorner", bar).CornerRadius = UDim.new(0, 8)
-
-local gradient = Instance.new("UIGradient", bar)
-gradient.Color = randGradient()
-gradient.Rotation = 0
-
-local stroke = Instance.new("UIStroke", bar)
-stroke.Thickness = 2
-stroke.Color = Color3.fromRGB(255, 255, 255)
-stroke.Transparency = 0.3
-
--- Animasi
-spawn(function()
-    while wait(3) do
-        TweenService:Create(gradient, TweenInfo.new(3), {Rotation = 360}):Play()
-        wait(3); gradient.Rotation = 0; gradient.Color = randGradient()
+        pcall(function()
+            loadstring(game:HttpGet(BASE_URL .. file))()
+            Fluent:Notify({ Title = "Success", Content = file .. " loaded!", Duration = 4 })
+        end)
     end
-end)
-
-spawn(function()
-    while wait(1.5) do
-        TweenService:Create(bar, TweenInfo.new(1), {Size = UDim2.new(0, 204, 0, 42)}):Play()
-        wait(1)
-        TweenService:Create(bar, TweenInfo.new(1), {Size = UDim2.new(0, 200, 0, 40)}):Play()
-        wait(1)
-    end
-end)
-
--- === [INPUT][A][M][X] MENEMPEL RAPAT ===
-local container = Instance.new("Frame", bar)
-container.Size = UDim2.new(0, 182, 0, 28)
-container.Position = UDim2.new(0, 8, 0, 6)
-container.BackgroundTransparency = 1
-
--- Input
-local input = Instance.new("TextBox", container)
-input.Size = UDim2.new(0, 88, 1, 0)
-input.Position = UDim2.new(0, 0, 0, 0)
-input.PlaceholderText = "Place ID"
-input.Text = ""
-input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-input.BackgroundTransparency = 0.15
-input.TextColor3 = Color3.fromRGB(255, 255, 255)
-input.Font = Enum.Font.Gotham
-input.TextSize = 11
-input.ClearTextOnFocus = false
-Instance.new("UICorner", input).CornerRadius = UDim.new(0, 6)
-
--- A (Auto Found)
-local autoBtn = Instance.new("TextButton", container)
-autoBtn.Size = UDim2.new(0, 30, 1, 0)
-autoBtn.Position = UDim2.new(0, 88, 0, 0)
-autoBtn.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
-autoBtn.Text = "A"
-autoBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-autoBtn.Font = Enum.Font.GothamBold
-autoBtn.TextSize = 12
-Instance.new("UICorner", autoBtn).CornerRadius = UDim.new(0, 6)
-
--- M (Premium - RGAKALPA)
-local premiumBtn = Instance.new("TextButton", container)
-premiumBtn.Size = UDim2.new(0, 30, 1, 0)
-premiumBtn.Position = UDim2.new(0, 118, 0, 0)
-premiumBtn.BackgroundColor3 = Color3.fromRGB(255, 215, 0) -- Gold
-premiumBtn.Text = "M"
-premiumBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
-premiumBtn.Font = Enum.Font.GothamBold
-premiumBtn.TextSize = 12
-Instance.new("UICorner", premiumBtn).CornerRadius = UDim.new(0, 6)
-
--- X (Close)
-local closeBtn = Instance.new("TextButton", container)
-closeBtn.Size = UDim2.new(0, 26, 1, 0)
-closeBtn.Position = UDim2.new(0, 148, 0, 0)
-closeBtn.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
-closeBtn.Text = "X"
-closeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-closeBtn.Font = Enum.Font.GothamBold
-closeBtn.TextSize = 12
-Instance.new("UICorner", closeBtn).CornerRadius = UDim.new(0, 6)
-
--- === FUNGSI ===
-local function runScript(id)
-    local file = GameScripts[id]
-    if not file then
-        StarterGui:SetCore("SendNotification", {Title="ArceusXArchive", Text="No script: "..id, Duration=3})
-        return
-    end
-    local url = getBaseUrl() .. file
-    pcall(function()
-        loadstring(game:HttpGet(url))()
-        StarterGui:SetCore("SendNotification", {Title="ArceusXArchive", Text="Script Loaded!", Duration=3})
-    end)
-end
-
-input.FocusLost:Connect(function(enter)
-    if enter and input.Text ~= "" then
-        runScript(input.Text)
-        input.Text = ""
-    end
-end)
-
-autoBtn.MouseButton1Click:Connect(function()
-    pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArceusXArchivezx/Nekoi/refs/heads/main/%E5%81%A5%E5%BA%B7%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E6%B0%B4%E3%82%92%E9%A3%B2%E3%81%BF%E3%81%BE%E3%81%97%E3%82%87%E3%81%86"))()
-        StarterGui:SetCore("SendNotification", {Title="ArceusXArchive", Text="Auto Found ON!", Duration=3})
-    end)
-end)
-
-premiumBtn.MouseButton1Click:Connect(function()
-    pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Premium"))()
-        StarterGui:SetCore("SendNotification", {Title="ArceusXArchive", Text="Mount Activated!", Duration=4})
-    end)
-end)
-
-closeBtn.MouseButton1Click:Connect(function()
-    screen:Destroy()
-end)
-
--- Welcome
-StarterGui:SetCore("SendNotification", {
-    Title = "ArceusXArchive",
-    Text = "Welcome",
-    Duration = 10
 })
+
+Tabs.Main:AddButton({
+    Title = "Auto Found Place ID",
+    Description = "Click Here",
+    Callback = function()
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ArceusXArchivezx/Nekoi/refs/heads/main/%E5%81%A5%E5%BA%B7%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E6%B0%B4%E3%82%92%E9%A3%B2%E3%81%BF%E3%81%BE%E3%81%97%E3%82%87%E3%81%86"))()
+            Fluent:Notify({ Title = "Auto Found", Content = "Activated!", Duration = 3 })
+        end)
+    end
+})
+
+Tabs.Mount:AddButton({
+    Title = "Mount | M",
+    Description = "Click Here",
+    Callback = function()
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Premium"))()
+            Fluent:Notify({ Title = "Meow", Content = "Loaded!", Duration = 4 })
+        end)
+    end
+})
+
+
+Fluent:Notify({
+    Title = "AX-Archive",
+    Content = "Welcome",
+    Duration = 8
+})
+
+-- === SAVE MANAGER ===
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+SaveManager:IgnoreThemeSettings()
+SaveManager:SetIgnoreIndexes({})
+InterfaceManager:SetFolder("ArceusXArchive")
+SaveManager:SetFolder("ArceusXArchive/cmdbar2")
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+
+Window:SelectTab(1)
+SaveManager:LoadAutoloadConfig()
