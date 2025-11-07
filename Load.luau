@@ -7,7 +7,7 @@ local Window = Fluent:CreateWindow({
     Title = "ArceusXArchive",
     SubTitle = "| AX-Archive",
     TabWidth = 140,
-    Size = UDim2.fromOffset(400, 380),
+    Size = UDim2.fromOffset(480, 380),
     Acrylic = true,
     Theme = "Dark",
     MinimizeKey = Enum.KeyCode.LeftControl
@@ -16,6 +16,7 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Main = Window:AddTab({ Title = "Game ID", Icon = "terminal" }),
     Mount = Window:AddTab({ Title = "Mount & Gunung", Icon = "anchor" }),
+    Troll = Window:AddTab({ Title = "Troll & Tower", Icon = "bolt" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -148,6 +149,16 @@ Tabs.Mount:AddButton({
     end
 })
 
+Tabs.Troll:AddButton({
+    Title = "Anti-Gravity Troll Tower",
+    Description = "Click Here",
+    Callback = function()
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Topazior"))()
+            Fluent:Notify({ Title = "Meow", Content = "Loaded!", Duration = 4 })
+        end)
+    end
+})
 
 Fluent:Notify({
     Title = "AX-Archive",
