@@ -140,10 +140,21 @@ Tabs.Main:AddButton({
 
 Tabs.Mount:AddButton({
     Title = "Mount | M",
-    Description = "Click Here",
+    Description = "Freemium",
     Callback = function()
         pcall(function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Premium"))()
+            Fluent:Notify({ Title = "Meow", Content = "Loaded!", Duration = 4 })
+        end)
+    end
+})
+
+Tabs.Mount:AddButton({
+    Title = "Mount | Premium",
+    Description = "want good features?, Buy",
+    Callback = function()
+        pcall(function()
+            loadstring(game:HttpGet("https://api.junkie-development.de/api/v1/luascripts/public/699732917645144473f8556bd70ddec45497ed61e46700490e51d73020d57830/download"))()
             Fluent:Notify({ Title = "Meow", Content = "Loaded!", Duration = 4 })
         end)
     end
