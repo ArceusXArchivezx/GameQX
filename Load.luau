@@ -100,7 +100,7 @@ local GameScripts = {
     ["91769674270735"] = "Amethyx"
 }
 
-local BASE_URL = "https://raw.githubusercontent.com/ArceusXArchivezx/Games/main/"
+local BASE_URL = "https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/main/"
 
 Tabs.Main:AddInput("PlaceID", {
     Title = "Enter Place ID",
