@@ -171,6 +171,17 @@ Tabs.Troll:AddButton({
     end
 })
 
+Tabs.Troll:AddButton({
+    Title = "Scary Troll Slap Tower",
+    Description = "Click Here",
+    Callback = function()
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Gamez635/ListGame/refs/heads/main/Scary%20Troll%20Slap%20Tower"))()
+            Fluent:Notify({ Title = "Meow", Content = "Loaded!", Duration = 4 })
+        end)
+    end
+})
+
 Fluent:Notify({
     Title = "AX-Archive",
     Content = "Welcome",
