@@ -183,6 +183,17 @@ Tabs.Troll:AddButton({
     end
 })
 
+Tabs.Obby:AddButton({
+    Title = "Obby & Tower",
+    Description = "Click Here",
+    Callback = function()
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Emeraldon"))()
+            Fluent:Notify({ Title = "Meow", Content = "Loaded!", Duration = 4 })
+        end)
+    end
+})
+
 Fluent:Notify({
     Title = "AX-Archive",
     Content = "Welcome",
