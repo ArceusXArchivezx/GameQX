@@ -140,7 +140,7 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Mount:AddButton({
-    Title = "Mount | M",
+    Title = "Mount | M | V1",
     Description = "Freemium",
     Callback = function()
         pcall(function()
