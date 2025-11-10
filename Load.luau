@@ -151,6 +151,17 @@ Tabs.Mount:AddButton({
 })
 
 Tabs.Mount:AddButton({
+    Title = "Mount | M | V2",
+    Description = "Freemium",
+    Callback = function()
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/MountV2Freemium"))()
+            Fluent:Notify({ Title = "Meow", Content = "Loaded!", Duration = 4 })
+        end)
+    end
+})
+
+Tabs.Mount:AddButton({
     Title = "Mount | Premium",
     Description = "want good features?, Buy",
     Callback = function()
