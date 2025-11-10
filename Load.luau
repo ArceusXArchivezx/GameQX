@@ -16,8 +16,9 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Main = Window:AddTab({ Title = "Game ID", Icon = "terminal" }),
     Mount = Window:AddTab({ Title = "Mount & Gunung", Icon = "anchor" }),
-    Troll = Window:AddTab({ Title = "Troll & Tower", Icon = "bolt" }),
+    Troll = Window:AddTab({ Title = "Troll & Tower", Icon = "flower-2" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+    Obby = Window:AddTab({ Title = "Obby & Tower", Icon = "candy" })
 }
 
 local GameScripts = {
