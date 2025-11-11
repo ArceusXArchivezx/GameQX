@@ -194,6 +194,17 @@ Tabs.Troll:AddButton({
     end
 })
 
+Tabs.Troll:AddButton({
+    Title = "Troll & Tower",
+    Description = "Click Here",
+    Callback = function()
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower"))()
+            Fluent:Notify({ Title = "Meow", Content = "Loaded!", Duration = 4 })
+        end)
+    end
+})
+
 Tabs.Obby:AddButton({
     Title = "Obby & Tower",
     Description = "Click Here",
