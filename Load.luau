@@ -234,7 +234,7 @@ Tabs.Simulat:AddButton({
     Description = "Click Here",
     Callback = function()
         pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation"))()
             Fluent:Notify({ Title = "Meow", Content = "Loaded!", Duration = 4 })
         end)
     end
