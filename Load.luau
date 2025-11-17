@@ -18,8 +18,9 @@ local Tabs = {
     Mount = Window:AddTab({ Title = "Mount & Gunung", Icon = "anchor" }),
     Troll = Window:AddTab({ Title = "Troll & Tower", Icon = "flower-2" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
-    Obby = Window:AddTab({ Title = "Obby & Tower", Icon = "candy" }),
+    Obby = Window:AddTab({ Title = "Obby & Tower", Icon = "cloud" }),
     Horror = Window:AddTab({ Title = "Horror & Elevator", Icon = "apple" }),
+    Simulat = Window:AddTab({ Title = "Simulation", Icon = "coins" }),
 }
 
 local GameScripts = {
@@ -219,6 +220,17 @@ Tabs.Obby:AddButton({
 
 Tabs.Horror:AddButton({
     Title = "Horror & Elevator",
+    Description = "Click Here",
+    Callback = function()
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror"))()
+            Fluent:Notify({ Title = "Meow", Content = "Loaded!", Duration = 4 })
+        end)
+    end
+})
+
+Tabs.Simulati:AddButton({
+    Title = "Simulation",
     Description = "Click Here",
     Callback = function()
         pcall(function()
