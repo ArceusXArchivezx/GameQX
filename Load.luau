@@ -229,7 +229,7 @@ Tabs.Horror:AddButton({
     end
 })
 
-Tabs.Simulati:AddButton({
+Tabs.Simulat:AddButton({
     Title = "Simulation",
     Description = "Click Here",
     Callback = function()
