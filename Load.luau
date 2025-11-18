@@ -21,6 +21,7 @@ local Tabs = {
     Obby = Window:AddTab({ Title = "Obby & Tower", Icon = "cloud" }),
     Horror = Window:AddTab({ Title = "Horror & Elevator", Icon = "apple" }),
     Simulat = Window:AddTab({ Title = "Simulation", Icon = "coins" }),
+    Surviva = Window:AddTab({ Title = "Survival", Icon = "clover" }),
 }
 
 local GameScripts = {
