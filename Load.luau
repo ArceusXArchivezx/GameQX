@@ -241,6 +241,17 @@ Tabs.Simulat:AddButton({
     end
 })
 
+Tabs.Surviva:AddButton({
+    Title = "Survival",
+    Description = "Click Here",
+    Callback = function()
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival"))()
+            Fluent:Notify({ Title = "Meow", Content = "Loaded!", Duration = 4 })
+        end)
+    end
+})
+
 Fluent:Notify({
     Title = "AX-Archive",
     Content = "Welcome",
