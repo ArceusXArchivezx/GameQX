@@ -95,7 +95,7 @@ Instance.new("UICorner",Main).CornerRadius=UDim.new(0,14)
 local Bar=Instance.new("Frame",Main) Bar.Size=UDim2.new(1,0,0,36) Bar.BackgroundColor3=Color3.fromRGB(0,130,255)
 Instance.new("UICorner",Bar).CornerRadius=UDim.new(0,14)
 local Title=Instance.new("TextLabel",Bar) Title.Size=UDim2.new(1,-80,1,0) Title.BackgroundTransparency=1
-Title.Text="EnvyXArchive" Title.TextColor3=Color3.new(1,1,1) Title.Font=Enum.Font.GothamBold Title.TextSize=16
+Title.Text="AlanWalkerX" Title.TextColor3=Color3.new(1,1,1) Title.Font=Enum.Font.GothamBold Title.TextSize=16
 local X=Instance.new("TextButton",Bar) X.Size=UDim2.new(0,30,0,30) X.Position=UDim2.new(1,-38,0,3)
 X.BackgroundColor3=Color3.fromRGB(255,70,70) X.Text="X" X.TextColor3=Color3.new(1,1,1)
 Instance.new("UICorner",X).CornerRadius=UDim.new(0,8)
