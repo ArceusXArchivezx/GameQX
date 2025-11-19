@@ -119,7 +119,7 @@ Instance.new("UICorner",b).CornerRadius=UDim.new(0,10) b.MouseButton1Click:Conne
 
 btn("Auto Found Place ID",function()load(HttpGet(game,"https://raw.githubusercontent.com/ArceusXArchivezx/Nekoi/refs/heads/main/%E5%81%A5%E5%BA%B7%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E6%B0%B4%E3%82%92%E9%A3%B2%E3%81%BF%E3%81%BE%E3%81%97%E3%82%87%E3%81%86"))()end)
 btn("Mount Freemium",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/UserPremiumUi.lua"))()end)
-btn("Mount Premium",function()load(HttpGet(game,"https://api.junkie-development.de/api/v1/lusscripts/public/699732917645144473f8556bd70ddec45497ed61e46700490e51d73020d57830/download"))()end)
+btn("Mount Premium",function()load(HttpGet(game,"https://api.junkie-development.de/api/v1/luascripts/public/38ffc04e33a5f4abd0ff7a1cad539b173aad564961fab1c9c5e8c1bd1840891c/download"))()end)
 btn("Anti-Gravity Troll",function()load(HttpGet(game,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Topazior"))()end)
 btn("Scary Troll Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/Gamez635/ListGame/refs/heads/main/Scary%20Troll%20Slap%20Tower"))()end)
 btn("Obby & Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Emeraldon"))()end)
