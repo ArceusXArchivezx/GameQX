@@ -122,6 +122,7 @@ btn("Mount Freemium",function()load(HttpGet(game,"https://raw.githubusercontent.
 btn("Mount Premium",function()load(HttpGet(game,"https://api.junkie-development.de/api/v1/luascripts/public/38ffc04e33a5f4abd0ff7a1cad539b173aad564961fab1c9c5e8c1bd1840891c/download"))()end)
 btn("Anti-Gravity Troll",function()load(HttpGet(game,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Topazior"))()end)
 btn("Scary Troll Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/Gamez635/ListGame/refs/heads/main/Scary%20Troll%20Slap%20Tower"))()end)
+btn("Fish It",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Fish%20It"))()end)
 btn("Troll & Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower"))()end)
 btn("Obby & Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Emeraldon"))()end)
 btn("Horror & Elevator",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror"))()end)
