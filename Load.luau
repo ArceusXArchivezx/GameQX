@@ -159,6 +159,7 @@ btn(Home,"Simulation",function()load(HttpGet(game,"https://raw.githubusercontent
 btn(Home,"Survival",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival"))()end)
 
 btn(Games,"Fish It",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Fish%20It"))()end)
+btn(Games,"Survive Overnight in a Mega Store",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survive%20Overnight%20in%20a%20Mega%20Store"))()end)
 
 Exec.MouseButton1Click:Connect(function()
     local id=Input.Text:match("^%d+$")
