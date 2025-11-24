@@ -165,7 +165,7 @@ btn(Games,"Fish It",function()load(HttpGet(game,"https://raw.githubusercontent.c
 btn(Games,"Survive Overnight in a Mega Store",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survive%20Overnight%20in%20a%20Mega%20Store"))()end)
 btn(Games,"SIREN HEAD: LEGACY",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/SIREN%20HEAD%3A%20LEGACY"))()end)
 
-btn(Ryuujin,"Survival",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival"))()end)
+btn(Ryuujin,"Be Fast Or DIE",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Be%20Fast%20Or%20DIE.luau"))()end)
 
 Exec.MouseButton1Click:Connect(function()
     local id=Input.Text:match("^%d+$")
