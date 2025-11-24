@@ -131,6 +131,7 @@ end
 
 local Home       = CreateTab("Home")
 local Games      = CreateTab("List Of Game")
+local Ryuujin      = CreateTab("List Of Ryuujin")
 
 Tabs[1].btn.BackgroundColor3=Color3.fromRGB(0,170,255) Tabs[1].page.Visible=true
 
@@ -163,6 +164,8 @@ btn(Home,"Roleplay & Avatar",function()load(HttpGet(game,"https://raw.githubuser
 btn(Games,"Fish It",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Fish%20It"))()end)
 btn(Games,"Survive Overnight in a Mega Store",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survive%20Overnight%20in%20a%20Mega%20Store"))()end)
 btn(Games,"SIREN HEAD: LEGACY",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/SIREN%20HEAD%3A%20LEGACY"))()end)
+
+btn(Ryuujin,"Survival",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival"))()end)
 
 Exec.MouseButton1Click:Connect(function()
     local id=Input.Text:match("^%d+$")
