@@ -78,7 +78,7 @@ local function btn(text, callback)
     btnStroke.Thickness = 1.4
     btnStroke.Transparency = 0.5
 
-    -- Hover yang halus banget
+    
     b.MouseEnter:Connect(function()
         TS:Create(b, TweenInfo.new(0.25), {BackgroundColor3 = Color3.fromRGB(70, 90, 140)}):Play()
     end)
