@@ -94,7 +94,7 @@ Instance.new("UICorner",Main).CornerRadius=UDim.new(0,14)
 local Bar=Instance.new("Frame",Main) Bar.Size=UDim2.new(1,0,0,36) Bar.BackgroundColor3=Color3.fromRGB(0,130,255)
 Instance.new("UICorner",Bar).CornerRadius=UDim.new(0,14)
 local Title=Instance.new("TextLabel",Bar) Title.Size=UDim2.new(1,-80,1,0) Title.BackgroundTransparency=1
-Title.Text="AlanWalkerX" Title.TextColor3=Color3.new(1,1,1) Title.Font=Enum.Font.GothamBold Title.TextSize=16
+Title.Text="ArchiveXNova" Title.TextColor3=Color3.new(1,1,1) Title.Font=Enum.Font.GothamBold Title.TextSize=16
 local X=Instance.new("TextButton",Bar) X.Size=UDim2.new(0,30,0,30) X.Position=UDim2.new(1,-38,0,3)
 X.BackgroundColor3=Color3.fromRGB(255,70,70) X.Text="X" X.TextColor3=Color3.new(1,1,1)
 Instance.new("UICorner",X).CornerRadius=UDim.new(0,8)
@@ -151,8 +151,6 @@ Exec.Text="EXECUTE" Exec.TextColor3=Color3.new(1,1,1) Exec.Font=Enum.Font.Gotham
 Instance.new("UICorner",Exec).CornerRadius=UDim.new(0,10)
 
 btn(Home,"Auto Found Place ID",function()load(HttpGet(game,"https://raw.githubusercontent.com/ArceusXArchivezx/Nekoi/refs/heads/main/%E5%81%A5%E5%BA%B7%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E6%B0%B4%E3%82%92%E9%A3%B2%E3%81%BF%E3%81%BE%E3%81%97%E3%82%87%E3%81%86"))()end)
-btn(Home,"Mount Freemium",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/UserPremiumUi.lua"))()end)
-btn(Home,"Mount Premium",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Whitelist"))()end)
 btn(Home,"Troll & Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower"))()end)
 btn(Home,"Obby & Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby"))()end)
 btn(Home,"Horror & Elevator",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror"))()end)
