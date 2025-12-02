@@ -206,7 +206,7 @@ spawn(function()
     end)
 
     TS:Create(notif,TweenInfo.new(0.6),{Position=UDim2.new(1,-400,0,20)}):Play()
-    task.wait(8)
+    task.wait(5)
     TS:Create(notif,TweenInfo.new(0.5),{Position=UDim2.new(1,20,0,20)}):Play()
     task.wait(0.5) notif:Destroy()
 end)
