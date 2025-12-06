@@ -128,7 +128,7 @@ X.TextColor3 = Color3.new(1,1,1)
 X.Font = Enum.Font.GothamBold
 Instance.new("UICorner", X).CornerRadius = UDim.new(0,10)
 
--- RAINBOW SEMUA BUTTON & GLOW
+
 local rainbowElements = {}
 spawn(function()
     while task.wait(0.02) do
@@ -146,7 +146,7 @@ spawn(function()
     end
 end)
 
--- Background random smooth
+
 spawn(function()
     while task.wait(6) do
         if not Main.Parent then break end
@@ -155,7 +155,7 @@ spawn(function()
     end
 end)
 
--- Tab System
+
 local TabScroll = Instance.new("ScrollingFrame", Main)
 TabScroll.Size = UDim2.new(1,0,0,44)
 TabScroll.Position = UDim2.new(0,0,0,40)
@@ -207,7 +207,7 @@ local Ryuujin = CreateTab("Ryuujin")
 
 Tabs[1].page.Visible = true
 
--- Button Creator (semua ikut rainbow)
+
 local function btn(parent, text, callback)
     local b = Instance.new("TextButton", parent)
     b.Size = UDim2.new(1,0,0,40)
@@ -225,7 +225,7 @@ local function btn(parent, text, callback)
     b.MouseButton1Click:Connect(callback)
 end
 
--- Home Tab
+
 local Input = Instance.new("TextBox", Home)
 Input.Size = UDim2.new(1,0,0,40)
 Input.PlaceholderText = "Enter Place ID..."
@@ -246,7 +246,7 @@ Exec.TextSize = 18
 Instance.new("UICorner", Exec).CornerRadius = UDim.new(0,12)
 table.insert(rainbowElements, Exec)
 
--- Semua Button Home
+
 btn(Home,"Auto Found Place ID",function()load(HttpGet(game,"https://raw.githubusercontent.com/ArceusXArchivezx/Nekoi/refs/heads/main/%E5%81%A5%E5%BA%B7%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E6%B0%B4%E3%82%92%E9%A3%B2%E3%81%BF%E3%81%BE%E3%81%97%E3%82%87%E3%81%86"))()end)
 btn(Home,"Troll & Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower"))()end)
 btn(Home,"Obby & Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby"))()end)
@@ -256,12 +256,12 @@ btn(Home,"Survival",function()load(HttpGet(game,"https://raw.githubusercontent.c
 btn(Home,"Puzzle",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Puzzle"))()end)
 btn(Home,"Roleplay & Avatar",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/RoleplayAvatar"))()end)
 
--- Games Tab
+
 btn(Games,"Fish It",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Fish%20It"))()end)
 btn(Games,"Survive Overnight in a Mega Store",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survive%20Overnight%20in%20a%20Mega%20Store"))()end)
 btn(Games,"SIREN HEAD: LEGACY",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/SIREN%20HEAD%3A%20LEGACY"))()end)
 
--- Ryuujin Tab
+
 btn(Ryuujin,"Be Fast Or DIE",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Be%20Fast%20Or%20DIE.luau"))()end)
 btn(Ryuujin,"Escape The Lava",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20The%20Lava.lua"))()end)
 
@@ -277,7 +277,7 @@ end)
 
 X.MouseButton1Click:Connect(function() sg:Destroy() end)
 
--- Notification Full Rainbow
+
 spawn(function()
     local gameName = "Loading..."
     pcall(function() gameName = M:GetProductInfo(game.PlaceId).Name end)
