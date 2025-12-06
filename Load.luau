@@ -223,7 +223,7 @@ local function btn(parent, text, callback)
     b.MouseButton1Click:Connect(callback)
 end
 
-local Input = Instance.new("TextBox", Home)
+local Input = Instance.new("Here", Home)
 Input.Size = UDim2.new(1,0,0,40)
 Input.PlaceholderText = "Enter Place ID..."
 Input.TextColor3 = Color3.new(1,1,1)
@@ -236,7 +236,7 @@ table.insert(rainbowElements, Input)
 local Exec = Instance.new("TextButton", Home)
 Exec.Size = UDim2.new(1,0,0,40)
 Exec.Position = UDim2.new(0,0,0,48)
-Exec.Text = "EXECUTE SCRIPT"
+Exec.Text = "EXECUTE"
 Exec.TextColor3 = Color3.new(1,1,1)
 Exec.Font = Enum.Font.GothamBlack
 Exec.TextSize = 18
