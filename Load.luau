@@ -1,9 +1,12 @@
-local HttpGet=game.HttpGet local load=loadstring local TS=game:GetService("TweenService")
-local P=game:GetService("Players").LocalPlayer local M=game:GetService("MarketplaceService")
-local Run=game:GetService("RunService")
-local BASE="https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/main/"
+local HttpGet = game.HttpGet
+local load = loadstring
+local TS = game:GetService("TweenService")
+local P = game:GetService("Players").LocalPlayer
+local M = game:GetService("MarketplaceService")
+local Run = game:GetService("RunService")
+local BASE = "https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/main/"
 
-local Scripts={} do
+local Scripts = {} do
 Scripts["10721852444"]="Alea.Moon" Scripts["3101667897"]="Terpercaya.lua" Scripts["3956818381"]="Indo.lua"
 Scripts["4924922222"]="12v.lua" Scripts["2693023319"]="Leonix" Scripts["75655206294061"]="Clean.luau"
 Scripts["117912363638950"]="Money1.luau" Scripts["120861500854151"]="Roblox.lua" Scripts["140202313776640"]="Senpei.lua"
@@ -83,72 +86,162 @@ Scripts["85277236695738"]="Omnistar" Scripts["76622091184398"]="Crystallak" Scri
 Scripts["91769674270735"]="Amethyx"
 end
 
-local sg=Instance.new("ScreenGui") sg.ResetOnSpawn=false sg.Name="EnvyXArchive"
+local sg = Instance.new("ScreenGui")
+sg.ResetOnSpawn = false
+sg.Name = "EnvyXArchive"
 if syn and syn.protect_gui then syn.protect_gui(sg) end
 sg.Parent = game.CoreGui or gethui() or game:GetService("CoreGui")
 
-local Main=Instance.new("Frame",sg) Main.Size=UDim2.new(0,400,0,300) Main.Position=UDim2.new(0.5,-200,0.5,-150)
-Main.BackgroundColor3=Color3.fromRGB(15,15,25) Main.Active=true Main.Draggable=true
-Instance.new("UICorner",Main).CornerRadius=UDim.new(0,14)
+local Main = Instance.new("Frame", sg)
+Main.Size = UDim2.new(0,300,0,300)
+Main.Position = UDim2.new(0.5,-210,0.5,-260)
+Main.BackgroundColor3 = Color3.fromRGB(12,12,28)
+Main.Active = true
+Main.Draggable = true
+Instance.new("UICorner", Main).CornerRadius = UDim.new(0,16)
 
-local Bar=Instance.new("Frame",Main) Bar.Size=UDim2.new(1,0,0,36) Bar.BackgroundColor3=Color3.fromRGB(0,130,255)
-Instance.new("UICorner",Bar).CornerRadius=UDim.new(0,14)
-local Title=Instance.new("TextLabel",Bar) Title.Size=UDim2.new(1,-80,1,0) Title.BackgroundTransparency=1
-Title.Text="ArchiveXNova" Title.TextColor3=Color3.new(1,1,1) Title.Font=Enum.Font.GothamBold Title.TextSize=16
-local X=Instance.new("TextButton",Bar) X.Size=UDim2.new(0,30,0,30) X.Position=UDim2.new(1,-38,0,3)
-X.BackgroundColor3=Color3.fromRGB(255,70,70) X.Text="X" X.TextColor3=Color3.new(1,1,1)
-Instance.new("UICorner",X).CornerRadius=UDim.new(0,8)
+local glow = Instance.new("UIStroke", Main)
+glow.Thickness = 4
+glow.Transparency = 0.4
+glow.Color = Color3.fromHSV(0,1,1)
 
-local TabScroll=Instance.new("ScrollingFrame",Main)
-TabScroll.Size=UDim2.new(1,0,0,40) TabScroll.Position=UDim2.new(0,0,0,36)
-TabScroll.BackgroundTransparency=1 TabScroll.ScrollBarThickness=4 TabScroll.AutomaticCanvasSize=Enum.AutomaticSize.X
-TabScroll.ScrollingDirection=Enum.ScrollingDirection.X
-local TabLayout=Instance.new("UIListLayout",TabScroll)
-TabLayout.FillDirection="Horizontal" TabLayout.Padding=UDim.new(0,8) TabLayout.SortOrder=Enum.SortOrder.LayoutOrder
+local Bar = Instance.new("Frame", Main)
+Bar.Size = UDim2.new(1,0,0,40)
+Bar.BackgroundColor3 = Color3.fromRGB(0,140,255)
+Instance.new("UICorner", Bar).CornerRadius = UDim.new(0,16)
 
-local Content=Instance.new("Frame",Main) Content.Size=UDim2.new(1,-20,1,-86) Content.Position=UDim2.new(0,10,0,66)
-Content.BackgroundTransparency=1 Content.ClipsDescendants=true
+local Title = Instance.new("TextLabel", Bar)
+Title.Size = UDim2.new(1,-80,1,0)
+Title.BackgroundTransparency = 1
+Title.Text = "YouTube ArchiveXNova"
+Title.TextColor3 = Color3.new(1,1,1)
+Title.Font = Enum.Font.GothamBlack
+Title.TextSize = 18
 
-local Tabs={}
+local X = Instance.new("TextButton", Bar)
+X.Size = UDim2.new(0,36,0,36)
+X.Position = UDim2.new(1,-40,0,2)
+X.BackgroundColor3 = Color3.fromRGB(255,60,60)
+X.Text = "X"
+X.TextColor3 = Color3.new(1,1,1)
+X.Font = Enum.Font.GothamBold
+Instance.new("UICorner", X).CornerRadius = UDim.new(0,10)
+
+local rainbowElements = {}
+spawn(function()
+    while task.wait(0.02) do
+        if not Main.Parent then break end
+        local hue = tick() % 10 / 10
+        local bright = Color3.fromHSV(hue, 1, 1)
+        local dim = Color3.fromHSV(hue, 0.9, 0.8)
+        Bar.BackgroundColor3 = bright
+        glow.Color = bright
+        for _, el in pairs(rainbowElements) do
+            if el and el.Parent then
+                el.BackgroundColor3 = dim
+            end
+        end
+    end
+end)
+
+-- Background random smooth
+spawn(function()
+    while task.wait(6) do
+        if not Main.Parent then break end
+        local r,g,b = math.random(8,35), math.random(8,35), math.random(40,85)
+        TS:Create(Main, TweenInfo.new(5), {BackgroundColor3 = Color3.fromRGB(r,g,b)}):Play()
+    end
+end)
+
+-- Tab System
+local TabScroll = Instance.new("ScrollingFrame", Main)
+TabScroll.Size = UDim2.new(1,0,0,44)
+TabScroll.Position = UDim2.new(0,0,0,40)
+TabScroll.BackgroundTransparency = 1
+TabScroll.ScrollBarThickness = 0
+TabScroll.AutomaticCanvasSize = Enum.AutomaticSize.X
+
+local TabLayout = Instance.new("UIListLayout", TabScroll)
+TabLayout.FillDirection = "Horizontal"
+TabLayout.Padding = UDim.new(0,10)
+
+local Content = Instance.new("Frame", Main)
+Content.Size = UDim2.new(1,-20,1,-94)
+Content.Position = UDim2.new(0,10,0,84)
+Content.BackgroundTransparency = 1
+
+local Tabs = {}
 local function CreateTab(name)
-    local btn=Instance.new("TextButton",TabScroll) btn.Size=UDim2.new(0,110,0,32) btn.BackgroundColor3=Color3.fromRGB(40,40,65)
-    btn.Text=name btn.TextColor3=Color3.new(1,1,1) btn.Font=Enum.Font.GothamBold btn.TextSize=14
-    Instance.new("UICorner",btn).CornerRadius=UDim.new(0,8)
+    local btn = Instance.new("TextButton", TabScroll)
+    btn.Size = UDim2.new(0,120,0,36)
+    btn.Text = name
+    btn.TextColor3 = Color3.new(1,1,1)
+    btn.Font = Enum.Font.GothamBold
+    btn.TextSize = 15
+    Instance.new("UICorner", btn).CornerRadius = UDim.new(0,12)
+    table.insert(rainbowElements, btn)
 
-    local page=Instance.new("ScrollingFrame",Content) page.Size=UDim2.new(1,0,1,0) page.Visible=false page.BackgroundTransparency=1
-    page.ScrollBarThickness=5 page.AutomaticCanvasSize=Enum.AutomaticSize.Y
-    Instance.new("UIListLayout",page).Padding=UDim.new(0,7)
-    Instance.new("UIPadding",page).PaddingTop=UDim.new(0,8)
+    local page = Instance.new("ScrollingFrame", Content)
+    page.Size = UDim2.new(1,0,1,0)
+    page.Visible = false
+    page.BackgroundTransparency = 1
+    page.ScrollBarThickness = 6
+    page.AutomaticCanvasSize = Enum.AutomaticSize.Y
+    Instance.new("UIListLayout", page).Padding = UDim.new(0,8)
+    Instance.new("UIPadding", page).PaddingTop = UDim.new(0,10)
 
     btn.MouseButton1Click:Connect(function()
-        for _,t in Tabs do t.page.Visible=false t.btn.BackgroundColor3=Color3.fromRGB(40,40,65) end
-        page.Visible=true btn.BackgroundColor3=Color3.fromRGB(0,170,255)
+        for _,t in Tabs do t.page.Visible = false end
+        page.Visible = true
     end)
 
-    table.insert(Tabs,{btn=btn,page=page})
+    table.insert(Tabs, {btn=btn, page=page})
     return page
 end
 
-local Home       = CreateTab("Home")
-local Games      = CreateTab("List Of Game")
-local Ryuujin      = CreateTab("List Of Ryuujin")
+local Home = CreateTab("Home")
+local Games = CreateTab("List Game")
+local Ryuujin = CreateTab("Ryuujin")
 
-Tabs[1].btn.BackgroundColor3=Color3.fromRGB(0,170,255) Tabs[1].page.Visible=true
+Tabs[1].page.Visible = true
 
-local function btn(parent,text,callback)
-    local b=Instance.new("TextButton",parent) b.Size=UDim2.new(1,0,0,36) b.BackgroundColor3=Color3.fromRGB(40,40,65)
-    b.Text="  "..text b.TextXAlignment="Left" b.TextColor3=Color3.new(1,1,1) b.Font=Enum.Font.GothamSemibold
-    Instance.new("UICorner",b).CornerRadius=UDim.new(0,10)
+-- Button Creator (semua ikut rainbow)
+local function btn(parent, text, callback)
+    local b = Instance.new("TextButton", parent)
+    b.Size = UDim2.new(1,0,0,40)
+    b.Text = "  "..text
+    b.TextXAlignment = "Left"
+    b.TextColor3 = Color3.new(1,1,1)
+    b.Font = Enum.Font.GothamSemibold
+    b.TextSize = 15
+    Instance.new("UICorner", b).CornerRadius = UDim.new(0,12)
+    table.insert(rainbowElements, b)
+
+    b.MouseEnter:Connect(function()
+        TS:Create(b, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromHSV(tick()%10/10,1,1)}):Play()
+    end)
     b.MouseButton1Click:Connect(callback)
 end
 
-local Input=Instance.new("TextBox",Home) Input.Size=UDim2.new(1,0,0,36) Input.BackgroundColor3=Color3.fromRGB(35,35,55)
-Input.PlaceholderText="Enter Place ID..." Input.TextColor3=Color3.new(1,1,1)
-Instance.new("UICorner",Input).CornerRadius=UDim.new(0,10)
+local Input = Instance.new("TextBox", Home)
+Input.Size = UDim2.new(1,0,0,40)
+Input.PlaceholderText = "Enter Place ID..."
+Input.TextColor3 = Color3.new(1,1,1)
+Input.BackgroundColor3 = Color3.fromRGB(30,30,50)
+Input.Font = Enum.Font.Gotham
+Input.TextSize = 16
+Instance.new("UICorner", Input).CornerRadius = UDim.new(0,12)
+table.insert(rainbowElements, Input)
 
-local Exec=Instance.new("TextButton",Home) Exec.Size=UDim2.new(1,0,0,36) Exec.BackgroundColor3=Color3.fromRGB(0,170,255)
-Exec.Text="EXECUTE" Exec.TextColor3=Color3.new(1,1,1) Exec.Font=Enum.Font.GothamBold
-Instance.new("UICorner",Exec).CornerRadius=UDim.new(0,10)
+local Exec = Instance.new("TextButton", Home)
+Exec.Size = UDim2.new(1,0,0,40)
+Exec.Position = UDim2.new(0,0,0,48)
+Exec.Text = "EXECUTE SCRIPT"
+Exec.TextColor3 = Color3.new(1,1,1)
+Exec.Font = Enum.Font.GothamBlack
+Exec.TextSize = 18
+Instance.new("UICorner", Exec).CornerRadius = UDim.new(0,12)
+table.insert(rainbowElements, Exec)
 
 btn(Home,"Auto Found Place ID",function()load(HttpGet(game,"https://raw.githubusercontent.com/ArceusXArchivezx/Nekoi/refs/heads/main/%E5%81%A5%E5%BA%B7%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E6%B0%B4%E3%82%92%E9%A3%B2%E3%81%BF%E3%81%BE%E3%81%97%E3%82%87%E3%81%86"))()end)
 btn(Home,"Troll & Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower"))()end)
@@ -167,46 +260,86 @@ btn(Ryuujin,"Be Fast Or DIE",function()load(HttpGet(game,"https://raw.githubuser
 btn(Ryuujin,"Escape The Lava",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20The%20Lava.lua"))()end)
 
 Exec.MouseButton1Click:Connect(function()
-    local id=Input.Text:match("^%d+$")
+    local id = Input.Text:match("^%d+$")
     if id and Scripts[id] then
-        pcall(function() load(HttpGet(game,BASE..Scripts[id]))() end)
+        pcall(function()
+            load(HttpGet(game, BASE .. Scripts[id]))()
+        end)
     end
 end)
 
 X.MouseButton1Click:Connect(function() sg:Destroy() end)
 
 spawn(function()
-    local gameName="Loading..."
-    pcall(function() gameName=M:GetProductInfo(game.PlaceId).Name end)
+    local gameName = "Loading..."
+    pcall(function() gameName = M:GetProductInfo(game.PlaceId).Name end)
 
-    local notif=Instance.new("Frame",sg) notif.Size=UDim2.new(0,380,0,150) notif.Position=UDim2.new(1,20,0,20)
-    notif.BackgroundColor3=Color3.fromRGB(20,20,35)
-    Instance.new("UICorner",notif).CornerRadius=UDim.new(0,14)
-    Instance.new("UIStroke",notif).Color=Color3.fromRGB(0,180,255) Instance.new("UIStroke",notif).Thickness=2.5
+    local notif = Instance.new("Frame", sg)
+    notif.Size = UDim2.new(0,400,0,160)
+    notif.Position = UDim2.new(1,20,0,20)
+    notif.BackgroundColor3 = Color3.fromRGB(18,18,38)
+    Instance.new("UICorner", notif).CornerRadius = UDim.new(0,16)
+    local nstroke = Instance.new("UIStroke", notif)
+    nstroke.Thickness = 4
+    nstroke.Transparency = 0.3
+    table.insert(rainbowElements, notif)
 
-    local user=Instance.new("TextLabel",notif) user.Size=UDim2.new(1,-20,0,26) user.Position=UDim2.new(0,10,0,8)
-    user.Text="User: "..P.DisplayName user.TextColor3=Color3.fromRGB(0,230,255) user.Font=Enum.Font.GothamBold user.TextSize=17 user.TextXAlignment="Left"
+    local user = Instance.new("TextLabel", notif)
+    user.Size = UDim2.new(1,-20,0,28)
+    user.Position = UDim2.new(0,10,0,10)
+    user.BackgroundTransparency = 1
+    user.Text = "User: "..P.DisplayName
+    user.TextColor3 = Color3.fromRGB(0,255,255)
+    user.Font = Enum.Font.GothamBold
+    user.TextSize = 18
+    user.TextXAlignment = "Left"
 
-    local username=Instance.new("TextLabel",notif) username.Size=UDim2.new(1,-20,0,24) username.Position=UDim2.new(0,10,0,34)
-    username.Text="Username: @"..P.Name username.TextColor3=Color3.fromRGB(180,180,255) username.TextSize=15 username.TextXAlignment="Left"
+    local username = Instance.new("TextLabel", notif)
+    username.Size = UDim2.new(1,-20,0,26)
+    username.Position = UDim2.new(0,10,0,38)
+    username.BackgroundTransparency = 1
+    username.Text = "Username: @"..P.Name
+    username.TextColor3 = Color3.fromRGB(200,200,255)
+    username.TextSize = 16
+    username.TextXAlignment = "Left"
 
-    local gameLbl=Instance.new("TextLabel",notif) gameLbl.Size=UDim2.new(1,-20,0,26) gameLbl.Position=UDim2.new(0,10,0,60)
-    gameLbl.Text="Game: "..gameName gameLbl.TextColor3=Color3.fromRGB(100,255,100) gameLbl.Font=Enum.Font.GothamSemibold gameLbl.TextSize=16 gameLbl.TextXAlignment="Left"
+    local gameLbl = Instance.new("TextLabel", notif)
+    gameLbl.Size = UDim2.new(1,-20,0,28)
+    gameLbl.Position = UDim2.new(0,10,0,64)
+    gameLbl.BackgroundTransparency = 1
+    gameLbl.Text = "Game: "..gameName
+    gameLbl.TextColor3 = Color3.fromRGB(100,255,100)
+    gameLbl.Font = Enum.Font.GothamBold
+    gameLbl.TextSize = 17
+    gameLbl.TextXAlignment = "Left"
 
-    local dateLbl=Instance.new("TextLabel",notif) dateLbl.Size=UDim2.new(1,-20,0,24) dateLbl.Position=UDim2.new(0,10,0,88)
-    dateLbl.TextColor3=Color3.fromRGB(255,200,100) dateLbl.Font=Enum.Font.GothamSemibold dateLbl.TextSize=15 dateLbl.TextXAlignment="Left"
+    local dateLbl = Instance.new("TextLabel", notif)
+    dateLbl.Position = UDim2.new(0,10,0,96)
+    dateLbl.Size = UDim2.new(1,-20,0,24)
+    dateLbl.BackgroundTransparency = 1
+    dateLbl.TextColor3 = Color3.fromRGB(255,180,100)
+    dateLbl.Font = Enum.Font.GothamSemibold
+    dateLbl.TextSize = 15
+    dateLbl.TextXAlignment = "Left"
 
-    local timeLbl=Instance.new("TextLabel",notif) timeLbl.Size=UDim2.new(1,-20,0,24) timeLbl.Position=UDim2.new(0,10,0,112)
-    timeLbl.TextColor3=Color3.fromRGB(255,255,150) timeLbl.Font=Enum.Font.GothamBold timeLbl.TextSize=18 timeLbl.TextXAlignment="Left"
+    local timeLbl = Instance.new("TextLabel", notif)
+    timeLbl.Position = UDim2.new(0,10,0,120)
+    timeLbl.Size = UDim2.new(1,-20,0,28)
+    timeLbl.BackgroundTransparency = 1
+    timeLbl.TextColor3 = Color3.fromRGB(255,255,120)
+    timeLbl.Font = Enum.Font.GothamBold
+    timeLbl.TextSize = 20
+    timeLbl.TextXAlignment = "Left"
 
     Run.Heartbeat:Connect(function()
-        local t=os.date("*t")
-        dateLbl.Text=string.format("Today %d %s %d",t.day,os.date("%B"),t.year)
-        timeLbl.Text=string.format("%02d:%02d:%02d",t.hour,t.min,t.sec)
+        local t = os.date("*t")
+        dateLbl.Text = string.format("Today: %d %s %d", t.day, os.date("%B"), t.year)
+        timeLbl.Text = string.format("%02d:%02d:%02d", t.hour, t.min, t.sec)
     end)
 
-    TS:Create(notif,TweenInfo.new(0.6),{Position=UDim2.new(1,-400,0,20)}):Play()
+    TS:Create(notif, TweenInfo.new(0.8, Enum.EasingStyle.Quint), {Position = UDim2.new(1,-420,0,20)}):Play()
     task.wait(5)
-    TS:Create(notif,TweenInfo.new(0.5),{Position=UDim2.new(1,20,0,20)}):Play()
-    task.wait(0.5) notif:Destroy()
+    TS:Create(notif, TweenInfo.new(0.7), {Position = UDim2.new(1,20,0,20)}):Play()
+    task.wait(0.7)
+    notif:Destroy()
 end)
