@@ -204,6 +204,7 @@ end
 local Home = CreateTab("Home")
 local Games = CreateTab("List Game")
 local Ryuujin = CreateTab("Ryuujin")
+local Mount = CreateTab("Mount")
 
 Tabs[1].page.Visible = true
 
@@ -264,6 +265,9 @@ btn(Games,"SIREN HEAD: LEGACY",function()load(HttpGet(game,"https://raw.githubus
 
 btn(Ryuujin,"Be Fast Or DIE",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Be%20Fast%20Or%20DIE.luau"))()end)
 btn(Ryuujin,"Escape The Lava",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20The%20Lava.lua"))()end)
+
+btn(Mount,"Be Fast Or DIE",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Be%20Fast%20Or%20DIE.luau"))()end)
+btn(Mount,"Escape The Lava",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20The%20Lava.lua"))()end)
 
 -- Execute by ID
 Exec.MouseButton1Click:Connect(function()
