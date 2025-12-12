@@ -266,8 +266,8 @@ btn(Games,"SIREN HEAD: LEGACY",function()load(HttpGet(game,"https://raw.githubus
 btn(Ryuujin,"Be Fast Or DIE",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Be%20Fast%20Or%20DIE.luau"))()end)
 btn(Ryuujin,"Escape The Lava",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20The%20Lava.lua"))()end)
 
-btn(Mount,"Be Fast Or DIE",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Be%20Fast%20Or%20DIE.luau"))()end)
-btn(Mount,"Escape The Lava",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20The%20Lava.lua"))()end)
+btn(Mount,"Mount Freemium",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/UserPremiumUi.lua"))()end)
+btn(Mount,"Mount Premium",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Whitelist"))()end)
 
 -- Execute by ID
 Exec.MouseButton1Click:Connect(function()
