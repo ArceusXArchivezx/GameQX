@@ -147,7 +147,7 @@ btn.MouseButton1Click:Connect(function()for _,t in Tabs do t.page.Visible=false 
 table.insert(Tabs,{btn=btn,page=page})return page
 end
 
-local Home=CreateTab("Home")local Games=CreateTab("Games")local Ryuujin=CreateTab("Ryuujin")local Mount=CreateTab("Mount")local ColorTab=CreateTab("Color")
+local Home=CreateTab("Home")local Games=CreateTab("Draconix")local Ryuujin=CreateTab("Ryuujin")local Mount=CreateTab("Mount")local ColorTab=CreateTab("Color")
 Tabs[1].page.Visible=true
 
 local function btn(p,t,c)
