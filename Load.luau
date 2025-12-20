@@ -117,6 +117,7 @@ addScript("Kitty Troll Tower",107587260474787,"https://raw.githubusercontent.com
 addScript("Tsunami Troll Tower",101661696139402,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
 addScript("67 Brainrot Tower",122531863544084,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
 addScript("Aura Edit Tower",129435169164618,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Gravity Tower 2",111834543171036,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrowerPart2")
 
 addScript("Run From 67 Obby",71543463524754,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
 addScript("Meet Nao Chorax",96247321266645,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
@@ -145,6 +146,11 @@ addScript("Adopt a Pet",97966820431834,"https://raw.githubusercontent.com/TheMug
 addScript("Rescue Animals",105775525885873,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation")
 addScript("Speed Per Step",132785630254139,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation")
 addScript("Jump RNG",96654799036437,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation")
+addScript("Fish It",121864768012064,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Fish%20It")
+addScript("Survive Overnight in a Mega Store",127380660530951,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survive%20Overnight%20in%20a%20Mega%20Store")
+addScript("SIREN HEAD: LEGACY",15715368401,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survive%20Overnight%20in%20a%20Mega%20Store")
+addScript("Be Fast Or DIE",71404999931084,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Be%20Fast%20Or%20DIE.luau")
+addScript("Escape The Lava",140481779622210,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Be%20Fast%20Or%20DIE.luau")
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -187,6 +193,7 @@ btn(Troll,"Kitty Troll Tower",function()load(HttpGet(game,scriptMap["kitty troll
 btn(Troll,"Tsunami Troll Tower",function()load(HttpGet(game,scriptMap["tsunami troll tower"]))()end)
 btn(Troll,"67 Brainrot Tower",function()load(HttpGet(game,scriptMap["67 brainrot tower"]))()end)
 btn(Troll,"Aura Edit Tower",function()load(HttpGet(game,scriptMap["aura edit tower"]))()end)
+btn(Troll,"Gravity Tower 2",function()load(HttpGet(game,scriptMap["Gravity Tower 2"]))()end)
 
 btn(Obby,"Run From 67 Obby",function()load(HttpGet(game,scriptMap["run from 67 obby"]))()end)
 btn(Obby,"Meet Nao Chorax",function()load(HttpGet(game,scriptMap["meet nao chorax"]))()end)
@@ -217,6 +224,11 @@ btn(Simulation,"Adopt a Pet",function()load(HttpGet(game,scriptMap["adopt a pet"
 btn(Simulation,"Rescue Animals",function()load(HttpGet(game,scriptMap["rescue animals"]))()end)
 btn(Simulation,"Speed Per Step",function()load(HttpGet(game,scriptMap["speed per step"]))()end)
 btn(Simulation,"Jump RNG",function()load(HttpGet(game,scriptMap["jump rng"]))()end)
+btn(Simulation,"Fish It",function()load(HttpGet(game,scriptMap["Fish It"]))()end)
+btn(Simulation,"Survive Overnight in a Mega Store",function()load(HttpGet(game,scriptMap["Survive Overnight in a Mega Store"]))()end)
+btn(Simulation,"SIREN HEAD: LEGACY",function()load(HttpGet(game,scriptMap["SIREN HEAD: LEGACY"]))()end)
+btn(Simulation,"Be Fast Or DIE",function()load(HttpGet(game,scriptMap["Be Fast Or DIE"]))()end)
+btn(Simulation,"Escape The Lava",function()load(HttpGet(game,scriptMap["Escape The Lava"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
