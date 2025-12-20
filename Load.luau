@@ -3,87 +3,6 @@ local load=loadstring
 local TS=game:GetService("TweenService")
 local P=game:GetService("Players").LocalPlayer
 local M=game:GetService("MarketplaceService")
-local BASE="https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/main/"
-
-local Scripts={}do
-Scripts["10721852444"]="Alea.Moon"Scripts["3101667897"]="Terpercaya.lua"Scripts["3956818381"]="Indo.lua"
-Scripts["4924922222"]="12v.lua"Scripts["2693023319"]="Leonix"Scripts["75655206294061"]="Clean.luau"
-Scripts["117912363638950"]="Money1.luau"Scripts["120861500854151"]="Roblox.lua"Scripts["140202313776640"]="Senpei.lua"
-Scripts["70550963992014"]="Global.lua"Scripts["104034421066865"]="Car.luau"Scripts["132130966239050"]="Whoiam.luau"
-Scripts["17737610444"]="Idkah.lua"Scripts["12623585422"]="Noei.lua"Scripts["13389049867"]="Eeeeeeeeeeeee.luau"
-Scripts["125248406466473"]="iloveyou.lua"Scripts["89118521329724"]="Zombie01.lua"Scripts["91193393488569"]="Victoria.lua"
-Scripts["16907564889"]="Anastasia.luau"Scripts["82311080830488"]="Isabella.luau"Scripts["71426585714528"]="Primordius.luau"
-Scripts["115142573873708"]="Eternaxis.luau"Scripts["106306383294064"]="Titanora.luau"Scripts["128486590418614"]="Veylthar.luau"
-Scripts["124331793246454"]="Kronethys.luau"Scripts["129270424652284"]="Excalyros.luau"Scripts["115788236442816"]="Hyperionis.luau"
-Scripts["123179067991291"]="Voragnar.luau"Scripts["80692223709267"]="Celesthor.luau"Scripts["109073199927285"]="Drakonis Core.Moon"
-Scripts["132214833492664"]="Solypharion.Moon"Scripts["136272288120249"]="Zenithros.Moon"Scripts["124809626273666"]="OmegaDrax.Moon"
-Scripts["140564479075599"]="Colossara.Moon"Scripts["90048768291999"]="Supremara.Moon"Scripts["106990445590115"]="Astravor.Moon"
-Scripts["83059641016557"]="Eternadrax.luau"Scripts["121198792957406"]="Titanexus.Moon"Scripts["127314070251555"]="Kronarion.luau"
-Scripts["94279945101354"]="Aethel.luau"Scripts["102015438526250"]="Aevum.Moon"Scripts["133719960214587"]="Aetherium.Moon"
-Scripts["104647821569857"]="Akasha.lua"Scripts["77765116337777"]="Alakir.luau"Scripts["77925588359671"]="Alcyoneus.luau"
-Scripts["140416344843929"]="Aldrazar.luau"Scripts["80260282334922"]="Almagest.luau"Scripts["78606986252533"]="Ananta.Moon"
-Scripts["13189735542"]="Love.Moon"Scripts["109259215974512"]="Arcanix.Moon"Scripts["105555311806207"]="Arclight.Moon"
-Scripts["119865329453489"]="Aethra.Moon"Scripts["16646849903"]="Astraeus.N"Scripts["136888805396223"]="Avalon.N"
-Scripts["76767617693575"]="Axanar.n"Scripts["140536326097029"]="Azimuth.LOVE"Scripts["86442735053775"]="Belexus.Moon"
-Scripts["136195038598165"]="Dragon.lua"Scripts["16653555262"]="HoleH.N"Scripts["17318749867"]="Draconis Astra.Lua"
-Scripts["122075434066550"]="Ignis Celestia.lua"Scripts["13305899582"]="Astraghon.Lua"Scripts["15423053861"]="Caelumdraco.lua"
-Scripts["137624695396050"]="Solardrakon.lua"Scripts["72462386094083"]="Cosmydrax.lua"Scripts["118199959729871"]="Galaxion.Moon"
-Scripts["124333399025205"]="Orbis Draco.Moon"Scripts["109832974748994"]="Stellardrake.Moon"Scripts["88264996806108"]="Voidwyrm.Moon"
-Scripts["125318037924040"]="Lunardracarys.Moon"Scripts["80688688944603"]="Nebulonax.Moon"Scripts["116739501459923"]="Astralis Draco.Moon"
-Scripts["81823526068423"]="Solarion"Scripts["108207853263201"]="Terraghon.Moon"Scripts["91116134990736"]="Ignis"
-Scripts["123468479998097"]="Vermithrax"Scripts["83491582463374"]="Drakkar"Scripts["74017761169031"]="Fafnir"
-Scripts["90264115537157"]="Bahamut"Scripts["135880624242201"]="Tiamat"Scripts["102429912667575"]="Ancalagon"
-Scripts["113604074601559"]="Glaurung"Scripts["103207450918669"]="Sancellar"Scripts["94952794697974"]="Pyrausta"
-Scripts["110132881708746"]="Ouroboros"Scripts["77456193125343"]="Vritra"Scripts["15297409281"]="Ladon"
-Scripts["70380018483320"]="Nidhogg"Scripts["77650651226156"]="Quetzalcoatl"Scripts["92092980656514"]="Ryujin"
-Scripts["118909003573676"]="Shenlong"Scripts["100438336521838"]="Zmey"Scripts["97639361445495"]="Leviathan"
-Scripts["139747517558790"]="Wyrm"Scripts["119574637420814"]="Cailleach"Scripts["126691209907714"]="Draco"
-Scripts["92614810259450"]="Orochi"Scripts["93751483762469"]="Norbert"Scripts["128152215267107"]="Saphira"
-Scripts["103421172373151"]="Kalessin"Scripts["78320694285708"]="Puff"Scripts["91791791825370"]="Maleficent"
-Scripts["94478161920361"]="Toothless"Scripts["125482389638298"]="Elliot"Scripts["84167547691677"]="Figment"
-Scripts["133326397883139"]="Charizard"Scripts["107549051862531"]="Rathalos"Scripts["135550636763763"]="Alduin"
-Scripts["140481779622210"]="Spyro"Scripts["6452292184"]="CyanBloodbane"Scripts["7044096177"]="Khellendros"
-Scripts["94373736738199"]="Bheithir"Scripts["138423548806566"]="Grael"Scripts["9075479275"]="Voltrex"
-Scripts["14259358984"]="Ignacia"Scripts["137304638496247"]="Terrox"Scripts["85442257107616"]="Brume"
-Scripts["84669620094641"]="Zephyros"Scripts["107480390436880"]="Solarius"Scripts["87516680797104"]="Obsidian"
-Scripts["76258615865952"]="Granite"Scripts["102353841629856"]="Cinder"Scripts["77294570564057"]="Ember"
-Scripts["132451615664022"]="Blaze"Scripts["118413473376604"]="Inferno"Scripts["116178423114975"]="Frost"
-Scripts["137806505974682"]="Glacier"Scripts["84092606596698"]="Cyclone"Scripts["131936189586468"]="Quake"
-Scripts["105171425275249"]="Abyss"Scripts["76964310785698"]="Nadir"Scripts["140378601517716"]="Tremor"
-Scripts["92127752062811"]="Nebulor"Scripts["87734613418457"]="Quasarth"Scripts["121439935748881"]="Pulsara"
-Scripts["103875406370088"]="Vel'kor"Scripts["91490659446272"]="Singularith"Scripts["137533333619498"]="Voidflare"
-Scripts["116053813135621"]="Astralith"Scripts["133626425082194"]="Celestrax"Scripts["85734067341424"]="Galaxion"
-Scripts["83146568106162"]="Cometor"Scripts["89047025631500"]="Meteoros"Scripts["81832457513928"]="Novaflare"
-Scripts["111417482709154"]="Supernovis"Scripts["106782625995423"]="Darkflare"Scripts["90593834103802"]="Stellara"
-Scripts["135663842983553"]="Cosmovyx"Scripts["94116744819156"]="Andromedon"Scripts["97393953768282"]="Siriusar"
-Scripts["87697066373562"]="Polarine"Scripts["107052315040505"]="Zenithos"Scripts["127804672565817"]="Nadirix"
-Scripts["125337660180093"]="Aetheris"Scripts["129916920179384"]="Lunarix"Scripts["118930028098583"]="Solaron"
-Scripts["89898833676465"]="Koronalis"Scripts["97233690279257"]="Eclipsera"Scripts["140014177882408"]="Rigelith"
-Scripts["112818969245263"]="Vegaron"Scripts["75336043355205"]="Antaresh"Scripts["99034404545832"]="Betelgor"
-Scripts["80482032675584"]="Canopix"Scripts["130453270520042"]="Fomalhax"Scripts["130788794138541"]="Aldebaranth"
-Scripts["110187948309890"]="Cassiophex"Scripts["116433680177156"]="Orionyx"Scripts["81672832974176"]="Lyranox"
-Scripts["115680054300509"]="Ursarix"Scripts["88644333175263"]="Draconix"Scripts["108581205213609"]="Hydrarion"
-Scripts["110248124005695"]="Cygnalis"Scripts["112274187986646"]="Phoenixar"Scripts["75504462758180"]="Griffarix"
-Scripts["136402973032879"]="Pegasoron"Scripts["92443799068611"]="Cepheusar"Scripts["117345375295598"]="Herculon"
-Scripts["111651646480914"]="Persevar"Scripts["139142406757181"]="Sagittarix"Scripts["109602187684894"]="Capricornax"
-Scripts["80764768938398"]="Aquarioth"Scripts["83773497775195"]="Piscixon"Scripts["92811427244720"]="Ariethos"
-Scripts["106106456364235"]="Tauron"Scripts["94812373413747"]="Geminor"Scripts["120146982804278"]="Canceron"
-Scripts["105067716302567"]="Virgon"Scripts["112940942530141"]="Libranox"Scripts["76521881655554"]="Ophiuchor"
-Scripts["131429801183273"]="Caelistor"Scripts["127664149300125"]="Vortexis"Scripts["91780519730910"]="Graviton"
-Scripts["107079217762159"]="Spacium"Scripts["98711018939494"]="Wormholis"Scripts["135653357039371"]="Eventidar"
-Scripts["75275402548831"]="Redshiftar"Scripts["103104599827022"]="Blueshiftar"Scripts["135285975690941"]="Expanthor"
-Scripts["114261767466786"]="Multivyx"Scripts["129366557423311"]="Parallaxis"Scripts["110429357957262"]="Pulsator"
-Scripts["114281010659299"]="Magnetar"Scripts["14963184269"]="Nebulix"Scripts["95883290231059"]="Voidripper"
-Scripts["99849807606260"]="Galacticore"Scripts["115456230773566"]="Constellux"Scripts["122736804274241"]="Planetar"
-Scripts["129166494114654"]="Moonstrider"Scripts["98757204462933"]="Sunforger"Scripts["73493765209038"]="DustDevourer"
-Scripts["140277708007710"]="RingGazer"Scripts["813360:pointerdown36028304509"]="Orbiton"Scripts["74242796697886"]="TidalLock"
-Scripts["102348365706836"]="RocheLimitor"Scripts["126688949103299"]="Kuiperon"Scripts["109286987552172"]="Oorth"
-Scripts["106823440585954"]="Nyxolar"Scripts["84766178190740"]="Heliopor"Scripts["86740499759561"]="BowShocker"
-Scripts["112574170157849"]="Nebulight"Scripts["94893333977039"]="Starduster"Scripts["93908541542709"]="Voidwhisper"
-Scripts["122233217802229"]="SilentScream"Scripts["128018459895270"]="InfiniteWing"Scripts["132441576270109"]="TimelessOne"
-Scripts["85277236695738"]="Omnistar"Scripts["76622091184398"]="Crystallak"Scripts["96894312443774"]="Diamonar"
-Scripts["91769674270735"]="Amethyx"
-end
 
 local sg=Instance.new("ScreenGui")sg.ResetOnSpawn=false sg.Name="EnvyXArchive"
 if syn and syn.protect_gui then syn.protect_gui(sg)end
@@ -147,7 +66,9 @@ btn.MouseButton1Click:Connect(function()for _,t in Tabs do t.page.Visible=false 
 table.insert(Tabs,{btn=btn,page=page})return page
 end
 
-local Home=CreateTab("Home")local Games=CreateTab("Draconix")local Ryuujin=CreateTab("Ryuujin")local Mount=CreateTab("Mount")local ColorTab=CreateTab("Color")
+local SearchTab=CreateTab("Search")local Troll=CreateTab("Troll & Tower")local Obby=CreateTab("Obby & Tower")local Horror=CreateTab("Horror & Elevator")
+local Simulation=CreateTab("Simulation")local Survival=CreateTab("Survival")local Puzzle=CreateTab("Puzzle")
+local Roleplay=CreateTab("Roleplay & Avatar")local ColorTab=CreateTab("Color")
 Tabs[1].page.Visible=true
 
 local function btn(p,t,c)
@@ -158,36 +79,151 @@ if not useRainbow then b.BackgroundColor3=currentColor:lerp(Color3.new(0,0,0),0.
 b.MouseButton1Click:Connect(c)
 end
 
-local Input=Instance.new("TextBox",Home)Input.Size=UDim2.new(1,0,0,40)Input.PlaceholderText="Enter Place ID..."
-Input.TextColor3=Color3.new(1,1,1)Input.BackgroundColor3=Color3.fromRGB(30,30,50)Input.Font=Enum.Font.Gotham Input.TextSize=16
-Instance.new("UICorner",Input).CornerRadius=UDim.new(0,12)table.insert(rainbowElements,Input)
-if not useRainbow then Input.BackgroundColor3=currentColor:lerp(Color3.new(0,0,0),0.5)end
+local scriptMap={}
+local placeIdMap={}
+local function addScript(name,placeId,url)
+scriptMap[name:lower()]=url
+placeIdMap[tostring(placeId)]=url
+end
 
-local Exec=Instance.new("TextButton",Home)Exec.Size=UDim2.new(1,0,0,40)Exec.Position=UDim2.new(0,0,0,48)
-Exec.Text="EXECUTE"Exec.TextColor3=Color3.new(1,1,1)Exec.Font=Enum.Font.GothamBlack Exec.TextSize=18
-Instance.new("UICorner",Exec).CornerRadius=UDim.new(0,12)table.insert(rainbowElements,Exec)
-if not useRainbow then Exec.BackgroundColor3=currentColor end
+addScript("Nightmare Troll Slap Tower",107639420156506,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Escape Troll Tower",128098798460722,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Brainrot Tower",130997513667177,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Brainrot Morph Tower",82338709069161,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Green Bean Tower",101457276563446,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Scary Smiley Tower",111683305806265,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Prop Morph Tower",125219962190809,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Boomerang Tower",81214012834883,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Christmas Troll Tower",132864973380490,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Scary Troll Tower",136835976646463,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Topazior")
+addScript("Emote Tower",139008469737286,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Meet Sammy Tower",139076562627423,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Keyboard ASMR Troll Tower",94255092395831,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Troll Escalator Tower",74826169070557,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Don't Get Crushed By 67",124082555806669,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Invisible Gun Troll Tower",124661781902090,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("99 Nights in the Tower",111510393232444,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Scary Slap Tower",127951704630086,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Lucky Troll Tower",92216603050132,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("UGC Christmas Tower",124719521435461,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Cursed Troll Tower",80858274130963,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("INSANE Gear Slap Tower",76522898127132,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Boys And Girls Tower",103802803330866,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Verified TROLL Tower",77585195380889,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("61 Scary Troll Slap Tower",119141950767466,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Jetpack Troll Slap Tower",80514417400229,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Scary Troll Animal Tower",93535969302222,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Kitty Troll Tower",107587260474787,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Tsunami Troll Tower",101661696139402,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("67 Brainrot Tower",122531863544084,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
+addScript("Aura Edit Tower",129435169164618,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
 
-btn(Home,"Auto Found Place ID",function()load(HttpGet(game,"https://raw.githubusercontent.com/ArceusXArchivezx/Nekoi/refs/heads/main/%E5%81%A5%E5%BA%B7%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E6%B0%B4%E3%82%92%E9%A3%B2%E3%81%BF%E3%81%BE%E3%81%97%E3%82%87%E3%81%86"))()end)
-btn(Home,"Troll & Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower"))()end)
-btn(Home,"Obby & Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby"))()end)
-btn(Home,"Horror & Elevator",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror"))()end)
-btn(Home,"Simulation",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation"))()end)
-btn(Home,"Survival",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival"))()end)
-btn(Home,"Puzzle",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Puzzle"))()end)
-btn(Home,"Roleplay & Avatar",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/RoleplayAvatar"))()end)
-btn(Home,"Party & Casual",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/PartyCasual"))()end)
+addScript("Run From 67 Obby",71543463524754,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Meet Nao Chorax",96247321266645,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Jump Into Green Bean",86913191563655,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Obby For Free Rewards",103719498213854,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Jump Into 67",86628023983934,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Jump Into Brainrot",121816583380853,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Free UGC Obby",80692223709267,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Jump To Meet Brainrots",118448647994857,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Mimi Tower",81609757724009,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Tower Of Dreams",5336391003,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Strawberry Tower",139733286702777,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Pink Stage Tower",18999253889,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Escape School Obby!",5327491283,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Dreamy Kawaii Obby",15776635867,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("oMega Obby",8003084678,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("Halloween Obby",18721710268,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("EL GATO'S PRISON RUN",18971610991,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("SAMMY'S PRISON RUN",83805654213735,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
+addScript("RUMI'S PRISON RUN",101581749005211,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
 
-btn(Games,"Fish It",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Fish%20It"))()end)
-btn(Games,"Survive Overnight in a Mega Store",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survive%20Overnight%20in%20a%20Mega%20Store"))()end)
-btn(Games,"SIREN HEAD: LEGACY",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/SIREN%20HEAD%3A%20LEGACY"))()end)
+addScript("Cheese Escape",5777099015,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror")
 
-btn(Ryuujin,"Be Fast Or DIE",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Be%20Fast%20Or%20DIE.luau"))()end)
-btn(Ryuujin,"Escape The Lava",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20The%20Lava.lua"))()end)
-btn(Ryuujin,"Super Scary Troll Tower",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Super%20Scary%20Troll%20Tower"))()end)
+addScript("Dig and Hatch a Brainrot",95885904866309,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation")
+addScript("Adopt a Pet",97966820431834,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation")
+addScript("Rescue Animals",105775525885873,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation")
+addScript("Speed Per Step",132785630254139,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation")
+addScript("Jump RNG",96654799036437,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation")
 
-btn(Mount,"Mount Freemium",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/UserPremiumUi.lua"))()end)
-btn(Mount,"Mount Premium",function()load(HttpGet(game,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Whitelist"))()end)
+addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
+addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
+
+addScript("Scary Escape Rooms",108682529022009,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Puzzle")
+
+addScript("Become Any SCP-096",105414615854152,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/RoleplayAvatar")
+
+btn(Troll,"Nightmare Troll Slap Tower",function()load(HttpGet(game,scriptMap["nightmare troll slap tower"]))()end)
+btn(Troll,"Escape Troll Tower",function()load(HttpGet(game,scriptMap["escape troll tower"]))()end)
+btn(Troll,"Brainrot Tower",function()load(HttpGet(game,scriptMap["brainrot tower"]))()end)
+btn(Troll,"Brainrot Morph Tower",function()load(HttpGet(game,scriptMap["brainrot morph tower"]))()end)
+btn(Troll,"Green Bean Tower",function()load(HttpGet(game,scriptMap["green bean tower"]))()end)
+btn(Troll,"Scary Smiley Tower",function()load(HttpGet(game,scriptMap["scary smiley tower"]))()end)
+btn(Troll,"Prop Morph Tower",function()load(HttpGet(game,scriptMap["prop morph tower"]))()end)
+btn(Troll,"Boomerang Tower",function()load(HttpGet(game,scriptMap["boomerang tower"]))()end)
+btn(Troll,"Christmas Troll Tower",function()load(HttpGet(game,scriptMap["christmas troll tower"]))()end)
+btn(Troll,"Anti-Gravity Troll",function()load(HttpGet(game,scriptMap["anti-gravity troll"]))()end)
+btn(Troll,"Scary Troll Tower",function()load(HttpGet(game,scriptMap["scary troll tower"]))()end)
+btn(Troll,"Emote Tower",function()load(HttpGet(game,scriptMap["emote tower"]))()end)
+btn(Troll,"Meet Sammy Tower",function()load(HttpGet(game,scriptMap["meet sammy tower"]))()end)
+btn(Troll,"Keyboard ASMR Troll Tower",function()load(HttpGet(game,scriptMap["keyboard asmr troll tower"]))()end)
+btn(Troll,"Troll Escalator Tower",function()load(HttpGet(game,scriptMap["troll escalator tower"]))()end)
+btn(Troll,"Pink Slap Tower",function()load(HttpGet(game,scriptMap["pink slap tower"]))()end)
+btn(Troll,"Don't Get Crushed By 67",function()load(HttpGet(game,scriptMap["don't get crushed by 67"]))()end)
+btn(Troll,"Invisible Gun Troll Tower",function()load(HttpGet(game,scriptMap["invisible gun troll tower"]))()end)
+btn(Troll,"Hungry Pig Tower",function()load(HttpGet(game,scriptMap["hungry pig tower"]))()end)
+btn(Troll,"99 Nights in the Tower",function()load(HttpGet(game,scriptMap["99 nights in the tower"]))()end)
+btn(Troll,"Scary Slap Tower",function()load(HttpGet(game,scriptMap["scary slap tower"]))()end)
+btn(Troll,"Lucky Troll Tower",function()load(HttpGet(game,scriptMap["lucky troll tower"]))()end)
+btn(Troll,"UGC Christmas Tower",function()load(HttpGet(game,scriptMap["ugc christmas tower"]))()end)
+btn(Troll,"Cursed Troll Tower",function()load(HttpGet(game,scriptMap["cursed troll tower"]))()end)
+btn(Troll,"INSANE Gear Slap Tower",function()load(HttpGet(game,scriptMap["insane gear slap tower"]))()end)
+btn(Troll,"Boys And Girls Tower",function()load(HttpGet(game,scriptMap["boys and girls tower"]))()end)
+btn(Troll,"Verified TROLL Tower",function()load(HttpGet(game,scriptMap["verified troll tower"]))()end)
+btn(Troll,"61 Scary Troll Slap Tower",function()load(HttpGet(game,scriptMap["61 scary troll slap tower"]))()end)
+btn(Troll,"Jetpack Troll Slap Tower",function()load(HttpGet(game,scriptMap["jetpack troll slap tower"]))()end)
+btn(Troll,"Scary Troll Animal Tower",function()load(HttpGet(game,scriptMap["scary troll animal tower"]))()end)
+btn(Troll,"Kitty Troll Tower",function()load(HttpGet(game,scriptMap["kitty troll tower"]))()end)
+btn(Troll,"Tsunami Troll Tower",function()load(HttpGet(game,scriptMap["tsunami troll tower"]))()end)
+btn(Troll,"67 Brainrot Tower",function()load(HttpGet(game,scriptMap["67 brainrot tower"]))()end)
+btn(Troll,"Aura Edit Tower",function()load(HttpGet(game,scriptMap["aura edit tower"]))()end)
+
+btn(Obby,"Run From 67 Obby",function()load(HttpGet(game,scriptMap["run from 67 obby"]))()end)
+btn(Obby,"Meet Nao Chorax",function()load(HttpGet(game,scriptMap["meet nao chorax"]))()end)
+btn(Obby,"Jump Into Green Bean",function()load(HttpGet(game,scriptMap["jump into green bean"]))()end)
+btn(Obby,"Get Ugc Reward Obby",function()load(HttpGet(game,scriptMap["get ugc reward obby"]))()end)
+btn(Obby,"Obby For Free Rewards",function()load(HttpGet(game,scriptMap["obby for free rewards"]))()end)
+btn(Obby,"Jump Into 67",function()load(HttpGet(game,scriptMap["jump into 67"]))()end)
+btn(Obby,"Jump Into Brainrot",function()load(HttpGet(game,scriptMap["jump into brainrot"]))()end)
+btn(Obby,"Free UGC Obby",function()load(HttpGet(game,scriptMap["free ugc obby"]))()end)
+btn(Obby,"Jump To Meet Brainrots",function()load(HttpGet(game,scriptMap["jump to meet brainrots"]))()end)
+btn(Obby,"Mimi Tower",function()load(HttpGet(game,scriptMap["mimi tower"]))()end)
+btn(Obby,"Tower Of Dreams",function()load(HttpGet(game,scriptMap["tower of dreams"]))()end)
+btn(Obby,"Strawberry Tower",function()load(HttpGet(game,scriptMap["strawberry tower"]))()end)
+btn(Obby,"Tower Of Banana - Tower Of Hell",function()load(HttpGet(game,scriptMap["tower of banana - tower of hell"]))()end)
+btn(Obby,"Pink Stage Tower",function()load(HttpGet(game,scriptMap["pink stage tower"]))()end)
+btn(Obby,"Escape School Obby!",function()load(HttpGet(game,scriptMap["escape school obby!"]))()end)
+btn(Obby,"Dreamy Kawaii Obby",function()load(HttpGet(game,scriptMap["dreamy kawaii obby"]))()end)
+btn(Obby,"oMega Obby",function()load(HttpGet(game,scriptMap["omega obby"]))()end)
+btn(Obby,"Halloween Obby",function()load(HttpGet(game,scriptMap["halloween obby"]))()end)
+btn(Obby,"EL GATO'S PRISON RUN",function()load(HttpGet(game,scriptMap["el gato's prison run"]))()end)
+btn(Obby,"SAMMY'S PRISON RUN",function()load(HttpGet(game,scriptMap["sammy's prison run"]))()end)
+btn(Obby,"RUMI'S PRISON RUN",function()load(HttpGet(game,scriptMap["rumi's prison run"]))()end)
+
+btn(Horror,"Cheese Escape",function()load(HttpGet(game,scriptMap["cheese escape"]))()end)
+
+btn(Simulation,"Dig and Hatch a Brainrot",function()load(HttpGet(game,scriptMap["dig and hatch a brainrot"]))()end)
+btn(Simulation,"Adopt a Pet",function()load(HttpGet(game,scriptMap["adopt a pet"]))()end)
+btn(Simulation,"Rescue Animals",function()load(HttpGet(game,scriptMap["rescue animals"]))()end)
+btn(Simulation,"Speed Per Step",function()load(HttpGet(game,scriptMap["speed per step"]))()end)
+btn(Simulation,"Jump RNG",function()load(HttpGet(game,scriptMap["jump rng"]))()end)
+
+btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
+btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
+
+btn(Puzzle,"Scary Escape Rooms",function()load(HttpGet(game,scriptMap["scary escape rooms"]))()end)
+
+btn(Roleplay,"Become Any SCP-096",function()load(HttpGet(game,scriptMap["become any scp-096"]))()end)
 
 local presets={
 {"Neon Purple",Color3.fromRGB(150,0,255)},{"Cyber Pink",Color3.fromRGB(255,0,150)},{"Toxic Green",Color3.fromRGB(0,255,100)},
@@ -196,7 +232,6 @@ local presets={
 {"Dark Mode",Color3.fromRGB(20,20,40)}
 }
 for _,v in ipairs(presets)do btn(ColorTab,v[1],function()setColor(v[2])end)end
-
 btn(ColorTab,"Save Current Color",function()setColor(currentColor)end)
 btn(ColorTab,"Clear Saved (Rainbow)",function()
 useRainbow=true currentColor=Color3.fromRGB(0,140,255)
@@ -204,9 +239,62 @@ if delfile and isfile("ArchiveXNova_Color.txt")then delfile("ArchiveXNova_Color.
 Main.BackgroundColor3=Color3.fromRGB(12,12,28)
 end)
 
-Exec.MouseButton1Click:Connect(function()
-local id=Input.Text:match("^%d+$")
-if id and Scripts[id]then pcall(function()load(HttpGet(game,BASE..Scripts[id]))()end)end
+local searchBox=Instance.new("TextBox",SearchTab)searchBox.Size=UDim2.new(1,0,0,40)searchBox.Position=UDim2.new(0,0,0,10)
+searchBox.PlaceholderText="Search game name..."searchBox.Text=""searchBox.TextColor3=Color3.new(1,1,1)
+searchBox.BackgroundColor3=Color3.fromRGB(30,30,50)searchBox.Font=Enum.Font.Gotham searchBox.TextSize=16
+Instance.new("UICorner",searchBox).CornerRadius=UDim.new(0,12)table.insert(rainbowElements,searchBox)
+if not useRainbow then searchBox.BackgroundColor3=currentColor:lerp(Color3.new(0,0,0),0.5)end
+
+local enterBtn=Instance.new("TextButton",SearchTab)enterBtn.Size=UDim2.new(1,0,0,40)enterBtn.Position=UDim2.new(0,0,0,58)
+enterBtn.Text="ENTER"enterBtn.TextColor3=Color3.new(1,1,1)enterBtn.Font=Enum.Font.GothamBlack enterBtn.TextSize=18
+Instance.new("UICorner",enterBtn).CornerRadius=UDim.new(0,12)table.insert(rainbowElements,enterBtn)
+if not useRainbow then enterBtn.BackgroundColor3=currentColor end
+
+enterBtn.MouseButton1Click:Connect(function()
+local query=searchBox.Text:lower():gsub("%p",""):gsub("%s+"," ")
+local url=scriptMap[query]
+if url then load(HttpGet(game,url))() end
+end)
+
+local copyBtn=Instance.new("TextButton",SearchTab)copyBtn.Size=UDim2.new(1,0,0,40)copyBtn.Position=UDim2.new(0,0,0,106)
+copyBtn.Text="Copy Name Game"copyBtn.TextColor3=Color3.new(1,1,1)copyBtn.Font=Enum.Font.GothamBold copyBtn.TextSize=16
+Instance.new("UICorner",copyBtn).CornerRadius=UDim.new(0,12)table.insert(rainbowElements,copyBtn)
+if not useRainbow then copyBtn.BackgroundColor3=currentColor:lerp(Color3.new(0,0,0),0.3)end
+
+copyBtn.MouseButton1Click:Connect(function()
+local gameName="Unknown"
+pcall(function()gameName=M:GetProductInfo(game.PlaceId).Name end)
+gameName=gameName:gsub("[%[%(].-[%]%)]",""):gsub("UPD",""):gsub("%p",""):gsub("%s+"," "):match("^%s*(.-)%s*$")
+setclipboard(gameName)
+searchBox.Text=gameName
+end)
+
+local placeIdBox=Instance.new("TextBox",SearchTab)placeIdBox.Size=UDim2.new(1,0,0,40)placeIdBox.Position=UDim2.new(0,0,0,154)
+placeIdBox.PlaceholderText="Search PlaceID..."placeIdBox.Text=""placeIdBox.TextColor3=Color3.new(1,1,1)
+placeIdBox.BackgroundColor3=Color3.fromRGB(30,30,50)placeIdBox.Font=Enum.Font.Gotham placeIdBox.TextSize=16
+Instance.new("UICorner",placeIdBox).CornerRadius=UDim.new(0,12)table.insert(rainbowElements,placeIdBox)
+if not useRainbow then placeIdBox.BackgroundColor3=currentColor:lerp(Color3.new(0,0,0),0.5)end
+
+local placeIdEnter=Instance.new("TextButton",SearchTab)placeIdEnter.Size=UDim2.new(1,0,0,40)placeIdEnter.Position=UDim2.new(0,0,0,202)
+placeIdEnter.Text="ENTER (PlaceID)"placeIdEnter.TextColor3=Color3.new(1,1,1)placeIdEnter.Font=Enum.Font.GothamBlack placeIdEnter.TextSize=18
+Instance.new("UICorner",placeIdEnter).CornerRadius=UDim.new(0,12)table.insert(rainbowElements,placeIdEnter)
+if not useRainbow then placeIdEnter.BackgroundColor3=currentColor end
+
+placeIdEnter.MouseButton1Click:Connect(function()
+local id=placeIdBox.Text:match("^%d+$")
+if id and placeIdMap[id] then
+load(HttpGet(game,placeIdMap[id]))()
+end
+end)
+
+local copyPlaceIdBtn=Instance.new("TextButton",SearchTab)copyPlaceIdBtn.Size=UDim2.new(1,0,0,40)copyPlaceIdBtn.Position=UDim2.new(0,0,0,250)
+copyPlaceIdBtn.Text="Copy PlaceID Game"copyPlaceIdBtn.TextColor3=Color3.new(1,1,1)copyPlaceIdBtn.Font=Enum.Font.GothamBold copyPlaceIdBtn.TextSize=16
+Instance.new("UICorner",copyPlaceIdBtn).CornerRadius=UDim.new(0,12)table.insert(rainbowElements,copyPlaceIdBtn)
+if not useRainbow then copyPlaceIdBtn.BackgroundColor3=currentColor:lerp(Color3.new(0,0,0),0.3)end
+
+copyPlaceIdBtn.MouseButton1Click:Connect(function()
+setclipboard(tostring(game.PlaceId))
+placeIdBox.Text=tostring(game.PlaceId)
 end)
 
 X.MouseButton1Click:Connect(function()sg:Destroy()end)
