@@ -154,6 +154,7 @@ addScript("Escape The Lava",140481779622210,"https://raw.githubusercontent.com/T
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
+addScript("Foxy from FNAF Doom",71544145522719,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Foxy%20from%20FNAF%20Doom")
 
 addScript("Scary Escape Rooms",108682529022009,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Puzzle")
 
@@ -193,7 +194,7 @@ btn(Troll,"Kitty Troll Tower",function()load(HttpGet(game,scriptMap["kitty troll
 btn(Troll,"Tsunami Troll Tower",function()load(HttpGet(game,scriptMap["tsunami troll tower"]))()end)
 btn(Troll,"67 Brainrot Tower",function()load(HttpGet(game,scriptMap["67 brainrot tower"]))()end)
 btn(Troll,"Aura Edit Tower",function()load(HttpGet(game,scriptMap["aura edit tower"]))()end)
-btn(Troll,"Gravity Tower 2",function()load(HttpGet(game,scriptMap["Gravity Tower 2"]))()end)
+btn(Troll,"Gravity Tower 2",function()load(HttpGet(game,scriptMap["gravity tower 2"]))()end)
 
 btn(Obby,"Run From 67 Obby",function()load(HttpGet(game,scriptMap["run from 67 obby"]))()end)
 btn(Obby,"Meet Nao Chorax",function()load(HttpGet(game,scriptMap["meet nao chorax"]))()end)
@@ -225,13 +226,14 @@ btn(Simulation,"Rescue Animals",function()load(HttpGet(game,scriptMap["rescue an
 btn(Simulation,"Speed Per Step",function()load(HttpGet(game,scriptMap["speed per step"]))()end)
 btn(Simulation,"Jump RNG",function()load(HttpGet(game,scriptMap["jump rng"]))()end)
 btn(Simulation,"Fish It",function()load(HttpGet(game,scriptMap["Fish It"]))()end)
-btn(Simulation,"Survive Overnight in a Mega Store",function()load(HttpGet(game,scriptMap["Survive Overnight in a Mega Store"]))()end)
-btn(Simulation,"SIREN HEAD: LEGACY",function()load(HttpGet(game,scriptMap["SIREN HEAD: LEGACY"]))()end)
-btn(Simulation,"Be Fast Or DIE",function()load(HttpGet(game,scriptMap["Be Fast Or DIE"]))()end)
-btn(Simulation,"Escape The Lava",function()load(HttpGet(game,scriptMap["Escape The Lava"]))()end)
+btn(Simulation,"Survive Overnight in a Mega Store",function()load(HttpGet(game,scriptMap["survive overnight in a mega store"]))()end)
+btn(Simulation,"SIREN HEAD: LEGACY",function()load(HttpGet(game,scriptMap["siren head: legacy"]))()end)
+btn(Simulation,"Be Fast Or DIE",function()load(HttpGet(game,scriptMap["be fast or die"]))()end)
+btn(Simulation,"Escape The Lava",function()load(HttpGet(game,scriptMap["escape the lava"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
+btn(Survival,"Foxy from FNAF Doom",function()load(HttpGet(game,scriptMap["foxy from fnaf doom"]))()end)
 
 btn(Puzzle,"Scary Escape Rooms",function()load(HttpGet(game,scriptMap["scary escape rooms"]))()end)
 
