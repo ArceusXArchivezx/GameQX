@@ -152,6 +152,7 @@ addScript("Survive Overnight in a Mega Store",127380660530951,"https://raw.githu
 addScript("SIREN HEAD: LEGACY",15715368401,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survive%20Overnight%20in%20a%20Mega%20Store")
 addScript("Be Fast Or DIE",71404999931084,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Be%20Fast%20Or%20DIE.luau")
 addScript("Escape The Lava",140481779622210,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Be%20Fast%20Or%20DIE.luau")
+addScript("Brainrots +1 Speed Per Step",84916774885454,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation")
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -232,6 +233,7 @@ btn(Simulation,"Survive Overnight in a Mega Store",function()load(HttpGet(game,s
 btn(Simulation,"SIREN HEAD: LEGACY",function()load(HttpGet(game,scriptMap["siren head: legacy"]))()end)
 btn(Simulation,"Be Fast Or DIE",function()load(HttpGet(game,scriptMap["be fast or die"]))()end)
 btn(Simulation,"Escape The Lava",function()load(HttpGet(game,scriptMap["escape the lava"]))()end)
+btn(Simulation,"Brainrots +1 Speed Per Step",function()load(HttpGet(game,scriptMap["brainrots +1 speed per step"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
