@@ -120,6 +120,7 @@ addScript("Aura Edit Tower",129435169164618,"https://raw.githubusercontent.com/T
 addScript("Gravity Tower 2",111834543171036,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrowerPart2")
 addScript("Meet A Friend Tower",139048466908419,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrowerPart2")
 addScript("Winter Tower",77972840239493,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrowerPart2")
+addScript("Капельница с прыжком по стене",111904358796869,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%D0%9A%D0%B0%D0%BF%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D0%B0%20%D1%81%20%D0%BF%D1%80%D1%8B%D0%B6%D0%BA%D0%BE%D0%BC%20%D0%BF%D0%BE%20%D1%81%D1%82%D0%B5%D0%BD%D0%B5")
 
 addScript("Run From 67 Obby",71543463524754,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
 addScript("Meet Nao Chorax",96247321266645,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
