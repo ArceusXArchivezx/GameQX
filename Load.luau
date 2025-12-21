@@ -119,6 +119,7 @@ addScript("67 Brainrot Tower",122531863544084,"https://raw.githubusercontent.com
 addScript("Aura Edit Tower",129435169164618,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower")
 addScript("Gravity Tower 2",111834543171036,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrowerPart2")
 addScript("Meet A Friend Tower",139048466908419,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrowerPart2")
+addScript("Winter Tower",77972840239493,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrowerPart2")
 
 addScript("Run From 67 Obby",71543463524754,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
 addScript("Meet Nao Chorax",96247321266645,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
@@ -198,6 +199,7 @@ btn(Troll,"67 Brainrot Tower",function()load(HttpGet(game,scriptMap["67 brainrot
 btn(Troll,"Aura Edit Tower",function()load(HttpGet(game,scriptMap["aura edit tower"]))()end)
 btn(Troll,"Gravity Tower 2",function()load(HttpGet(game,scriptMap["gravity tower 2"]))()end)
 btn(Troll,"Meet A Friend Tower",function()load(HttpGet(game,scriptMap["meet a friend tower"]))()end)
+btn(Troll,"Winter Tower",function()load(HttpGet(game,scriptMap["winter tower"]))()end)
 
 btn(Obby,"Run From 67 Obby",function()load(HttpGet(game,scriptMap["run from 67 obby"]))()end)
 btn(Obby,"Meet Nao Chorax",function()load(HttpGet(game,scriptMap["meet nao chorax"]))()end)
