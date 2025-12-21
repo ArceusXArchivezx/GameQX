@@ -68,6 +68,7 @@ end
 
 local SearchTab=CreateTab("Search")local Troll=CreateTab("Troll & Tower")local Obby=CreateTab("Obby & Tower")local Horror=CreateTab("Horror & Elevator")
 local Simulation=CreateTab("Simulation")local Survival=CreateTab("Survival")local Puzzle=CreateTab("Puzzle")
+local Adventure=CreateTab("Adventure")
 local Roleplay=CreateTab("Roleplay & Avatar")local ColorTab=CreateTab("Color")
 Tabs[1].page.Visible=true
 
@@ -162,6 +163,8 @@ addScript("Foxy from FNAF Doom",71544145522719,"https://raw.githubusercontent.co
 
 addScript("Scary Escape Rooms",108682529022009,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Puzzle")
 
+addScript("Find the Brainrot",136407404714539,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20the%20Brainrot")
+
 addScript("Become Any SCP-096",105414615854152,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/RoleplayAvatar")
 
 btn(Troll,"Nightmare Troll Slap Tower",function()load(HttpGet(game,scriptMap["nightmare troll slap tower"]))()end)
@@ -243,6 +246,8 @@ btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shr
 btn(Survival,"Foxy from FNAF Doom",function()load(HttpGet(game,scriptMap["foxy from fnaf doom"]))()end)
 
 btn(Puzzle,"Scary Escape Rooms",function()load(HttpGet(game,scriptMap["scary escape rooms"]))()end)
+
+btn(Adventure,"Find the Brainrot",function()load(HttpGet(game,scriptMap["find the brainrot"]))()end)
 
 btn(Roleplay,"Become Any SCP-096",function()load(HttpGet(game,scriptMap["become any scp-096"]))()end)
 
