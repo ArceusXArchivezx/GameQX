@@ -163,6 +163,7 @@ addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/The
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Foxy from FNAF Doom",71544145522719,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Foxy%20from%20FNAF%20Doom")
 addScript("Foxy from FNAF Doom",71544145522719,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Foxy%20from%20FNAF%20Doom")
+addScript("Cheese Escape: The Lurking",116066151987279,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Cheese%20Escape%3A%20The%20Lurking")
 
 addScript("Scary Escape Rooms",108682529022009,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Puzzle")
 
@@ -250,6 +251,7 @@ btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape a
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
 btn(Survival,"Foxy from FNAF Doom",function()load(HttpGet(game,scriptMap["foxy from fnaf doom"]))()end)
 btn(Survival,"Nico's Nextbots",function()load(HttpGet(game,scriptMap["nico's nextbots"]))()end)
+btn(Survival,"Cheese Escape: The Lurking",function()load(HttpGet(game,scriptMap["cheese escape: the lurking"]))()end)
 
 btn(Puzzle,"Scary Escape Rooms",function()load(HttpGet(game,scriptMap["scary escape rooms"]))()end)
 
