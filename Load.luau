@@ -123,6 +123,7 @@ addScript("Meet A Friend Tower",139048466908419,"https://raw.githubusercontent.c
 addScript("Winter Tower",77972840239493,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrowerPart2")
 addScript("Капельница с прыжком по стене",111904358796869,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%D0%9A%D0%B0%D0%BF%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D0%B0%20%D1%81%20%D0%BF%D1%80%D1%8B%D0%B6%D0%BA%D0%BE%D0%BC%20%D0%BF%D0%BE%20%D1%81%D1%82%D0%B5%D0%BD%D0%B5")
 addScript("Aura Farm Edit Tower",81904348631659,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Aura%20Farm%20Edit%20Tower")
+addScript("Tower Gitu Aja",73859395934014,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Tower%20Gitu%20Aja")
 
 addScript("Run From 67 Obby",71543463524754,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
 addScript("Meet Nao Chorax",96247321266645,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
@@ -160,6 +161,7 @@ addScript("Brainrots +1 Speed Per Step",84916774885454,"https://raw.githubuserco
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
+addScript("Foxy from FNAF Doom",71544145522719,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Foxy%20from%20FNAF%20Doom")
 addScript("Foxy from FNAF Doom",71544145522719,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Foxy%20from%20FNAF%20Doom")
 
 addScript("Scary Escape Rooms",108682529022009,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Puzzle")
@@ -206,6 +208,7 @@ btn(Troll,"Gravity Tower 2",function()load(HttpGet(game,scriptMap["gravity tower
 btn(Troll,"Meet A Friend Tower",function()load(HttpGet(game,scriptMap["meet a friend tower"]))()end)
 btn(Troll,"Winter Tower",function()load(HttpGet(game,scriptMap["winter tower"]))()end)
 btn(Troll,"Aura Farm Edit Tower",function()load(HttpGet(game,scriptMap["aura farm edit tower"]))()end)
+btn(Troll,"Tower Gitu Aja",function()load(HttpGet(game,scriptMap["tower gitu aja"]))()end)
 
 btn(Obby,"Run From 67 Obby",function()load(HttpGet(game,scriptMap["run from 67 obby"]))()end)
 btn(Obby,"Meet Nao Chorax",function()load(HttpGet(game,scriptMap["meet nao chorax"]))()end)
@@ -246,6 +249,7 @@ btn(Simulation,"Brainrots +1 Speed Per Step",function()load(HttpGet(game,scriptM
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
 btn(Survival,"Foxy from FNAF Doom",function()load(HttpGet(game,scriptMap["foxy from fnaf doom"]))()end)
+btn(Survival,"Nico's Nextbots",function()load(HttpGet(game,scriptMap["nico's nextbots"]))()end)
 
 btn(Puzzle,"Scary Escape Rooms",function()load(HttpGet(game,scriptMap["scary escape rooms"]))()end)
 
