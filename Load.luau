@@ -126,6 +126,7 @@ addScript("Aura Farm Edit Tower",81904348631659,"https://raw.githubusercontent.c
 addScript("Tower Gitu Aja",73859395934014,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Tower%20Gitu%20Aja")
 addScript("Pink Keys Asmr Tower",102186835348979,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Pink%20Keys%20Asmr%20Tower")
 addScript("Troll Battle Tower",73993817204130,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Troll%20Battle%20Tower")
+addScript("Meet 99 Nights Tower",89212644711336,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Meet%2099%20Nights%20Tower")
 
 addScript("Run From 67 Obby",71543463524754,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
 addScript("Meet Nao Chorax",96247321266645,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
@@ -217,6 +218,7 @@ btn(Troll,"Aura Farm Edit Tower",function()load(HttpGet(game,scriptMap["aura far
 btn(Troll,"Tower Gitu Aja",function()load(HttpGet(game,scriptMap["tower gitu aja"]))()end)
 btn(Troll,"Pink Keys Asmr Tower",function()load(HttpGet(game,scriptMap["pink keys asmr tower"]))()end)
 btn(Troll,"Troll Battle Tower",function()load(HttpGet(game,scriptMap["troll battle tower"]))()end)
+btn(Troll,"Meet 99 Nights Tower",function()load(HttpGet(game,scriptMap["meet 99 nights tower"]))()end)
 
 btn(Obby,"Run From 67 Obby",function()load(HttpGet(game,scriptMap["run from 67 obby"]))()end)
 btn(Obby,"Meet Nao Chorax",function()load(HttpGet(game,scriptMap["meet nao chorax"]))()end)
