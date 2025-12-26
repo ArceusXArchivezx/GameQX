@@ -179,6 +179,7 @@ addScript("Scary Escape Rooms",108682529022009,"https://raw.githubusercontent.co
 addScript("Prove You Are Not a Dum-Dum",129786213527176,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Prove%20You%20Are%20Not%20a%20Dum-Dum")
 
 addScript("Find the Brainrot",136407404714539,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20the%20Brainrot")
+addScript("Find Sonic Morph",90136231908125,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20Sonic%20Morph")
 
 addScript("Become Any SCP-096",105414615854152,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/RoleplayAvatar")
 
@@ -278,6 +279,7 @@ btn(Puzzle,"Scary Escape Rooms",function()load(HttpGet(game,scriptMap["scary esc
 btn(Puzzle,"Prove You Are Not a Dum-Dum",function()load(HttpGet(game,scriptMap["prove you are not a dum-dum"]))()end)
 
 btn(Adventure,"Find the Brainrot",function()load(HttpGet(game,scriptMap["find the brainrot"]))()end)
+btn(Adventure,"Find Sonic Morph",function()load(HttpGet(game,scriptMap["find sonic morph"]))()end)
 
 btn(Roleplay,"Become Any SCP-096",function()load(HttpGet(game,scriptMap["become any scp-096"]))()end)
 
