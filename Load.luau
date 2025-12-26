@@ -175,6 +175,7 @@ addScript("Foxy from FNAF Doom",71544145522719,"https://raw.githubusercontent.co
 addScript("Cheese Escape: The Lurking",116066151987279,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Cheese%20Escape%3A%20The%20Lurking")
 
 addScript("Scary Escape Rooms",108682529022009,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Puzzle")
+addScript("Prove You Are Not a Dum-Dum",129786213527176,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Prove%20You%20Are%20Not%20a%20Dum-Dum")
 
 addScript("Find the Brainrot",136407404714539,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20the%20Brainrot")
 
@@ -272,6 +273,7 @@ btn(Survival,"Nico's Nextbots",function()load(HttpGet(game,scriptMap["nico's nex
 btn(Survival,"Cheese Escape: The Lurking",function()load(HttpGet(game,scriptMap["cheese escape: the lurking"]))()end)
 
 btn(Puzzle,"Scary Escape Rooms",function()load(HttpGet(game,scriptMap["scary escape rooms"]))()end)
+btn(Puzzle,"Prove You Are Not a Dum-Dum",function()load(HttpGet(game,scriptMap["prove you are not a dum-dum"]))()end)
 
 btn(Adventure,"Find the Brainrot",function()load(HttpGet(game,scriptMap["find the brainrot"]))()end)
 
