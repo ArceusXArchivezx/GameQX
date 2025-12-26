@@ -165,6 +165,7 @@ addScript("Escape The Lava",140481779622210,"https://raw.githubusercontent.com/T
 addScript("Brainrots +1 Speed Per Step",84916774885454,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation")
 addScript("+1 Car Speed",72759831222082,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Car%20Speed")
 addScript("+1 Speed Bike Escape",128070940451265,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Bike%20Escape")
+addScript("+1 Power Per Jump",96310489045568,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Power%20Per%20Jump")
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -260,6 +261,7 @@ btn(Simulation,"Escape The Lava",function()load(HttpGet(game,scriptMap["escape t
 btn(Simulation,"Brainrots +1 Speed Per Step",function()load(HttpGet(game,scriptMap["brainrots +1 speed per step"]))()end)
 btn(Simulation,"+1 Car Speed",function()load(HttpGet(game,scriptMap["+1 car speed"]))()end)
 btn(Simulation,"+1 Speed Bike Escape",function()load(HttpGet(game,scriptMap["+1 speed bike escape"]))()end)
+btn(Simulation,"+1 Power Per Jump",function()load(HttpGet(game,scriptMap["+1 power per jump"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
