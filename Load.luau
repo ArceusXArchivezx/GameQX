@@ -171,6 +171,7 @@ addScript("+1 Speed Per Click",109999827422468,"https://raw.githubusercontent.co
 addScript("School Escape",113859658651362,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/School%20Escape")
 addScript("+1 Speed ESCAPE OBBY",76944728777524,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20ESCAPE%20OBBY")
 addScript("Don't Get Eaten By Hungry Worm",91205780054565,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Don't%20Get%20Eaten%20By%20Hungry%20Worm")
+addScript("Escape the Tsunami on Bike",118460028711730,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20the%20Tsunami%20on%20Bike")
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -275,6 +276,7 @@ btn(Simulation,"+1 Speed Per Click",function()load(HttpGet(game,scriptMap["+1 sp
 btn(Simulation,"School Escape",function()load(HttpGet(game,scriptMap["school escape"]))()end)
 btn(Simulation,"+1 Speed ESCAPE OBBY",function()load(HttpGet(game,scriptMap["+1 speed escape obby"]))()end)
 btn(Simulation,"Don't Get Eaten By Hungry Worm",function()load(HttpGet(game,scriptMap["don't get eaten by hungry worm"]))()end)
+btn(Simulation,"Escape the Tsunami on Bike",function()load(HttpGet(game,scriptMap["escape the tsunami on bike"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
