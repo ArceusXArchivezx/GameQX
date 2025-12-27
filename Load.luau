@@ -274,6 +274,7 @@ btn(Simulation,"+1 Jump Per Step",function()load(HttpGet(game,scriptMap["+1 jump
 btn(Simulation,"+1 Speed Per Click",function()load(HttpGet(game,scriptMap["+1 speed per click"]))()end)
 btn(Simulation,"School Escape",function()load(HttpGet(game,scriptMap["school escape"]))()end)
 btn(Simulation,"+1 Speed ESCAPE OBBY",function()load(HttpGet(game,scriptMap["+1 speed escape obby"]))()end)
+btn(Simulation,"Don't Get Eaten By Hungry Worm",function()load(HttpGet(game,scriptMap["don't get eaten by hungry worm"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
