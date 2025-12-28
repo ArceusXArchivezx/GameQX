@@ -149,6 +149,7 @@ addScript("EL GATO'S PRISON RUN",18971610991,"https://raw.githubusercontent.com/
 addScript("SAMMY'S PRISON RUN",83805654213735,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
 addScript("RUMI'S PRISON RUN",101581749005211,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
 addScript("Drive the ball to the end",82086702654870,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Drive%20the%20ball%20to%20the%20end")
+addScript("Obby, BUT you unlock ABILITIES",15009591064,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Obby2Ok")
 
 addScript("Cheese Escape",5777099015,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror")
 
@@ -259,6 +260,7 @@ btn(Obby,"EL GATO'S PRISON RUN",function()load(HttpGet(game,scriptMap["el gato's
 btn(Obby,"SAMMY'S PRISON RUN",function()load(HttpGet(game,scriptMap["sammy's prison run"]))()end)
 btn(Obby,"RUMI'S PRISON RUN",function()load(HttpGet(game,scriptMap["rumi's prison run"]))()end)
 btn(Obby,"Drive the ball to the end",function()load(HttpGet(game,scriptMap["drive the ball to the end"]))()end)
+btn(Obby,"Obby, BUT you unlock ABILITIES",function()load(HttpGet(game,scriptMap["obby, but you unlock abilities"]))()end)
 
 btn(Horror,"Cheese Escape",function()load(HttpGet(game,scriptMap["cheese escape"]))()end)
 
