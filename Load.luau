@@ -181,6 +181,7 @@ addScript("Build to Survive",94423988769690,"https://raw.githubusercontent.com/T
 addScript("UPD +1 Jump Per Step",127584917378679,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/UPD%20%2B1%20Jump%20Per%20Step")
 addScript("Save Christmas",75774326976701,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Save%20Christmas")
 addScript("+1 Speed Minion Evolution",137041225352450,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Minion%20Evolution")
+addScript("Escape 67",127383162960820,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%2067")
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -295,6 +296,7 @@ btn(Simulation,"Build to Survive",function()load(HttpGet(game,scriptMap["build t
 btn(Simulation,"UPD +1 Jump Per Step",function()load(HttpGet(game,scriptMap["upd +1 jump per step"]))()end)
 btn(Simulation,"Save Christmas",function()load(HttpGet(game,scriptMap["save christmas"]))()end)
 btn(Simulation,"+1 Speed Minion Evolution",function()load(HttpGet(game,scriptMap["+1 speed minion evolution"]))()end)
+btn(Simulation,"Escape 67",function()load(HttpGet(game,scriptMap["escape 67"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
