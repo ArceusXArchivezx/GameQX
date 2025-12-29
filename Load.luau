@@ -202,6 +202,7 @@ addScript("Find the Brainrot",136407404714539,"https://raw.githubusercontent.com
 addScript("Find Sonic Morph",90136231908125,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20Sonic%20Morph")
 
 addScript("Become Any SCP-096",105414615854152,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/RoleplayAvatar")
+addScript("Cattos Lizard ATTACK RP",102353841629856,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Cattos%20Lizard%20ATTACK%20RP")
 
 btn(Troll,"Nightmare Troll Slap Tower",function()load(HttpGet(game,scriptMap["nightmare troll slap tower"]))()end)
 btn(Troll,"Escape Troll Tower",function()load(HttpGet(game,scriptMap["escape troll tower"]))()end)
@@ -322,6 +323,7 @@ btn(Adventure,"Find the Brainrot",function()load(HttpGet(game,scriptMap["find th
 btn(Adventure,"Find Sonic Morph",function()load(HttpGet(game,scriptMap["find sonic morph"]))()end)
 
 btn(Roleplay,"Become Any SCP-096",function()load(HttpGet(game,scriptMap["become any scp-096"]))()end)
+btn(Roleplay,"Cattos Lizard ATTACK RP",function()load(HttpGet(game,scriptMap["cattos lizard attack rp"]))()end)
 
 local presets={
 {"Neon Purple",Color3.fromRGB(150,0,255)},{"Cyber Pink",Color3.fromRGB(255,0,150)},{"Toxic Green",Color3.fromRGB(0,255,100)},
