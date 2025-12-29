@@ -187,6 +187,7 @@ addScript("+1 Speed Longest Brainrot Tunnel",133209054156971,"https://raw.github
 addScript("+1 Speed to ESCAPE",108877961231008,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20to%20ESCAPE")
 addScript("+1 Speed Garden Escape",71020775930418,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Garden%20Escape")
 addScript("Keyboard ASMR Speed Escape",93707779198874,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Keyboard%20ASMR%20Speed%20Escape")
+addScript("+1 Speed Survival",129819755364195,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Survival")
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -308,6 +309,7 @@ btn(Simulation,"+1 Speed Longest Brainrot Tunnel",function()load(HttpGet(game,sc
 btn(Simulation,"+1 Speed to ESCAPE",function()load(HttpGet(game,scriptMap["+1 speed to escape"]))()end)
 btn(Simulation,"+1 Speed Garden Escape",function()load(HttpGet(game,scriptMap["+1 speed garden escape"]))()end)
 btn(Simulation,"Keyboard ASMR Speed Escape",function()load(HttpGet(game,scriptMap["keyboard asmr speed escape"]))()end)
+btn(Simulation,"+1 Speed Survival",function()load(HttpGet(game,scriptMap["+1 speed survival"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
