@@ -183,6 +183,7 @@ addScript("Save Christmas",75774326976701,"https://raw.githubusercontent.com/The
 addScript("+1 Speed Minion Evolution",137041225352450,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Minion%20Evolution")
 addScript("Escape 67",127383162960820,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%2067")
 addScript("+1 Speed Escape Evil Santa",134126509854298,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Speed%20Escape%20Evil%20Santa")
+addScript("+1 Speed Longest Brainrot Tunnel",133209054156971,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Longest%20Brainrot%20Tunnel")
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -299,6 +300,7 @@ btn(Simulation,"Save Christmas",function()load(HttpGet(game,scriptMap["save chri
 btn(Simulation,"+1 Speed Minion Evolution",function()load(HttpGet(game,scriptMap["+1 speed minion evolution"]))()end)
 btn(Simulation,"Escape 67",function()load(HttpGet(game,scriptMap["escape 67"]))()end)
 btn(Simulation,"+1 Speed Escape Evil Santa",function()load(HttpGet(game,scriptMap["+1 speed escape evil santa"]))()end)
+btn(Simulation,"+1 Speed Longest Brainrot Tunnel",function()load(HttpGet(game,scriptMap["+1 speed longest brainrot tunnel"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
