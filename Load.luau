@@ -149,6 +149,7 @@ addScript("SAMMY'S PRISON RUN",83805654213735,"https://raw.githubusercontent.com
 addScript("RUMI'S PRISON RUN",101581749005211,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
 addScript("Drive the ball to the end",82086702654870,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Drive%20the%20ball%20to%20the%20end")
 addScript("Obby, BUT you unlock ABILITIES",15009591064,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Obby2Ok")
+addScript("DTI Obby",16181786582,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/DTI%20Obby")
 
 addScript("Cheese Escape",5777099015,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror")
 
@@ -278,6 +279,7 @@ btn(Obby,"SAMMY'S PRISON RUN",function()load(HttpGet(game,scriptMap["sammy's pri
 btn(Obby,"RUMI'S PRISON RUN",function()load(HttpGet(game,scriptMap["rumi's prison run"]))()end)
 btn(Obby,"Drive the ball to the end",function()load(HttpGet(game,scriptMap["drive the ball to the end"]))()end)
 btn(Obby,"Obby, BUT you unlock ABILITIES",function()load(HttpGet(game,scriptMap["obby, but you unlock abilities"]))()end)
+btn(Obby,"DTI Obby",function()load(HttpGet(game,scriptMap["dti obby"]))()end)
 
 btn(Horror,"Cheese Escape",function()load(HttpGet(game,scriptMap["cheese escape"]))()end)
 
@@ -350,8 +352,6 @@ useRainbow=true currentColor=Color3.fromRGB(0,140,255)
 if delfile and isfile("ArchiveXNova_Color.txt")then delfile("ArchiveXNova_Color.txt")end
 Main.BackgroundColor3=Color3.fromRGB(12,12,28)
 end)
-
--- Search Tab features (same as before)
 
 local searchBox=Instance.new("TextBox",SearchTab)searchBox.Size=UDim2.new(1,0,0,40)searchBox.Position=UDim2.new(0,0,0,10)
 searchBox.PlaceholderText="Search game name..."searchBox.Text=""searchBox.TextColor3=Color3.new(1,1,1)
