@@ -66,10 +66,9 @@ btn.MouseButton1Click:Connect(function()for _,t in Tabs do t.page.Visible=false 
 table.insert(Tabs,{btn=btn,page=page})return page
 end
 
-local SearchTab=CreateTab("Search")local Troll=CreateTab("Troll & Tower")local Obby=CreateTab("Obby & Tower")local Horror=CreateTab("Horror & Elevator")
+local SearchTab=CreateTab("Search")local FavoriteTab=CreateTab("Favorite")local Troll=CreateTab("Troll & Tower")local Obby=CreateTab("Obby & Tower")local Horror=CreateTab("Horror & Elevator")
 local Simulation=CreateTab("Simulation")local Survival=CreateTab("Survival")local Puzzle=CreateTab("Puzzle")
-local Adventure=CreateTab("Adventure")
-local Roleplay=CreateTab("Roleplay & Avatar")local ColorTab=CreateTab("Color")
+local Adventure=CreateTab("Adventure")local Roleplay=CreateTab("Roleplay & Avatar")local ColorTab=CreateTab("Color")
 Tabs[1].page.Visible=true
 
 local function btn(p,t,c)
@@ -338,9 +337,6 @@ btn(Puzzle,"Prove You Are Not a Dum-Dum",function()load(HttpGet(game,scriptMap["
 btn(Adventure,"Find the Brainrot",function()load(HttpGet(game,scriptMap["find the brainrot"]))()end)
 btn(Adventure,"Find Sonic Morph",function()load(HttpGet(game,scriptMap["find sonic morph"]))()end)
 
-btn(Roleplay,"Become Any SCP-096",function()load(HttpGet(game,scriptMap["become any scp-096"]))()end)
-btn(Roleplay,"Cattos Lizard ATTACK RP",function()load(HttpGet(game,scriptMap["cattos lizard attack rp"]))()end)
-
 local presets={
 {"Neon Purple",Color3.fromRGB(150,0,255)},{"Cyber Pink",Color3.fromRGB(255,0,150)},{"Toxic Green",Color3.fromRGB(0,255,100)},
 {"Blood Red",Color3.fromRGB(200,0,0)},{"Ocean Blue",Color3.fromRGB(0,100,255)},{"Galaxy",Color3.fromRGB(100,0,200)},
@@ -354,6 +350,8 @@ useRainbow=true currentColor=Color3.fromRGB(0,140,255)
 if delfile and isfile("ArchiveXNova_Color.txt")then delfile("ArchiveXNova_Color.txt")end
 Main.BackgroundColor3=Color3.fromRGB(12,12,28)
 end)
+
+-- Search Tab features (same as before)
 
 local searchBox=Instance.new("TextBox",SearchTab)searchBox.Size=UDim2.new(1,0,0,40)searchBox.Position=UDim2.new(0,0,0,10)
 searchBox.PlaceholderText="Search game name..."searchBox.Text=""searchBox.TextColor3=Color3.new(1,1,1)
@@ -411,6 +409,72 @@ if not useRainbow then copyPlaceIdBtn.BackgroundColor3=currentColor:lerp(Color3.
 copyPlaceIdBtn.MouseButton1Click:Connect(function()
 setclipboard(tostring(game.PlaceId))
 placeIdBox.Text=tostring(game.PlaceId)
+end)
+
+local favoriteBox=Instance.new("TextBox",FavoriteTab)favoriteBox.Size=UDim2.new(1,0,0,40)favoriteBox.Position=UDim2.new(0,0,0,80)
+favoriteBox.PlaceholderText="Enter PlaceID..."favoriteBox.Text=""favoriteBox.TextColor3=Color3.new(1,1,1)
+favoriteBox.BackgroundColor3=Color3.fromRGB(30,30,50)favoriteBox.Font=Enum.Font.Gotham favoriteBox.TextSize=16
+Instance.new("UICorner",favoriteBox).CornerRadius=UDim.new(0,12)table.insert(rainbowElements,favoriteBox)
+if not useRainbow then favoriteBox.BackgroundColor3=currentColor:lerp(Color3.new(0,0,0),0.5)end
+
+local addFavBtn=Instance.new("TextButton",FavoriteTab)addFavBtn.Size=UDim2.new(1,0,0,40)addFavBtn.Position=UDim2.new(0,0,0,128)
+addFavBtn.Text="Add Favorite PlaceID"addFavBtn.TextColor3=Color3.new(1,1,1)addFavBtn.Font=Enum.Font.GothamBold addFavBtn.TextSize=16
+Instance.new("UICorner",addFavBtn).CornerRadius=UDim.new(0,12)table.insert(rainbowElements,addFavBtn)
+if not useRainbow then addFavBtn.BackgroundColor3=currentColor:lerp(Color3.new(0,0,0),0.3)end
+
+local loadFavBtn=Instance.new("TextButton",FavoriteTab)loadFavBtn.Size=UDim2.new(1,0,0,40)loadFavBtn.Position=UDim2.new(0,0,0,176)
+loadFavBtn.Text="Load Favorite PlaceID"loadFavBtn.TextColor3=Color3.new(1,1,1)loadFavBtn.Font=Enum.Font.GothamBold loadFavBtn.TextSize=16
+Instance.new("UICorner",loadFavBtn).CornerRadius=UDim.new(0,12)table.insert(rainbowElements,loadFavBtn)
+if not useRainbow then loadFavBtn.BackgroundColor3=currentColor:lerp(Color3.new(0,0,0),0.3)end
+
+local clearFavBtn=Instance.new("TextButton",FavoriteTab)clearFavBtn.Size=UDim2.new(1,0,0,40)clearFavBtn.Position=UDim2.new(0,0,0,224)
+clearFavBtn.Text="Clear Favorite PlaceID"clearFavBtn.TextColor3=Color3.new(1,1,1)clearFavBtn.Font=Enum.Font.GothamBold clearFavBtn.TextSize=16
+Instance.new("UICorner",clearFavBtn).CornerRadius=UDim.new(0,12)table.insert(rainbowElements,clearFavBtn)
+if not useRainbow then clearFavBtn.BackgroundColor3=Color3.fromRGB(200,50,50) end
+
+local favorites={}
+if isfile and readfile and isfile("ArchiveXNova_Favorites.txt")then
+pcall(function()
+favorites=loadstring("return {"..readfile("ArchiveXNova_Favorites.txt").."}")() or {}
+end)end
+
+local function saveFavorites()
+if writefile then
+local str="{"
+for i,v in ipairs(favorites)do str=str..'"'..v..'",' end
+str=str.."}"
+writefile("ArchiveXNova_Favorites.txt",str)
+end
+end
+
+local function refreshFavorites()
+loadFavBtn.Text="Load Favorite PlaceID ("..#favorites..")"
+end
+refreshFavorites()
+
+addFavBtn.MouseButton1Click:Connect(function()
+local id=favoriteBox.Text:match("^%d+$")
+if id and not table.find(favorites,id) then
+table.insert(favorites,id)
+saveFavorites()
+refreshFavorites()
+favoriteBox.Text=""
+end
+end)
+
+loadFavBtn.MouseButton1Click:Connect(function()
+if #favorites>0 then
+local id=favorites[math.random(#favorites)]
+favoriteBox.Text=id
+local url=placeIdMap[id]
+if url then load(HttpGet(game,url))() end
+end
+end)
+
+clearFavBtn.MouseButton1Click:Connect(function()
+favorites={}
+saveFavorites()
+refreshFavorites()
 end)
 
 X.MouseButton1Click:Connect(function()sg:Destroy()end)
