@@ -165,7 +165,7 @@ addScript("Be Fast Or DIE",71404999931084,"https://raw.githubusercontent.com/The
 addScript("Escape The Lava",140481779622210,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Be%20Fast%20Or%20DIE.luau")
 addScript("Brainrots +1 Speed Per Step",84916774885454,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation")
 addScript("+1 Car Speed",72759831222082,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Car%20Speed")
-addScript("+1 Speed Bike Escape",128070940451265,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Bike%20Escape")
+addScript("+1 Speed Bike Escape",128070940451265,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Bike%20EscapeV3")
 addScript("+1 Power Per Jump",96310489045568,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Power%20Per%20Jump")
 addScript("+1 Jump Per Step",106337932664716,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Jump%20Per%20Step")
 addScript("+1 Speed Per Click",109999827422468,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Per%20Click")
