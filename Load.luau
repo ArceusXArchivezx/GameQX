@@ -199,6 +199,7 @@ addScript("+1 Speed every JUMP!!",71226853386346,"https://raw.githubusercontent.
 addScript("Bigger Every Step!",108284916145176,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Bigger%20Every%20Step!")
 addScript("Build to Ski!",91362012293383,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Build%20to%20Ski!")
 addScript("Escape The Acid",74615581000844,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20The%20Acid")
+addScript("Run or Die",95713983489925,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Run%20or%20Die")
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -333,6 +334,7 @@ btn(Simulation,"+1 Speed every JUMP!!",function()load(HttpGet(game,scriptMap["+1
 btn(Simulation,"Bigger Every Step!",function()load(HttpGet(game,scriptMap["bigger every step!"]))()end)
 btn(Simulation,"Build to Ski!",function()load(HttpGet(game,scriptMap["build to ski!"]))()end)
 btn(Simulation,"Escape The Acid",function()load(HttpGet(game,scriptMap["escape the acid"]))()end)
+btn(Simulation,"Run or Die",function()load(HttpGet(game,scriptMap["run or die"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
