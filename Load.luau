@@ -195,6 +195,8 @@ addScript("+1 Speed Prison Escape",73934517857372,"https://raw.githubusercontent
 addScript("+1 Speed Rock Escape",117265809722033,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Rock%20Escape")
 addScript("Bridge to Brainrot",74407860720916,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Bridge%20to%20Brainrot")
 addScript("+1 Size Per Second Sammy",90196214155723,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Size%20Per%20Second%20Sammy")
+addScript("+1 Speed every JUMP!!",71226853386346,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20every%20JUMP!!")
+addScript("Bigger Every Step!",108284916145176,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Bigger%20Every%20Step!")
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -325,6 +327,8 @@ btn(Simulation,"+1 Speed Prison Escape",function()load(HttpGet(game,scriptMap["+
 btn(Simulation,"+1 Speed Rock Escape",function()load(HttpGet(game,scriptMap["+1 speed rock escape"]))()end)
 btn(Simulation,"Bridge to Brainrot",function()load(HttpGet(game,scriptMap["bridge to brainrot"]))()end)
 btn(Simulation,"+1 Size Per Second Sammy",function()load(HttpGet(game,scriptMap["+1 size per second sammy"]))()end)
+btn(Simulation,"+1 Speed every JUMP!!",function()load(HttpGet(game,scriptMap["+1 speed every jump!!"]))()end)
+btn(Simulation,"Bigger Every Step!",function()load(HttpGet(game,scriptMap["bigger every step!"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
