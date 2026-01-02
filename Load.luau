@@ -203,6 +203,7 @@ addScript("Bigger Every Step!",108284916145176,"https://raw.githubusercontent.co
 addScript("Build to Ski!",91362012293383,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Build%20to%20Ski!")
 addScript("Escape The Acid",74615581000844,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20The%20Acid")
 addScript("Run or Die",95713983489925,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Run%20or%20Die")
+addScript("Grass Cutters",105352795362105,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Grass%20Cutters")
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -213,6 +214,7 @@ addScript("MEDVED",132273534230449,"https://raw.githubusercontent.com/TheMugenKi
 
 addScript("Scary Escape Rooms",108682529022009,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Puzzle")
 addScript("Prove You Are Not a Dum-Dum",129786213527176,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Prove%20You%20Are%20Not%20a%20Dum-Dum")
+addScript("Horror Elevator",7331676440,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Prove%20You%20Are%20Not%20a%20Dum-Dum")
 
 addScript("Find the Brainrot",136407404714539,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20the%20Brainrot")
 addScript("Find Sonic Morph",90136231908125,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20Sonic%20Morph")
@@ -341,6 +343,7 @@ btn(Simulation,"Bigger Every Step!",function()load(HttpGet(game,scriptMap["bigge
 btn(Simulation,"Build to Ski!",function()load(HttpGet(game,scriptMap["build to ski!"]))()end)
 btn(Simulation,"Escape The Acid",function()load(HttpGet(game,scriptMap["escape the acid"]))()end)
 btn(Simulation,"Run or Die",function()load(HttpGet(game,scriptMap["run or die"]))()end)
+btn(Simulation,"Grass Cutters",function()load(HttpGet(game,scriptMap["grass cutters"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
@@ -351,6 +354,7 @@ btn(Survival,"MEDVED",function()load(HttpGet(game,scriptMap["medved"]))()end)
 
 btn(Puzzle,"Scary Escape Rooms",function()load(HttpGet(game,scriptMap["scary escape rooms"]))()end)
 btn(Puzzle,"Prove You Are Not a Dum-Dum",function()load(HttpGet(game,scriptMap["prove you are not a dum-dum"]))()end)
+btn(Puzzle,"Horror Elevator",function()load(HttpGet(game,scriptMap["horror elevator"]))()end)
 
 btn(Adventure,"Find the Brainrot",function()load(HttpGet(game,scriptMap["find the brainrot"]))()end)
 btn(Adventure,"Find Sonic Morph",function()load(HttpGet(game,scriptMap["find sonic morph"]))()end)
