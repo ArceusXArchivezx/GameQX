@@ -152,6 +152,7 @@ addScript("RUMI'S PRISON RUN",101581749005211,"https://raw.githubusercontent.com
 addScript("Drive the ball to the end",82086702654870,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Drive%20the%20ball%20to%20the%20end")
 addScript("Obby, BUT you unlock ABILITIES",15009591064,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Obby2Ok")
 addScript("DTI Obby",16181786582,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/DTI%20Obby")
+addScript("MEGA IMPOSSIBLE OBBY",87437805664415,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/MEGA%20IMPOSSIBLE%20OBBY")
 
 addScript("Cheese Escape",5777099015,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror")
 
@@ -289,6 +290,7 @@ btn(Obby,"RUMI'S PRISON RUN",function()load(HttpGet(game,scriptMap["rumi's priso
 btn(Obby,"Drive the ball to the end",function()load(HttpGet(game,scriptMap["drive the ball to the end"]))()end)
 btn(Obby,"Obby, BUT you unlock ABILITIES",function()load(HttpGet(game,scriptMap["obby, but you unlock abilities"]))()end)
 btn(Obby,"DTI Obby",function()load(HttpGet(game,scriptMap["dti obby"]))()end)
+btn(Obby,"MEGA IMPOSSIBLE OBBY",function()load(HttpGet(game,scriptMap["mega impossible obby"]))()end)
 
 btn(Horror,"Cheese Escape",function()load(HttpGet(game,scriptMap["cheese escape"]))()end)
 
