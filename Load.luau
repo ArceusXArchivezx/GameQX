@@ -130,6 +130,7 @@ addScript(74615581000844,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(95713983489925,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Run%20or%20Die")
 addScript(105352795362105,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Grass%20Cutters")
 addScript(128602654120186,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Strength%20Per%20Punch")
+addScript(80440775110643,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Dangerous%20Horse%20Riding")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
