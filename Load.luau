@@ -76,6 +76,7 @@ addScript(82086702654870,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(15009591064,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Obby2Ok")
 addScript(16181786582,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/DTI%20Obby")
 addScript(87437805664415,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/MEGA%20IMPOSSIBLE%20OBBY")
+addScript(123901549209405,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Rasa%20Ini%20Tower%20Akukuat")
 
 -- Horror
 addScript(5777099015,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror")
