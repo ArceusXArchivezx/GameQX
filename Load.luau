@@ -204,6 +204,7 @@ addScript("Build to Ski!",91362012293383,"https://raw.githubusercontent.com/TheM
 addScript("Escape The Acid",74615581000844,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20The%20Acid")
 addScript("Run or Die",95713983489925,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Run%20or%20Die")
 addScript("Grass Cutters",105352795362105,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Grass%20Cutters")
+addScript("+1 Strength Per Punch",128602654120186,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Strength%20Per%20Punch")
 
 addScript("Escape Angry Head",16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
 addScript("Shrek in The Backrooms",9534337535,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -344,6 +345,7 @@ btn(Simulation,"Build to Ski!",function()load(HttpGet(game,scriptMap["build to s
 btn(Simulation,"Escape The Acid",function()load(HttpGet(game,scriptMap["escape the acid"]))()end)
 btn(Simulation,"Run or Die",function()load(HttpGet(game,scriptMap["run or die"]))()end)
 btn(Simulation,"Grass Cutters",function()load(HttpGet(game,scriptMap["grass cutters"]))()end)
+btn(Simulation,"+1 Strength Per Punch",function()load(HttpGet(game,scriptMap["+1 strength per punch"]))()end)
 
 btn(Survival,"Escape Angry Head",function()load(HttpGet(game,scriptMap["escape angry head"]))()end)
 btn(Survival,"Shrek in The Backrooms",function()load(HttpGet(game,scriptMap["shrek in the backrooms"]))()end)
