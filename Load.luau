@@ -79,6 +79,7 @@ addScript(87437805664415,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(123901549209405,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Rasa%20Ini%20Tower%20Akukuat")
 addScript(90802083095310,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Cobain%20Nih%20Tower%202")
 addScript(71717678513989,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Emang%20Gini%20Laser%202")
+addScript(101946478822481,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Obby2")
 
 -- Horror
 addScript(5777099015,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror")
