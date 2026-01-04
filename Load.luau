@@ -80,6 +80,7 @@ addScript(123901549209405,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(90802083095310,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Cobain%20Nih%20Tower%202")
 addScript(71717678513989,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Emang%20Gini%20Laser%202")
 addScript(101946478822481,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Obby2")
+addScript(97622296096899,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/SAMMY%20JUMP%20ROPE%20GIANT%20SAMMY%20MORPH")
 
 -- Horror
 addScript(5777099015,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror")
