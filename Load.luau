@@ -154,6 +154,7 @@ addScript(129786213527176,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 -- Adventure
 addScript(136407404714539,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20the%20Brainrot")
 addScript(90136231908125,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20Sonic%20Morph")
+addScript(101905843742027,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/FIND%20THE%20BRAINROT%20MORPHS")
 
 -- Party And Casual
 addScript(105414615854152,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/RoleplayAvatar")
