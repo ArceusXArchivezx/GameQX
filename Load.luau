@@ -145,6 +145,7 @@ addScript(120298786979907,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(135787657971346,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Bridge%20Building")
 addScript(140304916524239,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20and%20Escape%20Brainrot")
 addScript(116655602398589,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Bubu%20%2B1%20Speed%20Per%20Step")
+addScript(94044834705696,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20the%20Prison")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
