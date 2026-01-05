@@ -52,6 +52,9 @@ addScript(118546475246005,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(103259107767540,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ay%20Mi%20Gatito%20Tower")
 addScript(139370383735801,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Tower%20Nao%20Chorax")
 
+-- Tower
+addScript(134997651114504,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ice%20Skate%20Tower")
+
 -- Obby
 addScript(71543463524754,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
 addScript(96247321266645,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
