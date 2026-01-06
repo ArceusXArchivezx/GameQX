@@ -51,6 +51,7 @@ addScript(89212644711336,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(118546475246005,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ability%20Slap%20Tower%203")
 addScript(103259107767540,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ay%20Mi%20Gatito%20Tower")
 addScript(139370383735801,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Tower%20Nao%20Chorax")
+addScript(75304671440673,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20the%20Slaps%20Tower")
 
 -- Tower
 addScript(134997651114504,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ice%20Skate%20Tower")
