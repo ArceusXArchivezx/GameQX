@@ -148,6 +148,7 @@ addScript(116655602398589,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(94044834705696,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20the%20Prison")
 addScript(95319535505764,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sail%20Down%20A%20River")
 addScript(88658729052139,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Surfing%20and%20Slide")
+addScript(91330679445177,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Horse%20Speed%20Escape")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
