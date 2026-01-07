@@ -153,6 +153,7 @@ addScript(88658729052139,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(91330679445177,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Horse%20Speed%20Escape")
 addScript(91815352850707,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Freddy%20Escape")
 addScript(87556782095453,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Per%20Swim")
+addScript(125482389638298,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/99%20Nights%20Forest%20Escape%20%2B1%20Speed")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
