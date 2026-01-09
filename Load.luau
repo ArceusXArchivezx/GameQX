@@ -55,6 +55,7 @@ addScript(75304671440673,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(87186597509368,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Five%20Nights%20at%20Freddy's%20Tower")
 addScript(102015438526250,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Size%20Troll%20Tower")
 addScript(85573803794783,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Doodle%20Tower")
+addScript(115958079277049,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20Sammy%20Tower")
 
 -- Tower
 addScript(134997651114504,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ice%20Skate%20Tower")
