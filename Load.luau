@@ -56,6 +56,7 @@ addScript(87186597509368,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(102015438526250,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Size%20Troll%20Tower")
 addScript(85573803794783,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Doodle%20Tower")
 addScript(115958079277049,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20Sammy%20Tower")
+addScript(88951201927122,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Gear%20Troll%20Slap%20Tower")
 
 -- Tower
 addScript(134997651114504,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ice%20Skate%20Tower")
