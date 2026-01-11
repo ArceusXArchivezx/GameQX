@@ -212,6 +212,7 @@ addScript(132273534230449,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 -- Puzzle
 addScript(108682529022009,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Puzzle")
 addScript(129786213527176,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Prove%20You%20Are%20Not%20a%20Dum-Dum")
+addScript(103593441753340,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20The%20Button")
 
 -- Adventure
 addScript(136407404714539,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20the%20Brainrot")
