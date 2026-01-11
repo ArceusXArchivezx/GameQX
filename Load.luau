@@ -88,6 +88,7 @@ addScript(102015438526250,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(85573803794783,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Doodle%20Tower")
 addScript(115958079277049,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20Sammy%20Tower")
 addScript(88951201927122,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Gear%20Troll%20Slap%20Tower")
+addScript(91654574937058,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Nyan%20Cat%20Troll%20Tower")
 
 -- Tower
 addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sajonara%20Tower")
