@@ -1,3 +1,34 @@
+local Players = game:GetService("Players")
+
+local BannedUsers = {
+    [8927461290] = true,
+    [7926507757] = true,
+    [10305145595] = false,
+}
+
+local function checkAndKick(player)
+    if BannedUsers[player.UserId] then
+        player:Kick("ArchiveXNova: You are on the Blacklist")
+    end
+end
+
+Players.PlayerAdded:Connect(checkAndKick)
+
+for _, player in ipairs(Players:GetPlayers()) do
+    checkAndKick(player)
+end
+
+local function addBan(userId, status)
+    BannedUsers[userId] = status
+    if status then
+        for _, player in ipairs(Players:GetPlayers()) do
+            if player.UserId == userId then
+                player:Kick("ArchiveXNova: You are on The Blacklist")
+            end
+        end
+    end
+end
+
 local HttpGet = game.HttpGet
 local load = loadstring
 
@@ -187,12 +218,11 @@ addScript(101905843742027,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(105414615854152,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/RoleplayAvatar")
 addScript(102353841629856,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Cattos%20Lizard%20ATTACK%20RP")
 
-
 local currentPlaceId = tostring(game.PlaceId)
+local url = placeIdMap[currentPlaceId]
 
-if placeIdMap[currentPlaceId] then
-    local url = placeIdMap[currentPlaceId]
-    spawn(function()
+if url then
+    task.spawn(function()
         load(HttpGet(game, url))()
     end)
 end
