@@ -200,6 +200,7 @@ addScript(111518700391488,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(107352261775081,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20the%20Lava%20on%20Bike")
 addScript(82945911783799,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Per%20Step%20Tower")
 addScript(94019598641684,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%2067%20Evolution")
+addScript(109800309138590,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Speed%20Motorcycle%20Escape")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
