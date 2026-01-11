@@ -124,6 +124,7 @@ addScript(101946478822481,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(97622296096899,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/SAMMY%20JUMP%20ROPE%20GIANT%20SAMMY%20MORPH")
 addScript(14184086618,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Obby%20But%20You%E2%80%99re%20On%20a%20Bike")
 addScript(126875674787435,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Fun%20Obby%20Parkour")
+addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sajonara%20Tower")
 
 -- Horror
 addScript(5777099015,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror")
