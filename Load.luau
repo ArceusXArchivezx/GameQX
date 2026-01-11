@@ -90,6 +90,7 @@ addScript(115958079277049,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(88951201927122,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Gear%20Troll%20Slap%20Tower")
 
 -- Tower
+addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sajonara%20Tower")
 addScript(134997651114504,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ice%20Skate%20Tower")
 addScript(121439935748881,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/The%20Core%20of%20Wallhop%20Tower")
 
@@ -124,7 +125,7 @@ addScript(101946478822481,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(97622296096899,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/SAMMY%20JUMP%20ROPE%20GIANT%20SAMMY%20MORPH")
 addScript(14184086618,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Obby%20But%20You%E2%80%99re%20On%20a%20Bike")
 addScript(126875674787435,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Fun%20Obby%20Parkour")
-addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sajonara%20Tower")
+addScript(15776635867,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Dreamy%20Kawaii%20Obby")
 
 -- Horror
 addScript(5777099015,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror")
