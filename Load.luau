@@ -219,6 +219,9 @@ addScript(136407404714539,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(90136231908125,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20Sonic%20Morph")
 addScript(101905843742027,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/FIND%20THE%20BRAINROT%20MORPHS")
 
+-- Morphs
+addScript(133156994361448,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Shin%20Sonic%20MORPHS")
+
 -- Party And Casual
 addScript(105414615854152,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/RoleplayAvatar")
 addScript(102353841629856,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Cattos%20Lizard%20ATTACK%20RP")
