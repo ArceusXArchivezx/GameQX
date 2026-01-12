@@ -208,6 +208,7 @@ addScript(138466964702137,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(115362946047489,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ball%20%2B1%20Speed%20Per%20Step")
 addScript(106315567468113,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Drive%20A%20Car%20Down%20A%20Slide")
 addScript(111250485829076,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Skate%20Escape")
+addScript(106570778194957,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Jump%20Pogo%20Escape")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
