@@ -91,6 +91,10 @@ addScript(88951201927122,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(91654574937058,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Nyan%20Cat%20Troll%20Tower")
 addScript(135198689604615,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Horror%20Phonk%20Troll%20Tower")
 addScript(127867453131813,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Aura%20Troll%20Slap%20Tower")
+addScript(109071420974939,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Impossible%20Slap%20Tower")
+addScript(105938112304055,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Lucky%20Block%20Tower")
+addScript(76767617693575,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Gravity%20Coil%20Tower")
+addScript(101642582715212,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ShowSpeed%20Tower")
 
 -- Tower
 addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sajonara%20Tower")
