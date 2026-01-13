@@ -95,6 +95,7 @@ addScript(109071420974939,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(105938112304055,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Lucky%20Block%20Tower")
 addScript(76767617693575,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Gravity%20Coil%20Tower")
 addScript(101642582715212,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ShowSpeed%20Tower")
+addScript(74408277676603,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20Brainrots%20Tower")
 
 -- Tower
 addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sajonara%20Tower")
@@ -217,6 +218,7 @@ addScript(106570778194957,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(133989814065516,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20On%20a%20Bike")
 addScript(134383527120325,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Boat%20Escape")
 addScript(88572527412623,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Animal%20Ride")
+addScript(109080788695843,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Keyboard%20Escape")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
