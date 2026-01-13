@@ -90,6 +90,7 @@ addScript(115958079277049,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(88951201927122,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Gear%20Troll%20Slap%20Tower")
 addScript(91654574937058,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Nyan%20Cat%20Troll%20Tower")
 addScript(135198689604615,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Horror%20Phonk%20Troll%20Tower")
+addScript(127867453131813,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Aura%20Troll%20Slap%20Tower")
 
 -- Tower
 addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sajonara%20Tower")
