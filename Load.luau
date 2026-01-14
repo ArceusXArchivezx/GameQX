@@ -222,6 +222,8 @@ addScript(109080788695843,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(121230136531797,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20Logs%20for%20Brainrots")
 addScript(108270241986212,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Roller%20Escape")
 addScript(93134086099089,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Scooter%20Escape")
+addScript(93219064799815,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Roll%20Escape")
+addScript(114173865144490,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Raft%20Escape")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
