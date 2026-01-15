@@ -96,6 +96,8 @@ addScript(105938112304055,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(76767617693575,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Gravity%20Coil%20Tower")
 addScript(101642582715212,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ShowSpeed%20Tower")
 addScript(74408277676603,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20Brainrots%20Tower")
+addScript(76006971006303,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Troll%20Slap%20Tower")
+addScript(72845937010155,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Gear%20Slap%20Tower")
 
 -- Tower
 addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sajonara%20Tower")
@@ -224,6 +226,9 @@ addScript(108270241986212,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(93134086099089,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Scooter%20Escape")
 addScript(93219064799815,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Roll%20Escape")
 addScript(114173865144490,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Raft%20Escape")
+addScript(108629505947581,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Wheelchair%20Escape")
+addScript(70860953256036,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Unicycle%20Escape")
+addScript(78952061274245,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Rocket%20Escape")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
