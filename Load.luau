@@ -229,6 +229,10 @@ addScript(114173865144490,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(108629505947581,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Wheelchair%20Escape")
 addScript(70860953256036,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Unicycle%20Escape")
 addScript(78952061274245,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Rocket%20Escape")
+addScript(108213383259099,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Horror%20Escape")
+addScript(93516077920019,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ninja%20%2B1%20Speed%20Per%20Step")
+addScript(95156513426986,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20SPEED%20BRAINROT%20PETS")
+addScript(131282653041241,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Superhero%20Speed")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -246,6 +250,7 @@ addScript(103593441753340,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(136407404714539,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20the%20Brainrot")
 addScript(90136231908125,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20Sonic%20Morph")
 addScript(101905843742027,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/FIND%20THE%20BRAINROT%20MORPHS")
+addScript(85085406792679,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20a%20Meme")
 
 -- Morphs
 addScript(133156994361448,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Shin%20Sonic%20MORPHS")
