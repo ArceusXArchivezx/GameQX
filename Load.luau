@@ -138,6 +138,7 @@ addScript(14184086618,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGam
 addScript(126875674787435,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Fun%20Obby%20Parkour")
 addScript(15776635867,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Dreamy%20Kawaii%20Obby")
 addScript(128646334704030,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Fruit%20Stage%20Tower")
+addScript(117119585526401,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Run%20From%20Brainrot%20Obby")
 
 -- Horror
 addScript(5777099015,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror")
