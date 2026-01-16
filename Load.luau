@@ -103,6 +103,7 @@ addScript(72845937010155,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sajonara%20Tower")
 addScript(134997651114504,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ice%20Skate%20Tower")
 addScript(121439935748881,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/The%20Core%20of%20Wallhop%20Tower")
+addScript(123401392328470,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/The%20Core%20of%20Wallhop%20Tower")
 
 -- Obby
 addScript(71543463524754,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
@@ -233,6 +234,7 @@ addScript(108213383259099,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(93516077920019,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ninja%20%2B1%20Speed%20Per%20Step")
 addScript(95156513426986,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20SPEED%20BRAINROT%20PETS")
 addScript(131282653041241,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Superhero%20Speed")
+addScript(72016025318094,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20SkillPoint%20Every%20Second")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
