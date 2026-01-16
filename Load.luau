@@ -236,6 +236,8 @@ addScript(93516077920019,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(95156513426986,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20SPEED%20BRAINROT%20PETS")
 addScript(131282653041241,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Superhero%20Speed")
 addScript(72016025318094,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20SkillPoint%20Every%20Second")
+addScript(119934990395419,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Fart%20Speed%20Escape")
+addScript(101592778615412,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Animal%20Speed%20Escape")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
