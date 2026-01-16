@@ -263,7 +263,7 @@ addScript(105414615854152,"https://raw.githubusercontent.com/TheMugenKingx/RGAKA
 addScript(102353841629856,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Cattos%20Lizard%20ATTACK%20RP")
 
 -- Mountain
-addScript(94315512267840,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
+addScript(139712188039948,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
