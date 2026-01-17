@@ -238,6 +238,11 @@ addScript(131282653041241,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(72016025318094,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20SkillPoint%20Every%20Second")
 addScript(119934990395419,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Fart%20Speed%20Escape")
 addScript(101592778615412,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Animal%20Speed%20Escape")
+addScript(79516362095868,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Swim%20Speed%20Escape")
+addScript(132769566461685,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Bubu%20Escape")
+addScript(93107811111884,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Clone%20Speed%20Escape")
+addScript(72941779473012,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20to%20Escape%2067")
+addScript(90517691009911,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Faster%20Each%20Step")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
@@ -266,6 +271,7 @@ addScript(102353841629856,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 
 -- Mountain
 addScript(139712188039948,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
+addScript(94315512267840,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
