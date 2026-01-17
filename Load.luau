@@ -243,6 +243,7 @@ addScript(132769566461685,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(93107811111884,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Clone%20Speed%20Escape")
 addScript(72941779473012,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20to%20Escape%2067")
 addScript(90517691009911,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Faster%20Each%20Step")
+addScript(132573289800229,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20to%20Escape%20Sammy")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
