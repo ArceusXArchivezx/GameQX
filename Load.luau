@@ -98,6 +98,7 @@ addScript(101642582715212,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(74408277676603,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20Brainrots%20Tower")
 addScript(76006971006303,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Troll%20Slap%20Tower")
 addScript(72845937010155,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Gear%20Slap%20Tower")
+addScript(76490888522129,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Math%20Tower")
 
 -- Tower
 addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sajonara%20Tower")
