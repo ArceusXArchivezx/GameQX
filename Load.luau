@@ -146,6 +146,7 @@ addScript(17484510306,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGam
 -- Horror
 addScript(5777099015,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror")
 addScript(7783741,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Scary%20Elevator")
+addScript(4830581890,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Fear%20Elevator")
 
 -- Simulation
 addScript(95885904866309,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Simulation")
