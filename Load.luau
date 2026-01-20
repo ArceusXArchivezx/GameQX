@@ -245,6 +245,7 @@ addScript(93107811111884,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(72941779473012,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20to%20Escape%2067")
 addScript(90517691009911,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Faster%20Each%20Step")
 addScript(132573289800229,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20to%20Escape%20Sammy")
+addScript(108905821208772,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Get%20Taller%20Every%20Second")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
