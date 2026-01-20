@@ -105,6 +105,7 @@ addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(134997651114504,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ice%20Skate%20Tower")
 addScript(121439935748881,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/The%20Core%20of%20Wallhop%20Tower")
 addScript(123401392328470,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/The%20Core%20of%20Wallhop%20Tower")
+addScript(108949313599411,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Suka%20Laser%20Tower")
 
 -- Obby
 addScript(71543463524754,"https://raw.githubusercontent.com/ArceusXArchivezx/GameQX/refs/heads/main/Obby")
