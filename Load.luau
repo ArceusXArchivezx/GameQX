@@ -261,6 +261,7 @@ addScript(132273534230449,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(108682529022009,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Puzzle")
 addScript(129786213527176,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Prove%20You%20Are%20Not%20a%20Dum-Dum")
 addScript(103593441753340,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20The%20Button")
+addScript(112730892056697,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20The%20ButtoW")
 
 -- Adventure
 addScript(136407404714539,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Find%20the%20Brainrot")
@@ -270,6 +271,7 @@ addScript(85085406792679,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 
 -- Morphs
 addScript(133156994361448,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Shin%20Sonic%20MORPHS")
+addScript(18587585775,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Poop%20Morphs")
 
 -- Party And Casual
 addScript(105414615854152,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/RoleplayAvatar")
