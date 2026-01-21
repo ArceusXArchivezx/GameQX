@@ -1,4 +1,5 @@
 local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
 
 local BannedUsers = {
     [8927461290] = true,
@@ -99,6 +100,7 @@ addScript(74408277676603,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(76006971006303,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Troll%20Slap%20Tower")
 addScript(72845937010155,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Gear%20Slap%20Tower")
 addScript(76490888522129,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Math%20Tower")
+addScript(107142108120503,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ASMR%20Key%20Jump%20Tower")
 
 -- Tower
 addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sajonara%20Tower")
@@ -300,7 +302,22 @@ local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
 
 if url then
+    
+    StarterGui:SetCore("SendNotification", {
+        Title = "ArchiveXNova",
+        Text = "This Game Supported!",
+        Duration = 10,
+        Icon = "rbxassetid://85025739024001" 
+    })
+    
     task.spawn(function()
         load(HttpGet(game, url))()
     end)
+else
+    
+    -- StarterGui:SetCore("SendNotification", {
+    --     Title = "ArchiveXNova",
+    --     Text = "This game is not supported yet.",
+    --     Duration = 5
+    -- })
 end
