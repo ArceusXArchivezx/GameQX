@@ -144,6 +144,7 @@ addScript(15776635867,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGam
 addScript(128646334704030,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Fruit%20Stage%20Tower")
 addScript(117119585526401,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Run%20From%20Brainrot%20Obby")
 addScript(17484510306,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Easy%20Win%20Obby")
+addScript(121398068723493,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20the%20Hello%20Kitty%E2%80%98s%20House")
 
 -- Horror
 addScript(5777099015,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Horror")
@@ -315,9 +316,9 @@ if url then
     end)
 else
     
-    -- StarterGui:SetCore("SendNotification", {
-    --     Title = "ArchiveXNova",
-    --     Text = "This game is not supported yet.",
-    --     Duration = 5
-    -- })
+    StarterGui:SetCore("SendNotification", {
+        Title = "ArchiveXNova",
+        Text = "This game is not supported yet.",
+        Duration = 5
+      })
 end
