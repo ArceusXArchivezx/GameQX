@@ -187,6 +187,8 @@ addScript(129819755364195,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(113571636318123,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Per%20BITE")
 addScript(129358834769320,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Become%20the%20fastest%20Brainrot")
 addScript(88242597869863,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Hospital%20Escape")
+addScript(117831624091425,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Hospital%20Escape")
+addScript(81554184594903,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Hospital%20Escape")
 addScript(73934517857372,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Prison%20Escape")
 addScript(117265809722033,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Rock%20Escape")
 addScript(74407860720916,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Bridge%20to%20Brainrot")
