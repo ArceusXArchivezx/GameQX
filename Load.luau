@@ -225,7 +225,6 @@ addScript(82945911783799,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(94019598641684,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%2067%20Evolution")
 addScript(109800309138590,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Speed%20Motorcycle%20Escape")
 addScript(138466964702137,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/99%20Nights%20%2B1%20Size%20Per%20Click")
-addScript(115362946047489,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Ball%20%2B1%20Speed%20Per%20Step")
 addScript(106315567468113,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Drive%20A%20Car%20Down%20A%20Slide")
 addScript(111250485829076,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Skate%20Escape")
 addScript(106570778194957,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Jump%20Pogo%20Escape")
@@ -301,6 +300,7 @@ addScript(89056206671977,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(123723413018345,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
 addScript(73284592342678,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
 addScript(135638562857984,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
+addScript(117948254364533,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
