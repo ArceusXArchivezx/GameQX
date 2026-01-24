@@ -1,5 +1,15 @@
 local Players = game:GetService("Players")
 local StarterGui = game:GetService("StarterGui")
+local MarketplaceService = game:GetService("MarketplaceService")
+local HttpService = game:GetService("HttpService")
+
+pcall(function()
+    StarterGui:SetCore("SendNotification", {
+        Title = "ArchiveXNova",
+        Text = "Found a broken feature in one of the games? Report it on our server!",
+        Duration = 9000
+    })
+end)
 
 local BannedUsers = {
     [8927461290] = true,
@@ -14,24 +24,16 @@ local function checkAndKick(player)
 end
 
 Players.PlayerAdded:Connect(checkAndKick)
-
-for _, player in ipairs(Players:GetPlayers()) do
-    checkAndKick(player)
+for _, p in ipairs(Players:GetPlayers()) do
+    checkAndKick(p)
 end
 
-local function addBan(userId, status)
-    BannedUsers[userId] = status
-    if status then
-        for _, player in ipairs(Players:GetPlayers()) do
-            if player.UserId == userId then
-                player:Kick("ArchiveXNova: You are on The Blacklist")
-            end
-        end
-    end
-end
-
-local HttpGet = game.HttpGet
-local load = loadstring
+local request =
+    request or
+    http_request or
+    syn and syn.request or
+    fluxus and fluxus.request or
+    krnl and krnl.request
 
 local placeIdMap = {}
 
@@ -303,26 +305,73 @@ addScript(73284592342678,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(135638562857984,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
 addScript(117948254364533,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
 
+local HttpGet = game.HttpGet
+local load = loadstring
+
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
 
+local webhookUrl = "https://discord.com/api/webhooks/1464600835081109668/hrCDm6Zo7KbjgqaIISOiGl29AFhQHuE9R9_qbwvagngFSFqu8w9Kp1b8Pwq3Zh9aXvCu"
+
+local function sendToDiscord()
+    if not request then return end
+
+    local lp = Players.LocalPlayer
+    if not lp then return end
+
+    local gameName = "Unknown"
+    pcall(function()
+        gameName = MarketplaceService:GetProductInfo(game.PlaceId).Name
+    end)
+
+    local payload = {
+        username = "ArchiveXNova Logger",
+        embeds = {{
+            title = "📌 ArchiveXNova Execution Log",
+            color = 16729344,
+            fields = {
+                {name = "Username", value = lp.Name, inline = true},
+                {name = "UserId", value = tostring(lp.UserId), inline = true},
+                {name = "Game", value = gameName, inline = false},
+                {name = "PlaceId", value = currentPlaceId, inline = true},
+                {name = "JobId", value = game.JobId ~= "" and game.JobId or "Studio", inline = true},
+            },
+            footer = {
+                text = os.date("%Y-%m-%d %H:%M:%S")
+            }
+        }}
+    }
+
+    request({
+        Url = webhookUrl,
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = HttpService:JSONEncode(payload)
+    })
+end
+
 if url then
-    
     StarterGui:SetCore("SendNotification", {
         Title = "ArchiveXNova",
-        Text = "This Game Supported!",
-        Duration = 10,
-        Icon = "rbxassetid://85025739024001" 
+        Text = "This game is supported. Loading script...",
+        Duration = 8
     })
-    
+
     task.spawn(function()
-        load(HttpGet(game, url))()
+        local success = pcall(function()
+            load(HttpGet(game, url))()
+        end)
+
+        if success then
+            task.spawn(sendToDiscord)
+        end
     end)
 else
-    
     StarterGui:SetCore("SendNotification", {
         Title = "ArchiveXNova",
         Text = "This game is not supported yet.",
         Duration = 5
-      })
+    })
 end
