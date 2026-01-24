@@ -304,6 +304,7 @@ addScript(123723413018345,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(73284592342678,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
 addScript(135638562857984,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
 addScript(117948254364533,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
+addScript(114820517050548,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
 
 local HttpGet = game.HttpGet
 local load = loadstring
@@ -311,7 +312,7 @@ local load = loadstring
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
 
-local webhookUrl = "https://discord.com/api/webhooks/1464600835081109668/hrCDm6Zo7KbjgqaIISOiGl29AFhQHuE9R9_qbwvagngFSFqu8w9Kp1b8Pwq3Zh9aXvCu"
+local webhookUrl = "https://proxy.sidetechroblox.com/discord/webhooks/1464600835081109668/hrCDm6Zo7KbjgqaIISOiGl29AFhQHuE9R9_qbwvagngFSFqu8w9Kp1b8Pwq3Zh9aXvCu"
 
 local function sendToDiscord()
     if not request then return end
