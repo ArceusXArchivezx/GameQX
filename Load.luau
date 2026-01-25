@@ -12,7 +12,7 @@ pcall(function()
 end)
 
 local BannedUsers = {
-    [8927461290] = true,
+    [8048454992] = true,
     [7926507757] = true,
     [10305145595] = false,
 }
