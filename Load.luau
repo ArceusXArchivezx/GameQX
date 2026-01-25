@@ -327,7 +327,7 @@ local function sendToDiscord()
     end)
 
     local payload = {
-        username = "ArchiveXNova Logger",
+        username = "ArchiveXNova",
         embeds = {{
             title = "📌 ArchiveXNova Execution Log",
             color = 16729344,
