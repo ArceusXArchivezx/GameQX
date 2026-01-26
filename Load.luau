@@ -13,7 +13,7 @@ end)
 
 local BannedUsers = {
     [8048454992] = true,
-    [7926507757] = true,
+    [9616617886] = true,
     [10305145595] = false,
 }
 
