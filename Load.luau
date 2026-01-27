@@ -106,6 +106,7 @@ addScript(107142108120503,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(94255092395831,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Keyboard%20ASMR%20Troll%20Tower")
 addScript(121091852804618,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Coil%20Troll%20Tower")
 addScript(98906347294244,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/67%20Obby%20Tower")
+addScript(128576448886902,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Clone%20Troll%20Tower")
 
 -- Tower
 addScript(136796002077170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Sajonara%20Tower")
