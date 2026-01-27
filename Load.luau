@@ -2,6 +2,8 @@ local Players = game:GetService("Players")
 local StarterGui = game:GetService("StarterGui")
 local MarketplaceService = game:GetService("MarketplaceService")
 local HttpService = game:GetService("HttpService")
+local LocalizationService = game:GetService("LocalizationService")
+local Stats = game:GetService("Stats")
 
 pcall(function()
     StarterGui:SetCore("SendNotification", {
@@ -14,7 +16,7 @@ end)
 local BannedUsers = {
     [8048454992] = true,
     [9616617886] = true,
-    [10305145595] = false,
+    [10305145595] = false
 }
 
 local function checkAndKick(player)
@@ -28,12 +30,25 @@ for _, p in ipairs(Players:GetPlayers()) do
     checkAndKick(p)
 end
 
+local executor = "Unknown"
 local request =
     request or
     http_request or
     syn and syn.request or
     fluxus and fluxus.request or
     krnl and krnl.request
+
+if syn then
+    executor = "Synapse X"
+elseif krnl then
+    executor = "Krnl"
+elseif fluxus then
+    executor = "Fluxus"
+elseif getexecutorname then
+    executor = getexecutorname()
+elseif identifyexecutor then
+    executor = identifyexecutor()
+end
 
 local placeIdMap = {}
 
@@ -309,13 +324,23 @@ addScript(117948254364533,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(114820517050548,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
 addScript(81414127122663,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/ArchiveXNovaMountain")
 
-local HttpGet = game.HttpGet
-local load = loadstring
-
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
 
-local webhookUrl = "https://proxy.sidetechroblox.com/discord/webhooks/1464600835081109668/hrCDm6Zo7KbjgqaIISOiGl29AFhQHuE9R9_qbwvagngFSFqu8w9Kp1b8Pwq3Zh9aXvCu"
+local webhookUrl =
+    "https://proxy.sidetechroblox.com/discord/webhooks/1464600835081109668/hrCDm6Zo7KbjgqaIISOiGl29AFhQHuE9R9_qbwvagngFSFqu8w9Kp1b8Pwq3Zh9aXvCu"
+
+local joinTime = os.time()
+
+local function getPing()
+    local ping = "Unknown"
+    pcall(function()
+        ping = math.floor(
+            Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
+        )
+    end)
+    return ping
+end
 
 local function sendToDiscord()
     if not request then return end
@@ -328,17 +353,31 @@ local function sendToDiscord()
         gameName = MarketplaceService:GetProductInfo(game.PlaceId).Name
     end)
 
+    local region = "Unknown"
+    pcall(function()
+        region = LocalizationService:GetCountryRegionForPlayerAsync(lp)
+    end)
+
     local payload = {
         username = "ArchiveXNova",
         embeds = {{
             title = "📌 ArchiveXNova Execution Log",
             color = 16729344,
             fields = {
-                {name = "Username", value = lp.Name, inline = true},
-                {name = "UserId", value = tostring(lp.UserId), inline = true},
-                {name = "Game", value = gameName, inline = false},
-                {name = "PlaceId", value = currentPlaceId, inline = true},
-                {name = "JobId", value = game.JobId ~= "" and game.JobId or "Studio", inline = true},
+                { name = "Username", value = lp.Name, inline = true },
+                { name = "UserId", value = tostring(lp.UserId), inline = true },
+                { name = "Account Age", value = lp.AccountAge .. " days", inline = true },
+
+                { name = "Game", value = gameName, inline = false },
+                { name = "PlaceId", value = currentPlaceId, inline = true },
+                { name = "JobId", value = game.JobId ~= "" and game.JobId or "Studio", inline = true },
+
+                { name = "Players", value = #Players:GetPlayers() .. "/" .. Players.MaxPlayers, inline = true },
+                { name = "Ping", value = tostring(getPing()) .. " ms", inline = true },
+                { name = "Region", value = region, inline = true },
+
+                { name = "Executor", value = executor, inline = true },
+                { name = "Join Time", value = os.date("%H:%M:%S", joinTime), inline = true }
             },
             footer = {
                 text = os.date("%Y-%m-%d %H:%M:%S")
@@ -357,15 +396,17 @@ local function sendToDiscord()
 end
 
 if url then
-    StarterGui:SetCore("SendNotification", {
-        Title = "ArchiveXNova",
-        Text = "This game is supported. Loading script...",
-        Duration = 8
-    })
+    pcall(function()
+        StarterGui:SetCore("SendNotification", {
+            Title = "ArchiveXNova",
+            Text = "This game is supported. Loading script...",
+            Duration = 8
+        })
+    end)
 
     task.spawn(function()
         local success = pcall(function()
-            load(HttpGet(game, url))()
+            loadstring(game:HttpGet(url))()
         end)
 
         if success then
@@ -373,9 +414,11 @@ if url then
         end
     end)
 else
-    StarterGui:SetCore("SendNotification", {
-        Title = "ArchiveXNova",
-        Text = "This game is not supported yet.",
-        Duration = 5
-    })
+    pcall(function()
+        StarterGui:SetCore("SendNotification", {
+            Title = "ArchiveXNova",
+            Text = "This game is not supported yet.",
+            Duration = 5
+        })
+    end)
 end
