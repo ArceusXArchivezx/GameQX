@@ -276,6 +276,7 @@ addScript(132573289800229,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(108905821208772,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Get%20Taller%20Every%20Second")
 addScript(140634691760923,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Plane%20Escape")
 addScript(73160984129221,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Aura%20Speed%20Escape")
+addScript(99457855080430,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Barrel%20Escape")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
