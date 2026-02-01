@@ -283,6 +283,7 @@ addScript(120402759300287,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(133259974635005,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Tsunami%20Escape")
 addScript(115442728708640,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Glider%20Escape")
 addScript(110751416901942,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20HP%20Per%20Step")
+addScript(104048191932422,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Jump%20per%20Jump")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
