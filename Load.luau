@@ -9,7 +9,7 @@ pcall(function()
     StarterGui:SetCore("SendNotification", {
         Title = "ArchiveXNova",
         Text = "If you find a broken feature in any game, drop your report on our server!",
-        Duration = 30
+        Duration = 10
     })
 end)
 
