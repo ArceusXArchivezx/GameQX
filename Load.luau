@@ -9,7 +9,7 @@ pcall(function()
     StarterGui:SetCore("SendNotification", {
         Title = "ArchiveXNova",
         Text = "If you find a broken feature in any game, drop your report on our server!",
-        Duration = 10
+        Duration = 30
     })
 end)
 
@@ -287,6 +287,7 @@ addScript(110751416901942,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(104048191932422,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Jump%20per%20Jump")
 addScript(108057513655537,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%5BUPD%5D%20%2B1%20Jump%20Per%20StepV1")
 addScript(106460748036817,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%5BUPD%5D%20%2B1%20Jump%20Per%20StepV2")
+addScript(132931126316629,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Speed%20Car%20Tsunami%20Escape")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
