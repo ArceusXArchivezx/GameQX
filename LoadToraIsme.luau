@@ -50,6 +50,7 @@ end
 
 -- all in One
 addScript(124311897657957,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/BreakaLuckyBlock")
+addScript(131623223084840,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/EscapeTsunamiForBrainrots")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
@@ -88,7 +89,7 @@ local function sendToDiscord()
     local payload = {
         username = "Tora Isme",
         embeds = {{
-            title = "📌 Tora Isme Execution Log",
+            title = "ðŸ“Œ Tora Isme Execution Log",
             color = 16729344,
             fields = {
                 { name = "Username", value = lp.Name, inline = true },
