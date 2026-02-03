@@ -52,6 +52,7 @@ end
 addScript(124311897657957,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/BreakaLuckyBlock")
 addScript(131623223084840,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/EscapeTsunamiForBrainrots")
 addScript(119987266683883,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SurviveLAVAforBrainrots")
+addScript(138048509924404,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SaveBrainrotfromLava")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
