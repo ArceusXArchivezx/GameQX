@@ -5,14 +5,6 @@ local HttpService = game:GetService("HttpService")
 local LocalizationService = game:GetService("LocalizationService")
 local Stats = game:GetService("Stats")
 
-pcall(function()
-    StarterGui:SetCore("SendNotification", {
-        Title = "ArchiveXNova",
-        Text = "If you find a broken feature in any game, drop your report on our server!",
-        Duration = 30
-    })
-end)
-
 local BannedUsers = {
     [8048454992] = true,
     [9616617886] = true,
@@ -417,8 +409,8 @@ if url then
     pcall(function()
         StarterGui:SetCore("SendNotification", {
             Title = "ArchiveXNova",
-            Text = "This game is supported. Loading script...",
-            Duration = 8
+            Text = "This game is supported. Loading game",
+            Duration = 5
         })
     end)
 
