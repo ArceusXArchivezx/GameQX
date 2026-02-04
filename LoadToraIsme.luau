@@ -53,6 +53,11 @@ addScript(124311897657957,"https://raw.githubusercontent.com/gumanba/Scripts/ref
 addScript(131623223084840,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/EscapeTsunamiForBrainrots")
 addScript(119987266683883,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SurviveLAVAforBrainrots")
 addScript(138048509924404,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SaveBrainrotfromLava")
+addScript(135094773390024,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/EscapePoliceForBrainrots")
+addScript(103571191458177,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DigLegends")
+addScript(135668295983945,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/1SkillPointLegends")
+addScript(139489585993138,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/BlowUpandFall")
+addScript(134763881293027,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/StealFromBrainrots")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
