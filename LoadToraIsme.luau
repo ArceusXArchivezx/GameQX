@@ -59,6 +59,7 @@ addScript(135668295983945,"https://raw.githubusercontent.com/gumanba/Scripts/ref
 addScript(139489585993138,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/BlowUpandFall")
 addScript(134763881293027,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/StealFromBrainrots")
 addScript(134951244280326,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/ClimbForBrainrots")
+addScript(120564326011184,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/BeaYouTuber")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
