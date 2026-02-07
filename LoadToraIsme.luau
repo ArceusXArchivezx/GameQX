@@ -61,6 +61,7 @@ addScript(134763881293027,"https://raw.githubusercontent.com/gumanba/Scripts/ref
 addScript(134951244280326,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/ClimbForBrainrots")
 addScript(120564326011184,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/BeaYouTuber")
 addScript(72167803024670,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/FindWhoSlapped")
+addScript(129315204746120,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/EscapeQuicksandforBrainrots")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
