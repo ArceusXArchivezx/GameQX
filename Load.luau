@@ -287,6 +287,7 @@ addScript(113961941956252,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(109319770402052,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Survive%20Volcano%20for%20Brainrots")
 addScript(127426371793697,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Dragon%20Ball%20Tsunami%20Escape")
 addScript(138048509924404,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Save%20Brainrots%20from%20LAVA")
+addScript(73001218460360,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/%2B1%20Escape%20Tsunami%20Poppy")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
