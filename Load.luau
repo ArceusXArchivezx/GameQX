@@ -291,6 +291,7 @@ addScript(73001218460360,"https://raw.githubusercontent.com/TheMugenKingx/Roblox
 addScript(94819536102126,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20Tsunami%20For%20Dinosaurs")
 addScript(119306225651101,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20Lava%20For%20Brainrots")
 addScript(124020967021490,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20Tsunami%20For%20Mobs")
+addScript(76625594468864,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20Tsunami%20for%20Soccer")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
