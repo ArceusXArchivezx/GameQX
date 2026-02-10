@@ -297,6 +297,7 @@ addScript(139299356663913,"https://raw.githubusercontent.com/TheMugenKingx/Roblo
 addScript(110652131889470,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20Tsunami%20For%20Phones")
 addScript(140561102066352,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20Stages%20For%20Brainrots")
 addScript(128909126739170,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Floor%20is%20Lava%20for%20Brainrots")
+addScript(78326551441316,"https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptV1/refs/heads/main/Escape%20Getting%20Crushed%20For%20Brainrots")
 
 -- Survival
 addScript(16867505761,"https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/Survival")
