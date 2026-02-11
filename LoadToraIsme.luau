@@ -66,6 +66,8 @@ addScript(72532006226238,"https://raw.githubusercontent.com/gumanba/Scripts/refs
 addScript(83333932726271,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/TrapRun")
 addScript(77499336428083,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DrawARaft")
 addScript(71812071769179,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/EscapeGuardstoStealBrainrots")
+addScript(78326551441316,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/EscapeGettingCrushedForBrainrots")
+addScript(113303333910928,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DiveForBrainrots")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
