@@ -73,6 +73,7 @@ addScript(89494216641846,"https://raw.githubusercontent.com/gumanba/Scripts/refs
 addScript(109533024287077,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/1SpeedEscapeforBrainrots")
 addScript(139299356663913,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/JumpforBrainrots")
 addScript(125055254587561,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/EscapeObbiesForBrainrots")
+addScript(75843683571426,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/MyCatArmy")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
