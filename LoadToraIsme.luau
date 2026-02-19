@@ -77,6 +77,8 @@ addScript(75843683571426,"https://raw.githubusercontent.com/gumanba/Scripts/refs
 addScript(131756752872026,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DiveDown")
 addScript(106685450523667,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/GlideforBrainrots")
 addScript(76124655331395,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SpearTraining")
+addScript(90695455422761,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/JumptoStealBrainrots")
+addScript(114204398207377,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SurviveZombieArena")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
