@@ -79,6 +79,10 @@ addScript(106685450523667,"https://raw.githubusercontent.com/gumanba/Scripts/ref
 addScript(76124655331395,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SpearTraining")
 addScript(90695455422761,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/JumptoStealBrainrots")
 addScript(114204398207377,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SurviveZombieArena")
+addScript(90695455422761,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/JumptoStealBrainrots")
+addScript(114204398207377,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SurviveZombieArena")
+addScript(94702395375549,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/RunForBrainrots")
+addScript(90918200416523,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SlapFights")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
