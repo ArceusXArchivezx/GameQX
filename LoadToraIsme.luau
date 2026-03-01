@@ -86,6 +86,8 @@ addScript(90918200416523,"https://raw.githubusercontent.com/gumanba/Scripts/refs
 addScript(130594398886540,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/GardenHorizons")
 addScript(88797686191630,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SaveBrainrotsFromBackrooms")
 addScript(110339581423462,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/1SpeedDinosaurEscape")
+addScript(117735412151102,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/CatchBrainrotsFromRiver")
+addScript(71827913900569,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/GrowBeanstalkForBrainrots")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
