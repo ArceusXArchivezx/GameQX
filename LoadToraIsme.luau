@@ -91,6 +91,9 @@ addScript(71827913900569,"https://raw.githubusercontent.com/gumanba/Scripts/refs
 addScript(106772177198260,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/ReelaBrainrot")
 addScript(70654235200182,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/BaddieJumping")
 addScript(114640202062357,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SwingObbyforBrainrots")
+addScript(74277864669743,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/FlyforBrainrots")
+addScript(73982574886804,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/LaunchYourRocket")
+addScript(83403180598996,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/ClimbtoInfinity")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
