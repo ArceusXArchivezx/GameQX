@@ -94,6 +94,12 @@ addScript(114640202062357,"https://raw.githubusercontent.com/gumanba/Scripts/ref
 addScript(74277864669743,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/FlyforBrainrots")
 addScript(73982574886804,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/LaunchYourRocket")
 addScript(83403180598996,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/ClimbtoInfinity")
+addScript(118433033586507,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/SimpleSpells")
+addScript(83403180598996,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/ClimbtoInfinity")
+addScript(123657429151726,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/GuessMyNumber")
+addScript(82031770257269,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/JumptoStealBrainrots")
+addScript(109404397225572,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/MyFarmersMarket")
+addScript(124473577469410,"https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/BeaLuckyBlock")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
