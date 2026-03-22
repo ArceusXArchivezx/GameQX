@@ -106,6 +106,12 @@ addScript(109404397225572, "https://raw.githubusercontent.com/gumanba/Scripts/re
 addScript(124473577469410, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/BeaLuckyBlock")
 addScript(97365843755210, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/CutGrassforBrainrots")
 addScript(88933961678687, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/HyperSpeedRunner")
+addScript(137768115850394, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/ClimbUpMountainForBrainrot")
+addScript(107095834793267, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/OilEmpire")
+addScript(137062508611911, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/BrainrotCharge")
+addScript(100623060214384, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/ENTERBRAINROTHEADS")
+addScript(130361766615221, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/GetFattoSplash")
+addScript(82397737462020, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/ShrinkForBrainrots")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
