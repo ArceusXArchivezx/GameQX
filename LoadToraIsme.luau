@@ -112,6 +112,8 @@ addScript(137062508611911, "https://raw.githubusercontent.com/gumanba/Scripts/re
 addScript(100623060214384, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/ENTERBRAINROTHEADS")
 addScript(130361766615221, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/GetFattoSplash")
 addScript(82397737462020, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/ShrinkForBrainrots")
+addScript(84514721527976, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DigDEEPERforBrainrots")
+addScript(81643004510026, "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/FartTraining")
 
 local currentPlaceId = tostring(game.PlaceId)
 local url = placeIdMap[currentPlaceId]
