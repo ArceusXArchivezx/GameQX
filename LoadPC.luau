@@ -1,8 +1,72 @@
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
+local MarketplaceService = game:GetService("MarketplaceService")
+local UserInputService = game:GetService("UserInputService")
 
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui", 10)
+
+local BLACKLISTED_EXECUTORS = {
+    "Delta", "Delta Executor", "Delta X",
+    "Arceus X", "ArceusX", "Krnl", "Codex", "Cryptic", "JJsploit", "JJ Sploit",
+    "FluxusZ", "Punk X", "Neutron", "Fluxus", "Rift", "Frostware", "Ronix",
+    "Trigon", "VegaX", "Evon"
+}
+
+local PC_ONLY_EXECUTORS = {
+    "Xeno", "Solara", "Velocity", "Bunni", "Zenith", "Swift", "World Client", 
+    "WorldClient", "Yub-X", "TNG", "LX63", "Volt", "Wave", "Isaeva", "Drift", 
+    "Potassium", "Seliware", "SirHurt", "Opiumware", "MacSploit"
+}
+
+local function isMobile()
+    return UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
+end
+
+local function detectExecutor()
+    local Cat, b, c = "Cat", false, {}
+    
+    for i = 1, 25 do
+        local ok, result = pcall(function()
+            return MarketplaceService:PromptBulkPurchase(player, Cat, b, c)
+        end)
+        if ok and result == nil then
+            return true
+        end
+        task.wait(0.03)
+    end
+
+    local name = ""
+    if getexecutorname then name = getexecutorname() end
+    if identifyexecutor and name == "" then name = identifyexecutor() end
+    if name == "" then
+        if syn then name = "syn" end
+        if fluxus then name = "fluxus" end
+    end
+    name = tostring(name):lower()
+
+    for _, v in ipairs(BLACKLISTED_EXECUTORS) do
+        if name:find(v:lower()) then return true end
+    end
+
+    if isMobile() then
+        for _, v in ipairs(PC_ONLY_EXECUTORS) do
+            if name:find(v:lower()) then return true end
+        end
+    end
+
+    if getrenv and getrenv()._G and type(getrenv()._G) == "table" then
+        if getrenv()._G.executor then return true end
+    end
+
+    return false
+end
+
+if detectExecutor() then
+    player:Kick("Executor not allowed!\n\nOnly PC & macOS are permitted.")
+    wait(1)
+    while true do end
+end
 
 local THEME = {
     bgStart = Color3.fromRGB(30, 10, 10),
@@ -13,26 +77,11 @@ local THEME = {
 }
 
 local NOTIFICATION_TYPES = {
-    success = {
-        accent = Color3.fromRGB(0, 255, 100),
-        stroke = Color3.fromRGB(0, 255, 100),
-    },
-    error = {
-        accent = Color3.fromRGB(255, 60, 60),
-        stroke = Color3.fromRGB(255, 60, 60),
-    },
-    warning = {
-        accent = Color3.fromRGB(255, 200, 0),
-        stroke = Color3.fromRGB(255, 200, 0),
-    },
-    info = {
-        accent = Color3.fromRGB(255, 80, 80),
-        stroke = Color3.fromRGB(255, 80, 80),
-    },
-    custom = {
-        accent = Color3.fromRGB(255, 80, 80),
-        stroke = Color3.fromRGB(255, 80, 80),
-    }
+    success = { accent = Color3.fromRGB(0, 255, 100), stroke = Color3.fromRGB(0, 255, 100) },
+    error = { accent = Color3.fromRGB(255, 60, 60), stroke = Color3.fromRGB(255, 60, 60) },
+    warning = { accent = Color3.fromRGB(255, 200, 0), stroke = Color3.fromRGB(255, 200, 0) },
+    info = { accent = Color3.fromRGB(255, 80, 80), stroke = Color3.fromRGB(255, 80, 80) },
+    custom = { accent = Color3.fromRGB(255, 80, 80), stroke = Color3.fromRGB(255, 80, 80) }
 }
 
 local function getTypeColors(notifyType)
