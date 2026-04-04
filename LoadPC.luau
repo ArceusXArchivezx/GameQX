@@ -168,7 +168,7 @@ end
 local placeId = tostring(game.PlaceId)
 
 local scripts = {
-    ["107639420156506"] = "https://raw.githubusercontent.com/TheMugenKingx/RGAKALPA/refs/heads/main/TrollTrower",
+    ["93978595733734"] = "https://raw.githubusercontent.com/TheMugenKingx/RobloxGameScriptPC/refs/heads/main/Violence%20District",
 }
 
 local url = scripts[placeId]
